@@ -1,0 +1,60 @@
+.command{
+  background: transparent;
+  border: none;
+  width: 90%;
+  outline: none !important;
+  /*
+  height: 0;
+  padding: 0 0;
+  */
+}
+
+
+.container{
+  font-family: MyFont, Monospace;
+  /*font-family: FreeMono, monospace; this don't work on Android */
+  font-size: 15px;
+  line-height: 20px;
+  color: #aaa;
+}
+
+.command, .command-value, .help, .contact{
+  color: #aaa;
+}
+
+.command-error{
+  color: red;
+}
+
+.menu, .help > ul{
+  list-style: none;
+  padding: 0;
+}
+
+/*menu*/
+.menu{
+
+}
+.menu h3{
+  font-size: 18px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+/*help*/
+.help{
+  max-width: 600px;
+}
+.help li{
+  display: block;
+}
+.help .h-left{
+  text-align: left;
+  float: left;
+  position: relative;
+}
+.help .h-right{
+  text-align: right;
+  float: right;
+  position: relative;
+}

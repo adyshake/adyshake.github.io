@@ -1,113 +1,45 @@
-﻿
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+---
+title: Home
+layout: base
+---
+<div class="wrapper">
+    <header>
+        <div class="logo-container">
+          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.logo }}')"></a>
+        </div>
 
-    <title>Adnan Shaikh</title>
+        <div class="author-container"><h1>{{ site.name }}</h1></div>
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" href=" /assets/favicon/favicon-16x16.png?v=545a66bb41" sizes="16x16">
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.1.0/css/tachyons.min.css">
-    <link rel="stylesheet" type="text/css" href=" /assets/css/app.css?v=545a66bb41">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700,700italic,300italic">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic%7CMerriweather:400,400italic,700,700italic">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/grayscale.min.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <meta name="description" content="A diary of Adnan's trials and tribulations">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="index.html">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    
-    <meta property="og:site_name" content="Adnan Shaikh">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Adnan Shaikh">
-    <meta property="og:description" content="A diary of Adnan's trials and tribulations">
-    <meta property="og:url" content=" /">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Adnan Shaikh">
-    <meta name="twitter:description" content="A diary of Adnan's trials and tribulations">
-    <meta name="twitter:url" content=" /">
-    
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Adnan Shaikh",
-        "logo": {
-            "@type": "ImageObject",
-            "url": " /favicon.ico",
-            "width": 60,
-            "height": 60
-        }
-    },
-    "url": " /",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": " /"
-    },
-    "description": "A diary of Adnan&#x27;s trials and tribulations"
-}
-    </script>
-
-    <script type="text/javascript" src=" /public/ghost-sdk.js?v=545a66bb41"></script>
-<script type="text/javascript">
-ghost.init({
-	clientId: "ghost-frontend",
-	clientSecret: "68df3d0f8269"
-});
-</script>
-    <meta name="generator" content="Ghost 1.8">
-    <link rel="alternate" type="application/rss+xml" title="Adnan Shaikh" href="rss/index.html">
-</head>
-<body class="relative pb6 mt5">
-
-
-    <div class="w-60-l w-90 ph3 ph0-l ph3-m center">
-
-        
-<header class="no-cover">
-    <nav class="">
-        
-    </nav>
-    <div class="tc">
-        <h1 class="fw3 f-headline-ns f1 f1-m ttu tracked mb0-l"><a class="no-underline dark-gray link dim" href="index.html">Adnan Shaikh</a></h1>
-        <h2 class="fw3 f4-ns f5 ttu tracked gray tc">A diary of Adnan's trials and tribulations</h2>
-    </div>
-</header>
-
-<main id="content" class="" role="main">
-
-    <article class="pt5 lh-copy mw8 center tc post tag-why tag-blog">
-    <header class="mb3">
-        <h2 class="ttu fw7 f3 lh-title tracked link dim pv1 mv1 mb0 bb b--light-gray"><a class="no-underline" href="why-im-blogging-and-why-you-probably-should-too/">Why am I blogging?</a></h2>
-        <time class="f6 i ttu tracked gray" datetime="2016-09-03">03 September 2016</time>
+        <hr>
+        <ul class="fa-ul main-list">
+            <li class="main-list-item">
+                <a href="https://github.com/adyshake">GitHub</a>
+                <span class="fa fa-github fa-lg main-list-item-icon"></span>
+            </li>
+            <li class="main-list-item">
+                <a href="https://stackoverflow.com/users/3672046/adnan-shaikh">StackOverflow</a>
+                <span class="fa fa-stack-overflow fa-lg main-list-item-icon"></span>
+            </li>
+            <li class="main-list-item">
+                <a href="https://twitter.com/adyshake_">Twitter</a>
+                <span class="fa fa-twitter fa-lg main-list-item-icon"></span>
+            </li>
+            <li class="main-list-item">
+                <a href="https://www.linkedin.com/in/adnan-shaikh/">LinkedIn</a>
+                <span class="fa fa-linkedin-square fa-lg main-list-item-icon"></span>
+            </li>
+            <li class="main-list-item">
+                <a href="mailto:adnan.shaikh1806@gmail.com">Email</a>
+                <span class="fa fa-envelope fa-lg main-list-item-icon"></span>
+            </li>
+        </ul>
     </header>
-</article>
+    <main>
+      <div class="content">
 
-<nav class="relative w-80-ns mw6 mt6 center tc" role="navigation">
-    <a class="fl dib ph3 pv1 no-underline dim link ba br2 ttu f6 disabled" href="index.html">Future</a>
-    <span class="ttu gray tracked f6 f5-ns">Page 1 of 1</span>
-    <a class="fr dib ph3 pv1 no-underline dim link ba br2 ttu f6 disabled" href="index.html">Past</a>
-</nav>
+        {% capture biosketch %}{% include biosketch.md %}{% endcapture %}
+        {{ biosketch | markdownify }}
 
-
-</main>
-
-
-    </div>
-    <footer class="absolute w-100 left-0 bottom-0 right-0">
-    </footer>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src=" /assets/js/scripts.js?v=545a66bb41"></script>
-    
-
-</body>
+      </div>
+    </main>
+</div>

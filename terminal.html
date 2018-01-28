@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal blog of Adnan Shaikh">
+    <meta name="author" content="Adnan Shiakh">
+    <link rel="shortcut icon" href="./terminal/site/ico/favicon.ico">
+    <title>Adnan Shaikh</title>
+
+    <link rel="stylesheet" href="./terminal/bootstrap/css/bootstrap.min.css">
+    <link href="./terminal/site/css/terminal.css" rel="stylesheet">
+    <link href="./terminal/site/css/general.css" rel="stylesheet">
+
+    <!-- Custom tags for the head tag -->
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+  </head>
+  <body>
+
+    <div class='container'>
+      <div class='row'>
+	<div class='col-md-12 col-xs-12' id='wrapper'></div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+	 ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="./terminal/site/js/jquery-1.7.1.min.js"></script>
+    <script src="./terminal/site/js/jquery-ui.min.js"></script>
+    <script src="./terminal/site/js/terminal.js"></script>
+
+    <script>
+      var _commands, _filetree;
+      _commands = void 0;
+      _filetree = {};
+      _commands = {
+      clear: function() {
+      $('#wrapper').children().remove();
+      },
+      
+      hacking: function() {
+      var PopupCenter;
+      PopupCenter = function(url, title, w, h) {
+      var dualScreenLeft, dualScreenTop, height, left, newWindow, top, width;
+      dualScreenLeft = window.screenLeft !== void 0 ? window.screenLeft : screen.left;
+      dualScreenTop = window.screenTop !== void 0 ? window.screenTop : screen.top;
+      width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+      height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+      left = width / 2 - (w / 2) + dualScreenLeft;
+      top = height / 2 - (h / 2) + dualScreenTop;
+      newWindow = window.open(url, title, 'scrollbars=no, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+      if (window.focus) {
+      newWindow.focus();
+      }
+      };
+      PopupCenter('http://www.hackertyper.net', '', '900', '500');
+      },
+      
+      help: function() {
+      var output, p, text;
+      text = void 0;
+      output = void 0;
+      p = 'Usage:<br>';
+      p += '&nbsp;&nbsp;about<br>';
+      p += '&nbsp;&nbsp;resume<br>';
+      p += '&nbsp;&nbsp;hire<br>';
+      p += '&nbsp;&nbsp;blog<br>';
+      p += '&nbsp;&nbsp;help<br>';
+      p += '&nbsp;&nbsp;version<br>';
+      p += '&nbsp;&nbsp;contact<br>';
+      text = '<div class=\'help\'>' + p + '</div>';
+      print(text);
+      },
+      
+      contact: function(key) {
+      var p, text;
+      if (key !== null && key !== void 0 && key.length > 0) {
+        key = key[0].toLowerCase();
+	} else {
+        key = '';
+	}
+	switch (key) {
+        case 'email':
+        window.location.href = 'mailto:adnan.shaikh1806@gmail.com?subject=Project';
+        return;
+        case 'twitter':
+        window.open('https://twitter.com/#!/adnanshaikhh');
+        return;
+        default:
+        if (key.length) {
+        text = 'Invalid key: ' + key;
+        printError(text);
+        } else {
+        p = void 0;
+        p = '<p>Contact information:</p>';
+        p += '<p>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adnan Shaikh</p>';
+        p += '<p>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adnan.shaikh1806@gmail.com</p>';
+        p += '<p>Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pune, India</p>';
+	p += '<p>Github:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/adyshake" target="_blank">adyshake</a></p>';
+        p += '<p>Twitter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/#!/adyshake_" target="_blank">adyshake_</a></p>';
+	p += '<p>Linked In:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/adnan-shaikh" target="_blank">adnan-shaikh</a></p>';
+	p += '<p>Steam:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://steamcommunity.com/id/AdyShake" target="_blank">adyshake</a></p>';
+        text = '<div class=\'contact\'>' + p + '</div>';
+        print(text);
+        }
+	}
+	},
+	
+        "twitter": function(){
+        window.open('https://twitter.com/#!/adyshake_/');
+        return " ";
+        },
+	
+        "email": function(){
+        window.location.href = "mailto:adnan.shaikh1806@gmail.com?subject=Project";
+        return " ";
+        },
+	
+        "mail": function(){
+        window.location.href = "mailto:adnan.shaikh1806@gmail.com?subject=Project";
+        return " ";
+        },
+
+	"about": function(){
+        var msg = "<p>Hey there, my name is <i>Adnan Shaikh</i> and this is my personal site where I keep a diary of my various misadventures that roughly fall into the \"recreational programming\" category<br>I've just graduated with a degree in computer engineering from Vishwakarma Institute of Technology, Pune.<br>I'm peculiarly intrigued by machine learning and particularly deep learning.<br>In my free time, you can find me buried in a new book that I am often told, reading all too slowly.<br>The Internet's a big place, standard disclaimers about these being my views and not my employer's apply.</p>";
+	return msg;
+        return " ";
+        },
+
+	"about --aggressive": function(){
+        var msg = "<p>BUCKLE YOUR SEAT BELTS BOY-Os, BECAUSE IN ONE SHORT PARAGRAPH I AM GOING TO LEARN U A THING THAT I ONLY LEARNED MYSELF TWO HOURS AGO, SO SIT DOWN, SHUT UP AND ENJOY THE EXPERIENCE OF MY 4-AM-REDBULL-INDUCED-SELF-HATRED-FUELLED-WRITING-EXTRAVAGANZA MINUS THE WRITING</p><img src=\"https://media.giphy.com/media/99e1L4KIXQh6U/200w.gif\" alt=\"zen\">";
+	return msg;
+        return " ";
+        },
+
+	"resume": function(){
+        window.open("https://docs.google.com/viewer?url=https://github.com/adyshake/resume/raw/master/resume.pdf", '_new');
+        return " ";
+        },
+
+	"hire": function(){
+        var msg = "<p>I'm currently <span style='color: #3399ff'><b>available</b></span> for hire!</p>";
+	return msg;
+        return " ";
+        },
+
+	"blog": function(){
+	$("html").animate({backgroundColor: "#2e3436"}, 300);
+	window.open('http://blog.adnanshaikh.com', '_self');
+	print("Opening...")
+        return " ";
+        },
+
+	"version": function(){
+	var msg = "<p>0.0.1</p>";
+	return msg;
+        return " ";
+        },
+
+	"ls": function(){
+        text = "Music/ Desktop/ do_not_run.sh";
+	return text
+        return " ";
+        },
+
+	"./do_not_run.sh": function(){
+	print("i am <i>b r o k e n</i>")
+        text = "uhoh" + self.function();
+	return text
+        return " ";
+        },
+	
+        "fuck": function(){
+        text = "<span style='color: #e60000'>+10 Bounty</span>";
+	return text
+        return " ";
+        }
+	
+	};
+
+	$(document).on('touchstart', function() {
+	var documentClick;
+	documentClick = true;
+	});
+
+	$(document).on('touchmove', function() {
+	var documentClick;
+	documentClick = false;
+	});
+
+	$(document).on('click touchend', function(event) {
+	var documentClick;
+	if (event.type === 'click') {
+	documentClick = true;
+	}
+	if (documentClick) {
+	setFocus();
+	}
+	});
+
+	$(document).keydown(function(event) {
+	var input;
+	setFocus();
+	if (event.keyCode === 13) {
+	input = getInput();
+	removeInput();
+	createLine(input);
+	if (input !== '') {
+        runCommand(input);
+	}
+	printInput();
+	}
+	});
+
+	$(document).ready(function() {
+	var msg;
+
+	msg = "Hi, my name is Adnan Shaikh, I'm a software engineer living and working in Pune, India.<br /> You can ask the terminal about myself by typing <b>about</b> or my <b>resume</b>, <b>blog</b>, etc. <p>If you’re lost you can always type <b>help</b>."
+
+      printBlock(msg);
+      printInput();
+      setFocus();
+      });
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88085331-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

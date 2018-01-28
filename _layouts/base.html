@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="navigation" class="clearfix">
+    <a href="/">home/</a>
+    <a href="/blog">blog/</a>
+    <a href="/resume">resume/</a>
+    <a href="/terminal.html">terminal/</a>
+  </div>
+
+  {{ content }}
+
+  <div style="clear:both;"></div>
+  <div class="poweredby">
+      <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Made with <3</span></a>
+  </div>
+  </body>
+</html>
