@@ -3,11 +3,11 @@
 $base03:    #002B36;
 $base02:    #073642;
 $base01:    #586E75;
-$base00:    #657B83;
-$base0:     #839496;
+$base00:    #112;
+$base0:     #333b3c;
 $base1:     #93A1A1;
-$base2:     #EEE8D5;
-$base3:     #FDF6E3;
+$base2:     #f8f5ed;
+$base3:     #fffff8;
 $yellow:    #B58900;
 $orange:    #CB4B16;
 $red:       #DC322F;
@@ -21,16 +21,14 @@ code {
     font-size: 15px;
 }
 p code {
+    background-color: rgba(177,47,185,.09);
     color: $base0;
     font-size: 16px;
 }
 
 .highlight {
   background-color: $base2;
-  padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  border-radius: 7px;
-  margin: 20px 0 20px 0;
+  padding: 3px 3px 3px 8px;
   overflow-x: auto;
 }
 

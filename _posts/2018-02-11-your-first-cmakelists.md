@@ -1,15 +1,18 @@
 ---
 layout: post
-title: Babby's first CMakeLists.txt
+title: Your first CMakeLists.txt
 description: cmake my day
 featured: true
 ---
 
-First off, I think writing a make file to make another make file is incredibly
-unproductive, meta and probably the worst first step you can take if you're
-trying to get started on a weekend project.
-Also what is going on with the syntax? It's so ambiguous at times and it's
-really infuriating. Take this for example.
+Writing a makefile to make another makefile is an unproductive, meta and
+probably the worst first step you can take if you're trying to get started on a
+weekend project. Start hacking first, worry about the build system later. But
+given how I'm usually terrible at following my own rules, writing makefiles is
+my way of procrastinating. Each time I do decide to write one I'm usually at a
+loss for code. There's a bunch of ways to do the same thing and what adds even
+more to this whole _experience_ is the syntax. It's incredibly ambiguous at times
+and makes for a really infuriating experience. Take this for example.
 
 The following are all equivalent statements:
 ```cmake
@@ -21,7 +24,7 @@ SET( x;a;b;c )
 
 _Delightful._
 
-After nearly wasting an entire day to figure out how this all works, here's how
+Alas, after spending a stupid amount of time on grokking the flow, here's how
 to write a basic no nonsense ```CMakeLists.txt``` for your C/C++ project.
 
 ## The Bare Minimum

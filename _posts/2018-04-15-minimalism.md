@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Minimalism is in the eye of the beholder
+title: Yet another minimalist library
 description: Minimalist libraries
 featured: true
 ---
 
-If you've ever woked with large libraries like
-[Kafka](https://github.com/edenhill/librdkafka), you've probably yearned for a
-simpler API too. At what point you decide a library is minimalistic or not is
+After working with large libraries like
+[Kafka](https://github.com/edenhill/librdkafka) and spending hours with my nose
+stuck in the documentation, I wanted to learn what it takes to design an API
+from scratch. At what point you decide a library is minimalistic or not is
 completely subjective and arbitary. But I think I have a few guidelines, so in
 honor of that I'm christening my very own header-only libary and I call it...
 
@@ -23,7 +24,7 @@ honor of that I'm christening my very own header-only libary and I call it...
 ## libshaikh
 libshaikh is intended to be a little helper header library to quickstart
 projects in C. With support for features like dynamic strings and common data
-structures like linked lists and hash maps. A noble yet mighty cause, one that's
+structures like linked lists and hash maps. A trivial project yet one that's
 been done time and time again. Here are a few design goals I have in mind while
 going about this.
 

@@ -1,14 +1,13 @@
 ---
 ---
-
 $base03:    #002b36;
 $base02:    #073642;
 $base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
+$base00:    #112;
+$base0:     #333b3c;
 $base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
+$base2:     #f8f5ed;
+$base3:     #fffff8;
 $yellow:    #b58900;
 $orange:    #cb4b16;
 $red:       #dc322f;
@@ -36,15 +35,19 @@ div.site-content {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+@font-face{font-family:Vollkorn;font-style:normal;src:url(/assets/fonts/Vollkorn-Regular.otf)}
+
 body {
 	font-family: 'Vollkorn', serif;
+	font-feature-settings: 'lnum';
 	color: $text-color;
 	background-color: $background-color;
-        font-size: 18px;
+    font-size: 17.8px; //OTF font is having rendering issues at 18px
 }
 
 p, li {    font-size: 1.3em;
-    font-size: 18px;
+    font-size: 17.8px;
     line-height: 1.5em;
 }
 
@@ -155,7 +158,7 @@ footer {
 	/* wrapper stays 480px wide past 480px wide and is kept centered */
 	.wrapper {
 		width: 480px;
-		margin: 5% auto 0 auto;
+		margin: 2.5% auto 0 auto;
 	}
         div.site-content {
             width: 480px;
