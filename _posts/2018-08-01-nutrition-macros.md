@@ -62,26 +62,6 @@ glucose monomers.
   insects (like termites) have special bacteria in their intestines that can
   break the 1-4 linkage of b-glucose, but we cannot break this bond!  
 
-
-### **Glyco-proteins and Glyco-lipids**  
-**Function**: Cell-cell commnication, Cell recognition: "Self" vs. "non-self"
-immune response, cell adhesion (cells sticking together).  
-**Examples**: The ABO blood groups in humans are the result of red blood cells
-coated with specific O-type, A-type and/or B-type glycoproteins
-("sugar-proteins") and glycolipids ("sugar-lipids"); the immune response to
-pathogenic bacteria is often stimulated by the glycoproteins on the surface of
-the bacteria, organ transplant rejection, etc!  
-**Structure**: A few of the most common sugars in cell-cell communication are
-Galactose, Glucose, Mannose, Sialic Acid, N-acetyglucosamine, and many others!
-(You do not need to know the names of these sugars). Sugars come in so many
-three-dimensional shapes, and connect to each other and to proteins and lipids
-in so many ways that an almost infinite number of possible combinations is
-possible - allowing cells to precisely differentiate between "self" and
-"non-self".  
-**Note**: Over 60% of all proteins (and many lipids) in cells are bound to sugar
-molecules, including antibodies, some hormones, and many other cellular enzymes,
-and plasma membrane lipids.  
-
 ## Proteins
 
 ![protein]
@@ -129,10 +109,10 @@ Lipid bilayers (the plasma membrane of every cell and the membranes within eukar
 ![diglyceride]
 {: align="middle"}  
 
-**Structure**: similar to a triacylglycerol, but has only 2 fatty acid tails, and in addition has a phosphate group = (1 glycerol, 2 fatty acids, and a -PO4)
+**Structure**: Similar to a triacylglycerol, but has only 2 fatty acid tails, and in addition has a phosphate group = (1 glycerol, 2 fatty acids, and a -PO4).
 The -PO4 makes the glycerol "head" water soluble, or hydrophilic.
 The long hydrocarbon tail is hydrophobic.  
-**Function**: Due to this "amphipathic" nature (both water-loving and water-hating regions in a single molecule), phospholipids self assemble into bilayers that shield the tail from water = forming membranes (phospholipid bilayers!).  
+**Function**: Due to this "amphipathic" nature (both water-loving and water-hating regions in a single molecule), phospholipids self assemble into bilayers that shield the tail from water = forming membranes (phospholipid bilayers!)  
 
 ### **Steroids (cholesterol, steroid hormones)**  
 **Structure**: Considered to be a "cousin" of fats - and are made from lipids. Have no fatty acids in their structure, but are very hydrophobic
