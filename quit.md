@@ -1,8 +1,8 @@
 ---
-title: Qutting Instagram
+title: Quitting Instagram
 layout: contentbase
 ---
-Qutting Instagram
+Quitting Instagram
 ======
 
 tl;dr
@@ -16,19 +16,19 @@ tl;dr
 
 Over the last year and a half, I've been deeply conflicted about the use of social media. It wasn't much of an issue while I was still in college but I could begin to feel its insidious influence after graduating. It made me feel inferior; you see everyone's highlight reels, their successes but never their failures. And most often than not it's always unsolicited, but then again it's my fault for expecting anything otherwise. 
 
-Inherently social media has always been the same. People posting updates about their life. But ever since most of my friends and I graduated from college, the kind of updates I see are directly related to how well they are doing in life. Before it would be something along the lines of _"Ugh finals week"_, now it's more like _"Just landed a kickass new job"_ or _"Just got into a fancy shmancy grad school"_ or even _"Yo check out this sick trip I just went on"_. You begin to sit and stare at your screen and question your life choices. Call me insecure all you want, but this is how I truly feel. I compare myself to others, it's a big glaring flaw of mine. Some comparisions are good, they inspire me to do things I wouldn't have done otherwise, however there are some times when I'm wrought with jealousy and unable to focus for the rest of the day.
+Inherently social media has always been the same. People posting updates about their life. But ever since most of my friends and I graduated from college, the kind of updates I see are directly related to how well they are doing in life. Before it would be something along the lines of _"Ugh finals week"_, now it's more like _"Just landed a kick-ass new job"_ or _"Just got into a fancy shmancy grad school"_ or even _"Yo check out this sick trip I just went on"_. You begin to sit and stare at your screen and question your life choices. Call me insecure all you want, but this is how I truly feel. I compare myself to others, it's a big glaring flaw of mine. Some comparisons are good, they inspire me to do things I wouldn't have done otherwise, however there are some times when I'm wrought with jealousy and unable to focus for the rest of the day.
 
-In its defense I understand that these networks do have some utlity to them, but the singal to nosie ratio is vey low.
+In its defense, I understand that these networks do have some utility to them, but the signal to noise ratio is very low.
 
 What worries me the most about quitting social media is:
 1. Losing touch with old friends
 2. Making new friends
-3. Oppurtunity cost (FOMO)
+3. Opportunity cost (FOMO)
 
 I have no problem staying in touch with my current close friend circle, we're always active on text. Social media provides you the context to just hit an old friend up if they happen to post something, but without it, you're taking shots in the dark, hoping that the other person cares enough to fill you in on their life. Either that or you get hit with a, "Just check out my feed, it'll fill you in".
 
-So far to remedy my--first world--problems, I've muted everyone's stories and posts on Instagram. It's a weird solution because now it only shows my photos on the main feed. What I really wanted to do was write an Xposed module to disable the explore page and the main feed. To keep my Instagram use deliberate--like, "Hey, what's this person up to I wonder?" Last year, I'd written a terminal browser for Instagram, mainly just to reply to DMs without all the other cruft--it was incredibly slow though. My final two options are to either delete Instagram off of my phone or go completely nuclear and delete my account. I'll stick to deleting the app.
+So far to remedy my (first world) problems, I've muted everyone's stories and posts on Instagram. It's a weird solution because now it only shows my photos on the main feed. What I really wanted to do was write an Xposed module to disable the explore page and the main feed. To keep my Instagram use deliberate, like, _"Hey, what's this person up to I wonder?"_ Last year, I'd written a terminal browser for Instagram, mainly just to reply to DMs without all the other cruft--it was incredibly slow though. My final two options are to either delete Instagram off of my phone or go completely nuclear and delete my account. I'll stick to deleting the app.
 
-And thus I begin my 30 day detox all over again, hoping I'll never come back. I guess I'll finally find out if there really is an oppurtunity cost associated with leaving a platform almost everybody you know is on.
+And thus I begin my detox all over again, hoping I'll never come back. I guess I'll finally find out if there really is an opportunity cost associated with leaving a platform almost everybody you know is on.
 
 Cheers.
