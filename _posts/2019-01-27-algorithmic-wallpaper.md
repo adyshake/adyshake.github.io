@@ -22,7 +22,7 @@ for i ← 1 to 100
             then plot(x, y, blue)
 ```
 
-At the core of function is the statement *_x<sup>2</sup> + y<sup>2</sup>_*, the circular function. At low side values you can see concentric circles forming.
+At the core of function is the statement <b>_x<sup>2</sup> + y<sup>2</sup>_</b>, the circular function. At low side values you can see concentric circles forming.
 
 {: align="center"}
 ![conc-circles]
