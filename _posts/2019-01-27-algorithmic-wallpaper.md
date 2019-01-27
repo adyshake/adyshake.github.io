@@ -25,12 +25,12 @@ for i ← 1 to 100
 At the core of function is the statement *_x<sup>2</sup> + y<sup>2</sup>_*, the circular function. At low side values you can see concentric circles forming.
 
 {: align="center"}
-![conc-circles](/images/conc-circles.png)
+![conc-circles]
 
 As the side value increases, the concentric circles get denser and moiré patterns begin forming like so. Colors begin to overlap leading to some very cool patterns as the algorithm iterates over the side value.
 
 {: align="center"}
-![conc-moire-patterns](/images/conc-moire-patterns.png)
+![conc-moire-patterns]
 
 Here's a dynamic version implemented in JavaScript. I spent more time trying to get dynamic resizing to work than implementing the actual algorithm itself. _Yay software engineering_.
 
@@ -116,3 +116,8 @@ Here's a dynamic version implemented in JavaScript. I spent more time trying to 
 
     main();
 </script>
+
+[conc-circles]: /images/conc-circles.png
+{: width="70%"}
+[conc-moire-patterns]: /images/conc-moire-patterns.png
+{: width="70%"}
