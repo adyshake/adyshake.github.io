@@ -43,5 +43,5 @@ exclude:
   - README.md
   - first_setup.md
   
-disqus: adnanshaikh
+#disqus: adnanshaikh
 analytics: UA-88085331-1
