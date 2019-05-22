@@ -12,7 +12,7 @@ Experience
 ----------
 
 ### Persistent Systems (Accelerite)
-*Software Engineer, July 2017 - Present*
+*Software Engineer, July 2017 - March 2019*
 
 * Ported Sentient’s agent-less client from Java to C++ to improve runtime
   performance and reduce its memory footprint.
