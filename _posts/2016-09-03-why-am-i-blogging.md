@@ -2,7 +2,7 @@
 layout: post
 title: Why am I blogging?
 description: Delve deep into the reasons why I do what I do
-featured: true
+featured: false
 ---
 
 Teaching someone a particular concept always reinforced my learning, so I

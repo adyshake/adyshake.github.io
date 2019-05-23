@@ -2,7 +2,7 @@
 layout: post
 title: Yet another minimalist library
 description: Minimalist libraries
-featured: true
+featured: false
 ---
 
 After working with large libraries like
