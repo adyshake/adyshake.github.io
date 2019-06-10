@@ -16,6 +16,10 @@ plugins:
   - jekyll-compose
   - jekyll-redirect-from
 
+sass:
+    sass_dir: assets
+    style: compressed
+
 pagination:
   enabled: true
   per_page: 8
