@@ -3,12 +3,18 @@ author: Adnan Shaikh
 title: "Adnan Shaikh's Blog"
 description: "Adnan Shaikh's personal website and blog."
 keywords: blog programming student resume technology talks
-tagline: A blog to enhance my elusion of professionalism
+tagline: A blog to enhance my delusion of professionalism
 logo: /images/me.jpg
 
 url: adnanshaikh.com
 
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-compose
+  - jekyll-redirect-from
 paginate: 10
 paginate_path: "blog/page:num"
 
@@ -21,7 +27,15 @@ kramdown:
   math_engine: mathjax
   hard_wrap: false
 
-exclude: ["CNAME", "README.md"]
-
+exclude:
+  - CNAME
+  - Rakefile
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - first_setup.md
+  
 disqus: adnanshaikh
 analytics: UA-88085331-1
