@@ -10,10 +10,10 @@ task :default do
     
     # Add HTMLProofer.check_directory("./_site").run in order to start checking
     # for invalid HTML
-    HTMLProofer.check_directory(
-    "./_site",
-    url_ignore: [/linkedin.com/]
-    ).run
+    # HTMLProofer.check_directory(
+    # "./_site",
+    # url_ignore: [/linkedin.com/]
+    # ).run
 
     puts "Jekyll successfully built"
   end
