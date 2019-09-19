@@ -2,11 +2,11 @@ Hey there, my name is Adnan Shaikh and this is my personal website where I keep
 a diary of my various misadventures that roughly fall into the category of
 "recreational programming".  
 
-I'm a recent graduate of Vishwakarma Institute of Technology with a degree in
-Computer Enginering and I'm currently living in Pune, India. As far as my career
-goes I'm a software engineer at Persistent Systems' product development division
-Accelerite, working on some cool things. I'm peculiarly intrigued by artificial
-intelligence and its implications, albeit scary but still rather exciting.  
+I'm a graduate student at the University of Texas at Dallas pursuing a master's
+degree in computer science. As far as my recent career goes, I was a software
+engineer at Persistent Systems' product development division, Accelerite. I'm
+peculiarly intrigued by artificial intelligence and its implications, albeit
+scary but still rather exciting.  
 
 I'm well aware there's a wide world outside of computer science too. In my free
 time, you can find me experimenting with my fitness regiment or buried in a new

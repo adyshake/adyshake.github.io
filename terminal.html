@@ -93,9 +93,6 @@
         case 'email':
         window.location.href = 'mailto:adnan.shaikh1806@gmail.com?subject=Project';
         return;
-        case 'twitter':
-        window.open('https://twitter.com/#!/adyshake_');
-        return;
         default:
         if (key.length) {
         text = 'Invalid key: ' + key;
@@ -105,22 +102,14 @@
         p = '<p>Contact information:</p>';
         p += '<p>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adnan Shaikh</p>';
         p += '<p>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adnan.shaikh1806@gmail.com</p>';
-        p += '<p>Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pune, India</p>';
+        p += '<p>Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dallas, Texas</p>';
 	p += '<p>Github:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/adyshake" target="_blank">adyshake</a></p>';
-        p += '<p>Twitter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/#!/adyshake_" target="_blank">adyshake_</a></p>';
 	p += '<p>Linked In:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/adnan-shaikh" target="_blank">adnan-shaikh</a></p>';
-	p += '<p>Steam:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://steamcommunity.com/id/AdyShake" target="_blank">adyshake</a></p>';
         text = '<div class=\'contact\'>' + p + '</div>';
         print(text);
         }
 	}
 	},
-	
-        "twitter": function(){
-        window.open('https://twitter.com/#!/adyshake_/');
-        return " ";
-        },
-	
         "email": function(){
         window.location.href = "mailto:adnan.shaikh1806@gmail.com?subject=Project";
         return " ";
@@ -132,7 +121,7 @@
         },
 
 	"about": function(){
-        var msg = "<p>Hey there, my name is <i>Adnan Shaikh</i> and this is my personal site where I keep a diary of my various misadventures that roughly fall into the \"recreational programming\" category<br>I've just graduated with a degree in computer engineering from Vishwakarma Institute of Technology, Pune.<br>I'm peculiarly intrigued by machine learning and particularly deep learning.<br>In my free time, you can find me buried in a new book that I am often told, reading all too slowly.<br>The Internet's a big place, standard disclaimers about these being my views and not my employer's apply.</p>";
+        var msg = "<p>Hey there, my name is <i>Adnan Shaikh</i> and this is my personal site where I keep a diary of my various misadventures that roughly fall into the \"recreational programming\" category<br>I'm currently pursuing my master's in computer science at the University of Texas at Dallas.<br>I'm peculiarly intrigued by machine learning and particularly deep learning.<br>In my free time, you can find me buried in a new book that I am often told, reading all too slowly.<br>The Internet's a big place, standard disclaimers about these being my views and not my employer's apply.</p>";
 	return msg;
         return " ";
         },
@@ -225,7 +214,7 @@
 	$(document).ready(function() {
 	var msg;
 
-	msg = "Hi, my name is Adnan Shaikh, I'm a software engineer living and working in Pune, India.<br /> You can ask the terminal about myself by typing <b>about</b> or my <b>resume</b>, <b>blog</b>, etc. <p>If you’re lost you can always type <b>help</b>."
+	msg = "Hi, my name is Adnan Shaikh, I'm a graduate student at the University of Texas at Dallas.<br /> You can ask the terminal about myself by typing <b>about</b> or my <b>resume</b>, <b>blog</b>, etc. <p>If you’re lost you can always type <b>help</b>."
 
       printBlock(msg);
       printInput();
