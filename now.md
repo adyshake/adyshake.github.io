@@ -22,22 +22,8 @@ If you can't beat the system, then just keep grinding till you're better at it I
 
 Here's my beeminder leetcode graph
 
-
-
-<center>
-    <div id="goal-graph" class="main graph">
-            <object type="image/svg+xml" data="https://bmndr.s3.amazonaws.com/uploads/bb383732-a864-4615-ab82-afaa5f5bf5f4.svg" id="graph-svg">
-            <div class="fallback">
-              <p>Whoops, something went wrong loading your graph!</p>
-              <p>Give us a second to try'n fix that, or
-              <a href="#" id="svg-reload" class="">Reload</a>
-              </p>
-            </div>
-            </object>
-    </div>
-    <br>
-    <i>Ma leetcode grind</i>
-</center>
+{: align="middle"}
+![beeminder]
 
 Here's hoping this can keep me in line and make me the 10x engineer that every company dreams of that can reverse linked lists in less than 5 minutes.
 
@@ -46,4 +32,6 @@ This page is a public declaration of my priorities and a reminder to myself for 
 _Last updated 11th November 2019_
 
 [now_page]: /images/now_page.jpg
+{: width="70%"}
+[beeminder]: /images/beeminder.png
 {: width="70%"}

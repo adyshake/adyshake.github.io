@@ -20,7 +20,7 @@ $green:     #859900;
 code {
     font-size: 15px;
 }
-p code {
+p code, li code {
     background-color: rgba(177,47,185,.09);
     color: $base0;
     font-size: 16px;
