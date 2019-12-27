@@ -8,7 +8,6 @@ Knowledge Base
 ## SQL
 * [SQL Joins](/kb/sql_join)
 
-
 ## Security
 * [Public Key Encryption](/kb/pub_key)
 
@@ -20,6 +19,9 @@ Knowledge Base
 
 ## Books
 * [Lifespan](/kb/lifespan)
+
+## Life
+* [Exercise FAQ](/kb/exercise_faq)
 
 ## Misc
 * [Windows](/kb/windows)

@@ -11,9 +11,11 @@ Rooting an Android Phone
 * [TWRP Recovery](https://dl.twrp.me/)
 * [EdXposed Intaller](https://github.com/solohsu/XposedInstaller/releases) 
 
-## Install TWRP Recovery
-Hold Volume Down and Power button till phone vibrates. Then reboot into
-fastboot by navigating through the following menus, `English -> Advanced -> Reboot to Fasboot`
+## Installation
+First, copy over all the downloaded files on to the phone. Next, hold the Volume
+Down and Power button till phone vibrates. Then reboot into fastboot by
+navigating through the following menus, `English -> Advanced -> Reboot to
+Fasboot`
 
 Once in fastboot, run the following command to boot into TWRP
 ```
