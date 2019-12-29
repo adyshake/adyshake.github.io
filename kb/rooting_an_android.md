@@ -18,8 +18,8 @@ navigating through the following menus, `English -> Advanced -> Reboot to
 Fasboot`
 
 Once in fastboot, run the following command to boot into TWRP
-```
-fastboot boot .\twrp-3.3.1-2-enchilada.img
+```bash
+fastboot boot ./twrp-3.3.1-2-enchilada.img
 ```
 
 Now run the following steps,

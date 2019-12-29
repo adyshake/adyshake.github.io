@@ -55,7 +55,7 @@ References:
 **Yes!** Infact it should be part of your diet unless you have high blood pressure.
 
 ```
-"coffee was associated with a probable decreased risk of breast, colorectal,
+"...coffee was associated with a probable decreased risk of breast, colorectal,
 colon, endometrial, and prostate cancers; cardiovascular disease and mortality;
 Parkinson’s disease; and type-2 diabetes."
 ```

@@ -28,7 +28,7 @@ PGP stores its public keys in the `.asc` extension.
 
 ## Public Key Encryption Usage on Linux
 
-```
+```bash
 ssh-keygen -t rsa
 ```
 
@@ -36,7 +36,7 @@ This command creates a public/private keypair. It provides the option of
 encrypting the private key, but that means you must supply the passphrase each
 time you use it. This prevents attackers from using your stolen key.
 
-```
+```bash
 id_rsa
 id_rsa.pub
 ```
@@ -45,18 +45,18 @@ The command generates two files, `id_rsa` is your private key and `id_rsa.pub`
 is your public key. To log on to remote systems without supplying a password, 
 copy the public key to the `authorized_keys` file on the remote system.
 
-```
+```bash
 cat ~/.ssh/id_rsa.pub | ssh user@hostname "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >>  ~/.ssh/authorized_keys"
 ```
 The following method is also a convenient alternative
-```
+```bash
 ssh-copy-id user@hostname
 ```
 
 To set aliases for hosts and default usernames for them as well, a `config` file
 can be created as well.
 
-```
+```bash
 Host amazon1
     HostName ec2.amazon.com
     User ec2-user
@@ -69,7 +69,7 @@ to keep it open, `ServerAliveCountMax` option specifies that this should only be
 performed 30 times, thus ensuring your session won’t time-out for at least 30
 minutes of inactivity. Don't forget to also run:
 
-```
+```bash
 chmod 600 ~/.ssh/config
 ```
 
@@ -80,7 +80,7 @@ keyring.
 
 To improve security you can disable standard password authentication and enforce
 key-based authentication only.
-```
+```bash
 # vi /etc/ssh/sshd_config
 PasswordAuthentication no
 ```
@@ -90,7 +90,7 @@ server to connect to it.
 
 ### Miscellaneous commands
 * Generate the corresponding public key using a private key
-```
+```bash
 ssh-keygen -y
 ```
 

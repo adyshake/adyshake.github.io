@@ -30,7 +30,7 @@ We'll use following tables this example,
 
 Here's the SQL to set it up
 
-```
+```sql
 CREATE TABLE friends
 (
   friend_id INT,
@@ -62,7 +62,7 @@ INSERT INTO pets values(7, NULL, 'iguana',     'Scales'   );
 
 ## Inner join
 
-```
+```sql
 SELECT * FROM friends
 INNER JOIN pets
 ON friends.friend_id = pets.owner_id;
@@ -107,7 +107,7 @@ Outer joins can be classified into three types:
 
 ### Left outer join
 
-```
+```sql
 SELECT * FROM friends
 LEFT OUTER JOIN pets
 ON friends.friend_id = pets.owner_id
@@ -138,7 +138,7 @@ Few things to note about the results:
 * Scales the iguana is not included in the table because he has a `NULL` owner.
 
 ### Right outer join
-```
+```sql
 SELECT * from friends
 RIGHT OUTER JOIN pets
 ON friends.friend_id = pets.owner_id;
@@ -166,7 +166,7 @@ Notice how Scales the iguana is in, but Sam is left out.
 These don’t exist in MySQL but do in PostgreSQL and other databases.
 If your database does support full outer joins, the syntax should look like this:
 
-```
+```sql
 SELECT * FROM friends
 FULL OUTER JOIN pets
 ON friends.friend_id = pets.owner_id;
@@ -174,7 +174,7 @@ ON friends.friend_id = pets.owner_id;
 
 You can emulate a full outer join in MySQL like this:
 
-```
+```sql
 SELECT * FROM friends
 LEFT JOIN pets ON friends.friend_id = pets.owner_id
 UNION
@@ -205,13 +205,13 @@ there's no matching between tables. It's forms a cartesian product.
 The cross join below will take every row from `friends` and mash it together
 with every other row in `pets`. 
 
-```
+```sql
 SELECT * FROM friends
 CROSS JOIN pets;
 ```
 
 Implicit cross join syntax:
-```
+```sql
 SELECT * FROM friends, pets;
 ```
 
