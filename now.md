@@ -32,6 +32,6 @@ This page is a public declaration of my priorities and a reminder to myself for 
 _Last updated 11th November 2019_
 
 [now_page]: /images/now_page.jpg
-{: width="70%"}
+{:class="shadow-img"  width="70%"}
 [beeminder]: /images/beeminder.png
-{: width="70%"}
+{:class="shadow-img"  width="70%"}

@@ -206,4 +206,4 @@ anymore
 
 [whatsapp-viewer]: https://github.com/andreas-mausch/whatsapp-viewer
 [ct]: /images/ct.jpg
-{: width="70%"}
+{:class="shadow-img"  width="70%"}

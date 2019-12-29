@@ -35,7 +35,7 @@ As the side value increases, the concentric circles get denser and moiré patter
 Here's a dynamic version implemented in JavaScript. I spent more time trying to get dynamic resizing to work than implementing the actual algorithm itself. _Yay software engineering_.
 
 <center>
-<canvas id="wallpaperCanvas" width="100" height="500"></canvas>
+<canvas class="shadow-img" id="wallpaperCanvas" width="100" height="500"></canvas>
 </center>
 
 <script>
@@ -118,6 +118,6 @@ Here's a dynamic version implemented in JavaScript. I spent more time trying to 
 </script>
 
 [conc-circles]: /images/conc-circles.png
-{: width="70%"}
+{:class="shadow-img"  width="70%"}
 [conc-moire-patterns]: /images/conc-moire-patterns.png
-{: width="70%"}
+{:class="shadow-img"  width="70%"}

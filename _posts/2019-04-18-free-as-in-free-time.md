@@ -2,7 +2,7 @@
 layout: post
 title: Free as in free time
 description: What freedom really costs you
-featured: true
+featured: false
 ---
 
 4 months ago, I decided to abstain from using social media and overall it's been going really well. I have to admit though I haven't been completely off for good. I keep slipping back in everytime I'm bored but I'm glad I decided to mute everyone when I did quit. The only thing I do now is go through everyone's greyed out stories which aren't really interesting. Once I got comfortable living without social media, it got me thinking about other omnipresent services I use in my life. Namely, Google.
