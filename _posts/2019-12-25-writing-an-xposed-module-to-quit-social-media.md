@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Qutting Instagram stories
+title: Writing an Xposed Module to Quit Social Media
 description: The downside of sharing
 featured: true
 ---
@@ -21,11 +21,10 @@ write an Xposed module myself to get it done. So I let it remain and arguing
 that I might get lose touch if I cut myself off completely--exactly the same
 way I felt before muting my feed by the way.
 
-Fastforward a few months and the content on my stories had gotten extremely
+Fast forward a few months and the content on my stories had gotten extremely
 political, ripe with both posts containing violence and misinformation. It
-reached a point where it genuinely started affecting my mood. I'm not here to
-talk about the source of the issue at hand, but this is what finally drove to me
-to write the Xposed module once and for all.
+reached a point where it genuinely started affecting my mood. It's what finally
+drove to me to write the Xposed module once and for all.
 
 I forked [TremendoX's UnclutterIG](https://github.com/TremendoX/UnclutterIG) and
 extended it to add more hooks to intercept the `setAdapter()` function while

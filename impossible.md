@@ -140,4 +140,4 @@ List of books I've read:
 [cliff-dive]:https://youtu.be/XPeZyCxxVKA
 [graduate-college]:/images/impossible/graduate-college.jpg
 [impossible-banner]:/images/impossible/impossible-banner.jpg
-{: width="70%"}
+{:class="shadow-img" width="70%"}
