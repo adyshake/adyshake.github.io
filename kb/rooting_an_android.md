@@ -7,9 +7,10 @@ Rooting an Android Phone
 
 ## Download prerequisites
 * [Magisk Manager](https://magiskmanager.com/downloading-magisk-manager)
-* [Magisk](https://github.com/topjohnwu/Magisk/releases/download/v20.1/Magisk-v20.1.zip)
+* [Magisk](https://github.com/topjohnwu/Magisk/releases/)
 * [TWRP Recovery](https://dl.twrp.me/)
-* [EdXposed Intaller](https://github.com/solohsu/XposedInstaller/releases) 
+* [TWRP Recovery OP6](https://forum.xda-developers.com/oneplus-6/development/recovery-unofficial-twrp-touch-recovery-t3860815)
+* [EdXposed Manager](https://github.com/ElderDrivers/EdXposedManager/releases) 
 
 ## Installation
 First, copy over all the downloaded files on to the phone. Next, hold the Volume
@@ -27,4 +28,9 @@ Now run the following steps,
 * Install Magisk
 * Reboot, and install the Magisk Manager and the EdXposed Installer APK
 * Open Magisk Manager, and download `Riru - Core` and `Riru - EdXposed (SandHook)`
-* Reboot 
+* Reboot
+
+
+# Some caveats
+Deleting magisk modules doesn't work sometimes, so you can delete them manually
+by navigating to `/data/adb/modules`

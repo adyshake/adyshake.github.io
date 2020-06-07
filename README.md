@@ -22,6 +22,17 @@ sudo gem install bundler
 bundler update --bundler
 ```
 
+In the event that `sudo gem update --system` does not work. It's probably
+because api.rubygems.org is unreachable by IPV6. Resolving this address works in
+most browsers because they implement the Happy Eyeballs algorithm. OS X
+implements this on the system level, where as Linux does not.
+Happy Eyeballs is an algorithm that makes dual-stack applications more
+responsive by attempting to connect to both IPV4 and IPV6 at the same time
+(prefers IPV6).
+Disabling IPV6 is one solution, another faster one is simply running 
+`dig api.rubygems.org +short` and appending one of the address into the
+`/etc/hosts/` file like, `151.101.192.70 rubygems.org`
+
 Run this to download all necessary packages
 
 ```bash
@@ -32,4 +43,11 @@ Begin serving by running
 
 ```bash
 sudo jekyll serve
+```
+
+Note: WSL2 with Ubuntu 20.04 seems to have broken the filesystem watcher so jekyll 
+serve does not work. A work around for this would be to move your project files 
+to the native filesystem.
+```bash
+sudo cp -r /mnt/c/Users/adnan/JD/10-19_Projects/11_Github/adyshake.github.io ~/ && cd ~/adyshake.github.io && jekyll serve
 ```
