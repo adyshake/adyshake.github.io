@@ -3,10 +3,8 @@ a diary of my various misadventures that roughly fall into the category of
 "recreational programming".  
 
 I'm a graduate student at the University of Texas at Dallas pursuing a master's
-degree in computer science. As far as my recent career goes, I was a software
-engineer at Persistent Systems' product development division, Accelerite. I'm
-peculiarly intrigued by artificial intelligence and its implications, albeit
-scary but still rather exciting.  
+degree in computer science. As far as my recent career goes, I recently interned
+at Amazon this past summer working with the Consumer Payments Team.
 
 I'm well aware there's a wide world outside of computer science too. In my free
 time, you can find me experimenting with my fitness regiment or buried in a new

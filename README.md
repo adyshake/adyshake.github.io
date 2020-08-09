@@ -51,3 +51,7 @@ to the native filesystem.
 ```bash
 sudo cp -r /mnt/c/Users/adnan/JD/10-19_Projects/11_Github/adyshake.github.io ~/ && cd ~/adyshake.github.io && jekyll serve
 ```
+Another alternative is to stop the file watcher altogether,
+```bash
+jekyll serve --no-watch
+```

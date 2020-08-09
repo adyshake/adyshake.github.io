@@ -18,6 +18,14 @@ Experience
    <i>Software Engineer Intern, May 2020 - August 2020</i>
 </p>
 
+* Migrated serving the frontend of an existing tightly coupled monolithic
+  service written with SpringMVC and moved it to AWS using S3, Amplify, and
+  CloudFront. This decoupled frontend allowed our team to launch our product
+  more effectively in multiple marketplaces.
+* Set up a continuous integration/deployment solution on AWS using CDK,
+  CodeCommit, CodeBuild, CodePipeline, and Lambda along with metrics to track
+  API usage and alarm on-calls in case of excessive errors.
+
 <p vertical-align="center"> <img src="/images/resume/persistent_logo.png"
   width="4.5%"
   style="float:left;">
@@ -30,9 +38,9 @@ Experience
 * Implemented a separate updater service to handle seamless background updates
   of the main application.
 * Solved major critical crashes and refactored major portions of the codebase
-  to increase the reliability of the system
+  to increase the reliability of the system.
 * Created Windows Installer (MSI) merge modules and installers using
-  InstallShield along with build automation scripts
+  InstallShield along with build automation scripts.
 
 <p vertical-align="center"> <img src="/images/resume/persistent_logo.png"
   width="4.5%"
