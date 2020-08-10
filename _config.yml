@@ -11,7 +11,7 @@ url: adnanshaikh.com
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-compose
   - jekyll-redirect-from
@@ -20,10 +20,8 @@ sass:
     sass_dir: assets
     style: compressed
 
-pagination:
-  enabled: true
-  per_page: 8
-  permalink: '/blog/page:num/'
+paginate: 10	
+paginate_path: "blog/page:num"
 
 markdown: kramdown
 highlighter: rouge
