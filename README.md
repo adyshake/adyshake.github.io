@@ -22,6 +22,11 @@ sudo gem install bundler
 bundler update --bundler
 ```
 
+To update gems run,
+```bash
+bundle update
+```
+
 In the event that `sudo gem update --system` does not work. It's probably
 because api.rubygems.org is unreachable by IPV6. Resolving this address works in
 most browsers because they implement the Happy Eyeballs algorithm. OS X
