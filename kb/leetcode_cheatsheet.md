@@ -19,7 +19,7 @@ new ArrayList<>(Arrays.asList(1, 2, 3));
 new int[] {1, 2, 3};
 ```
 
-### Sorting
+### Sorting and Searching
 ```java
 Arrays.sort(a, Collections.reverseOrder());
 Arrays.sort(logs, (log1, log2) -> {
@@ -30,6 +30,7 @@ Arrays.sort(logs, (log1, log2) -> {
     return IntegerObj1.compareTo(IntegerObj2);
     //For more techniques, https://www.baeldung.com/java-sorting
 });
+Arrays.binarySearch(nums, 0, nums.length, target);
 ```
 
 ### Strings
@@ -41,5 +42,5 @@ Character.isDigit("0");
 
 ### Binary Search
 ```java
-int mid = left + ((right - left) / 2);
+int mid = left + (right - left) / 2;
 ```
