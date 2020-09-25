@@ -1,0 +1,54 @@
+<style>
+    table,
+    td,
+    tr {
+        border: 0px
+    }
+    
+    #book-container {
+        display: flex;
+        flex-direction: reverse;
+    }
+    
+    #book-image {
+        margin-right: 10px;
+        text-align: left;
+    }
+    
+    #book-text {
+        margin: auto 0;
+    }
+    
+    img {
+        width: 175px;
+        height: 280px;
+        vertical-align: top;
+    }
+</style>
+<table id="book-table">
+
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/92671341.xml?key=YmVsH4mHjp3aaT2SI0zCg&v=2&shelf=read&per_page=200&page=1",
+            dataType: "xml",
+            success: function(data) {
+                $(data).find("review").each(function() {
+                    const bookTitle = $(this).find("book").find("title").text();
+                    var imageURL = $(this).find("book").find("small_image_url")[0].innerHTML;
+                    const imageSizeIdx = imageURL.search("SY75");
+                    if (imageSizeIdx != -1) {
+                        imageURL = imageURL.substring(0, imageSizeIdx) + "SY475_.jpg";
+                    }
+                    const bookImage = '<img src=\"' + imageURL + '\">';
+                    const bookDiv = '<div id="book-container">' + '<div id="book-image">' + bookImage + '</div>' + '<div id="book-text">' + bookTitle + '</div>' + '</div>';
+                    const bookRow = '<td>' + bookDiv + '</td>';
+                    const bookRowElement = $('<tr>' + bookRow + '</tr>');
+                    $("#book-table").append(bookRowElement);
+                });
+            }
+        });
+    });
+</script>

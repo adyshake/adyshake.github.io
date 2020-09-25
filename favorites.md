@@ -64,3 +64,9 @@ This is a list of my favorite movies, TV shows and video games.
 23. Bioshock Infinite _(2013)_
 24. Doom Eternal _(2020)_
 25. Resident Evil 2 _(2019)_
+
+## Books
+
+{% include goodread_books.html %}
+
+_Powered by Goodreads_
