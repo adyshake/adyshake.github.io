@@ -6,13 +6,13 @@ featured: true
 ---
 
 With the arrival of my Razer Core X eGPU enclosure, I was pretty excited to get
-back into some video editing and gaming, but there was a massive issue. My
-video and audio streams were both stuttering as soon as I'd plug it in. A bit of
+back into some video editing and gaming, but there was a massive issue. My video
+and audio streams were both stuttering as soon as I'd plug it in. A bit of
 googling led to me to the solution to disable my integrated GPU from the Device
-Manager. That's odd though, I don't see any complaints from users with dedicated
-NVIDIA GPUs in their machines. I figure NVIDIA Optimus must have something to do
-with this. Anyway with a working solution, I could finally begin automating this
-procedure.
+Manager. That was odd though, I didn't see any complaints from users with
+dedicated NVIDIA GPUs in their machines. I figure NVIDIA Optimus must have
+something to do with this. Anyway, with a working solution I could finally begin
+automating this procedure.
 
 Windows provides a pretty powerful interface to instrument your plugged in
 hardware through WMI -- Windows Management Interface. Here's the powershell

@@ -13,7 +13,7 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 ## Fitness/Health Goals
 
 ### Cardio
-* Run a 3K
+* ~~Run a 3K~~ (April 2018)
 * Run a 5K
 * Run a 10K
 * Run a 22K
@@ -26,20 +26,19 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 
 ### Gains
 
-* Do a 50 push-ups in one set
-* Do a 100 push-ups in one set
+* ~~Do a 50 push-ups in one set~~ (March 2020)
 * Do a muscle up
-* Do 15 pull-ups in a single-set
+* ~~Do 15 pull-ups in a single-set~~ (May 2018)
 * Do 20 pull-ups in a single-set
 * Do a one hand pull-up
-* Bench 50 kgs
-* Bench 75 kgs
+* ~~Bench 50 kgs~~ (August 2017)
+* ~~Bench 75 kgs~~ (February 2018)
 * Bench 100 kgs
-* Deadlift 50 kgs
-* Deadlift 75 kgs
-* Deadlift 100 kgs
-* Squat 50 kgs
-* Squat 75 kgs
+* ~~Deadlift 50 kgs~~ (February 2017)
+* ~~Deadlift 75 kgs~~ (April 2018)
+* ~~Deadlift 100 kgs~~ (June 2018)
+* ~~Squat 50 kgs~~ (February 2017)
+* ~~Squat 75 kgs~~ (May 2018)
 * Squat 100 kgs
 * Overhead Press 60 kgs
 
@@ -47,28 +46,17 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 
 * Do an iron cross
 * Do a front lever
-* Do a headstand
-* Do a handstand
-
+* ~~Do a headstand~~ (September 2017)
+* ~~Do a handstand~~ (May 2019)
 
 ## Professional Goals
 
-* Make $2,000 (gross) in a month
-
-## Habit Goals
-
-* Do a morning workout 100 days in a row
-* Read 25 pages a day for a 100 days in a row
+* ~~Make $5,000 (gross) in a month~~ (May 2020)
 
 ## Creative Goals
 
 * Learn how to make electronic music
 * Learn how to play the piano
-* Learn to draw to the point where I can draw like [this][draw-like-this]
-
-## Skill Goals
-
-* Become fluent in Japanese
 
 ## Fun Goals
 
@@ -94,6 +82,7 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Visit Sri Lanka~~ [(December 2018)][visit-srilanka]
 * ~~Visit UAE~~ [(1997)][visit-uae]
 * ~~Vist Oman~~ [(July 2017)][visit-oman]
+* ~~Vist USA~~ [(August 2019)][visit-usa]
 * Visit Thailand
 * Visit China
 * Visit Japan
@@ -109,34 +98,16 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 
 * ~~Graduate from college~~ [(January 2018)][graduate-college]
 * Graduate from grad school
-* Be self-sufficient and location-independent
+* ~~Be self-sufficient and location-independent~~ (August 2020)
 * “Retire” [Mr. Money Mustache-style][money-mustache] * by age 40 * (save $900k in 2014 dollars, live off of less than 4% $36,000/yr – from interest)
 * Maintain a loving, inspiring, happy relationship with my girlfriend
 * Get Married
-
-## Read 1000 Books
-List of books I've read:
-
-## 2017
-1. Ready Player One
-2. Deep Work
-3. Hitchhiker's Guide to the Galaxy
-4. Modern Romance
-5. The Shallows
-6. Mr. Penumbra's 24-Hour Bookstore
-
-## 2018
-
-1. Naoko
-2. Algorithms to Live By
-3. Predictably Irrational
-4. The New Turing Omnibus
 
 [money-mustache]:http://www.mrmoneymustache.com/2011/09/15/a-brief-history-of-the-stash-how-we-saved-from-zero-to-retirement-in-ten-years/
 [visit-srilanka]:/images/impossible/visit-srilanka.jpg
 [visit-uae]:/images/impossible/visit-uae.jpg
 [visit-oman]:/images/impossible/visit-oman.jpg
-[draw-like-this]:http://drawlikethis.com
+[visit-usa]:/images/impossible/visit-usa.jpg
 [cliff-dive]:https://youtu.be/XPeZyCxxVKA
 [graduate-college]:/images/impossible/graduate-college.jpg
 [impossible-banner]:/images/impossible/impossible-banner.jpg

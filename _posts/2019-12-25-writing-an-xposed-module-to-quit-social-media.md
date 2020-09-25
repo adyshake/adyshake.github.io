@@ -17,9 +17,9 @@ greyed out stories and photos from my own feed populating the main page.
 
 For the longest time I debated whether removing stories was worth the effort
 that it would require. Since Instagram itself wouldn't allow it, I'd have to
-write an Xposed module myself to get it done. So I let it remain and arguing
-that I might get lose touch if I cut myself off completely--exactly the same
-way I felt before muting my feed by the way.
+write an Xposed module myself to get it done. So I let it remain and I argued
+that I might get lose touch if I cut myself off completely--exactly the same way
+I felt before muting my feed by the way.
 
 Fast forward a few months and the content on my stories had gotten extremely
 political, ripe with both posts containing violence and misinformation. It
