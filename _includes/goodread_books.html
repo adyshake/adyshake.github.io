@@ -32,7 +32,7 @@
 <script>
     $(document).ready(function() {
         $.ajax({
-            url: "http://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/92671341.xml?key=YmVsH4mHjp3aaT2SI0zCg&v=2&shelf=read&per_page=200&page=1",
+            url: "https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/92671341.xml?key=YmVsH4mHjp3aaT2SI0zCg&v=2&shelf=read&per_page=200&page=1",
             dataType: "xml",
             success: function(data) {
                 $(data).find("review").each(function() {
