@@ -1,31 +1,31 @@
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #112;
-$base0:     #333b3c;
-$base1:     #93a1a1;
-$base2:     #f8f5ed;
-$base3:     #fffff8;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
-
+$base03: #002b36;
+$base02: #073642;
+$base01: #586e75;
+$base00: #112;
+$base0: #333b3c;
+$base1: #93a1a1;
+$base2: #f8f5ed;
+$base3: #fffff8;
+$yellow: #b58900;
+$orange: #cb4b16;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
 $text-color: $base00;
 $anchor-text-color: $yellow;
 $background-color: $base3;
-
 #navigation {
-    text-align:center;
+    text-align: center;
 }
+
 #navigation a {
     margin: 1em;
     display: inline-block;
 }
+
 div.site-content {
     margin-left: auto;
     margin-right: auto;
@@ -34,50 +34,73 @@ div.site-content {
     padding-right: 10px;
 }
 
-@font-face{font-family:Vollkorn;font-style:normal;src:url(/assets/fonts/Vollkorn-Regular.otf);font-display:fallback;}
+@font-face {
+    font-family: Vollkorn;
+    font-style: normal;
+    src: url(/assets/fonts/Vollkorn-Regular.otf);
+    font-display: fallback;
+}
 
 body {
-	font-family: 'Vollkorn', serif;
-	font-feature-settings: 'lnum';
-	color: $text-color;
-	background-color: $background-color;
+    font-family: 'Vollkorn', serif;
+    font-feature-settings: 'lnum';
+    color: $text-color;
+    background-color: $background-color;
     font-size: 17.8px; //OTF font is having rendering issues at 18px
 }
 
-p, li {    font-size: 1.3em;
+p,
+li {
+    font-size: 1.3em;
     font-size: 17.8px;
+}
+
+ul,
+ol {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+p {
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
 }
 
 header,
 main {
-	padding: 0 20px;
+    padding: 0 20px;
 }
+
 
 /*** wrapper div for both header and main ***/
+
 .wrapper {
-	margin-top: 10%;
+    margin-top: 10%;
 }
 
+
 /*** anchor tags ***/
+
 a:link,
 a:visited,
 a:hover,
 a:active {
-	color: $anchor-text-color;
-	text-decoration: none;
+    color: $anchor-text-color;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .shadow-img {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-h2, h3 {
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+h2,
+h3 {
+    margin-block-start: 0.50em;
+    margin-block-end: 0.25em;
 }
 
 h4 {
@@ -85,138 +108,153 @@ h4 {
     margin-block-end: -0.8em;
 }
 
-ul, ol {
-    margin-block-start: -0.6em;
-    margin-block-end: 0.0em;
-}
-
 
 /*** main content list ***/
+
 .main-list-item {
-	font-weight: bold;
-	font-size: 1.2em;
-	margin: 0.8em 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0.8em 0;
 }
+
 
 /* override the left margin added by font awesome for the main content list,
 since it must be aligned with the content */
+
 .fa-ul.main-list {
-	margin-left: 0;
+    margin-left: 0;
 }
+
 
 /* list icons */
+
 .main-list-item-icon {
-	width: 36px;
-	color: $text-color;
+    width: 36px;
+    color: $text-color;
 }
 
+
 /*** logo ***/
+
 .logo-container {
-	text-align: center;
+    text-align: center;
 }
 
 .logo {
-	width: 96px;
-	height: 96px;
-	display: inline-block;
-	background-size: cover;
-	border-radius: 50%;
-	-moz-border-radius: 50%;
-	border: 2px solid $background-color;
-	box-shadow: 0 0 0 3px $text-color;
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 2px solid $background-color;
+    box-shadow: 0 0 0 3px $text-color;
 }
+
 
 /*** author ***/
+
 .author-container h1 {
-	font-size: 2.8em;
-	margin-top: 0;
-	margin-bottom: 0;
-	text-align: center;
+    font-size: 2.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
 }
+
 
 /*** tagline ***/
+
 .tagline-container p {
-	font-size: 1.3em;
-	text-align: center;
-	margin-bottom: 2em;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 2em;
 }
+
 
 /******/
+
 hr {
-	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), $text-color, rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), $text-color, rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), $text-color, rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), $text-color, rgba(0, 0, 0, 0));
 }
 
+
 /*** footer ***/
+
 footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	height: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 20px;
 }
 
 .poweredby {
-	font-family: "Arial Narrow", Arial;
-	font-size: 0.6em;
-	line-height: 0.6em;
-	padding: 0 5px;
-        margin-top: 30px;
-        text-align: center;
+    font-family: "Arial Narrow", Arial;
+    font-size: 0.6em;
+    line-height: 0.6em;
+    padding: 0 5px;
+    margin-top: 30px;
+    text-align: center;
 }
+
 
 /*** media queries ***/
+
+
 /* X-Small devices (phones, 480px and up) */
+
 @media (min-width: 480px) {
-	/* wrapper stays 480px wide past 480px wide and is kept centered */
-	.wrapper {
-		width: 480px;
-		margin: 2.5% auto 0 auto;
-	}
-        div.site-content {
-            width: 480px;
-        }
+    /* wrapper stays 480px wide past 480px wide and is kept centered */
+    .wrapper {
+        width: 480px;
+        margin: 2.5% auto 0 auto;
+    }
+    div.site-content {
+        width: 480px;
+    }
 }
+
 
 /* All other devices (768px and up) */
+
 @media (min-width: 768px) {
-	/* past 768px the layout is changed and the wrapper has a fixed width of 680px
+    /* past 768px the layout is changed and the wrapper has a fixed width of 680px
 	to accomodate both the header column and the content column */
-	.wrapper {
-		width: 680px;
-	}
-        div.site-content {
-            width: 680px;
-        }
-
-	/* the header column stays left and has a dynamic width with all contents
+    .wrapper {
+        width: 680px;
+    }
+    div.site-content {
+        width: 680px;
+    }
+    /* the header column stays left and has a dynamic width with all contents
 	aligned right */
-	header {
-		float: left;
-		width: 30%;
-		text-align: right;
-	}
-
-	.author-container h1,
-	.logo-container,
-	.tagline-container p {
-		text-align: right;
-	}
-
-	main {
-		width: 62%;
-		margin-left: 43%;
-		padding: 0;
-	}
+    header {
+        float: left;
+        width: 30%;
+        text-align: right;
+    }
+    .author-container h1,
+    .logo-container,
+    .tagline-container p {
+        text-align: right;
+    }
+    main {
+        width: 62%;
+        margin-left: 43%;
+        padding: 0;
+    }
 }
 
+
 /* This makes the icons float left in a small viewport (when left aligned) */
+
 @media (max-width: 768px) {
     header ul span.fa {
-        float:left;
+        float: left;
         padding-top: 3px;
     }
 }
@@ -235,28 +273,35 @@ footer {
     padding-left: 0px;
 }
 
+
 /* BLOCKQUOTE STYLES */
+
+
 /* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote p {
-  display: inline;
+    display: inline;
 }
 
 table {
     border: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 5px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid $text-color;
 }

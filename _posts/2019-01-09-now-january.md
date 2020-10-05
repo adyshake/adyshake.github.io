@@ -1,0 +1,44 @@
+---
+title: What I'm doing now - January 2019
+layout: contentbase
+---
+What I'm doing now - January 2019
+======
+
+{: align="middle"}
+![srilanka]
+
+{: align="middle" style="font-size:12px"}
+_A wild Adnan in Sri Lanka drinking tea and reading a Hindi dictionary?_
+
+I'm currently living in Pune, India, trying to lead an _exciting_ yet structured
+and habit-based life. 
+
+I just got accepted into the computer science program at the University of Texas
+at Dallas for my master's. My semester begins in the fall of 2019, so I've got
+quite some time on my hands to prepare for what's to come.
+
+I also just returned from my first _(self-funded)_ international trip to Sri
+Lanka. Being away from home for those two weeks reminded me how being location
+independent has always been an overarching goal of mine. With over two years of
+work experience, I think it's finally time to brave the freelance market.
+
+Over the last year and a half, I've been trying to back off from my phone and
+the internet as much as I can. I question the utility of social networks every
+day, the signal to noise ratio is just too low. The hardest part of getting out
+of the Facebook ecosystem for me would be Instagram (and also WhatsApp, but
+it's still far more useful than what IG offers). I'm planning--yet another--a
+digital detox for 30 days. As I mentioned, this isn't my first rodeo, I've
+tried multiple variations of the detox and failed. Almost always because I
+promise myself that I will use social networks as tools and not a way to be
+content with boredom. You'd be surprised as to how a decent UX job and red
+notifications can hook you back in so quickly. Damn you variable rewards.
+
+My main focus for this year are:
+* Break into the freelance industry
+* Read 2 books a month
+* Quit social media for good this time
+* Drop to 10% body fat
+
+[srilanka]: /images/srilanka_me_and_tea.jpg
+{: width="70%"}

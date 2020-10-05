@@ -2,7 +2,7 @@
 layout: post
 title: Wallpaper Algorithm
 description: Wallpapers for ages
-featured: true
+featured: false
 ---
 
 I'm currently reading The New Turing Omnibus and one of the first exercises mentioned in Chapter 1 was implementing the Wallpaper algorithm with 3 colors. Although the premise of the chapter was to simply get acquainted with the conventions of how algorithms would be written in the book, they picked a pretty mesmerizing one. Here’s the algorithm, straight from the book.
