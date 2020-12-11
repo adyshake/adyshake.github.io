@@ -98,6 +98,7 @@ GEM
 PLATFORMS
   ruby
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   html-proofer
@@ -111,4 +112,4 @@ DEPENDENCIES
   rake (~> 12)
 
 BUNDLED WITH
-   2.1.4
+   2.2.0

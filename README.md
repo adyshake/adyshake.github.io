@@ -16,10 +16,10 @@ ruby -v
 ```
 
 ```bash
-sudo apt-get install ruby-bundler ruby-dev make gcc g++ zlib1g-dev
+sudo apt-get install ruby-bundler ruby-dev make gcc g++ zlib1g-dev make
 sudo gem update --system
 sudo gem install bundler
-bundler update --bundler
+sudo bundler update --bundler
 ```
 
 To update gems run,
