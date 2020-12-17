@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Main/Important Meta -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing an Xposed Module to Quit Social Media &#8226; Adnan Shaikh</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="/images/me.jpg"/>
+  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" />
+
+  <!-- Styles -->
+  
+  <style type="text/css">#navigation{text-align:center}#navigation a{margin:1em;display:inline-block}div.site-content{margin-left:auto;margin-right:auto;margin-top:40px;padding-left:10px;padding-right:10px}@font-face{font-family:Vollkorn;font-style:normal;src:url(/assets/fonts/Vollkorn-Regular.otf);font-display:fallback}body{font-family:'Vollkorn', serif;font-feature-settings:'lnum';color:#112;background-color:#fffff8;font-size:17.8px}p,li{font-size:1.3em;font-size:17.8px}ul,ol{margin-block-start:0em;margin-block-end:0em}p{margin-block-start:0.25em;margin-block-end:0.25em}header,main{padding:0 20px}.wrapper{margin-top:10%}a:link,a:visited,a:hover,a:active{color:#b58900;text-decoration:none}a:hover{text-decoration:underline}.shadow-img{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}h2,h3{margin-block-start:0.50em;margin-block-end:0.25em}h4{margin-block-start:1.5em;margin-block-end:-0.8em}.main-list-item{font-weight:bold;font-size:1.2em;margin:0.8em 0}.fa-ul.main-list{margin-left:0}.main-list-item-icon{width:36px;color:#112}.logo-container{text-align:center}.logo{width:96px;height:96px;display:inline-block;background-size:cover;border-radius:50%;-moz-border-radius:50%;border:2px solid #fffff8;box-shadow:0 0 0 3px #112}.author-container h1{font-size:2.8em;margin-top:0;margin-bottom:0;text-align:center}.tagline-container p{font-size:1.3em;text-align:center;margin-bottom:2em}hr{border:0;height:1px;background-image:-webkit-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-moz-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-ms-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-o-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0))}footer{position:fixed;bottom:0;right:0;height:20px}.poweredby{font-family:"Arial Narrow", Arial;font-size:0.6em;line-height:0.6em;padding:0 5px;margin-top:30px;text-align:center}@media (min-width: 480px){.wrapper{width:480px;margin:2.5% auto 0 auto}div.site-content{width:480px}}@media (min-width: 768px){.wrapper{width:680px}div.site-content{width:680px}header{float:left;width:30%;text-align:right}.author-container h1,.logo-container,.tagline-container p{text-align:right}main{width:62%;margin-left:43%;padding:0}}@media (max-width: 768px){header ul span.fa{float:left;padding-top:3px}}.social{text-align:center}.social li{display:inline-block;font-size:1px;padding-left:20px}#reddit-share{padding-left:0px}blockquote{background:#f9f9f9;border-left:10px solid #ccc;margin:1.5em 10px;padding:0.5em 10px;quotes:"“" "”" "‘" "’"}blockquote p{display:inline}table{border:collapse}th,td{padding:5px}table,th,td{border:1px solid #112}
+</style>
+  <link rel="preload" href="/assets/solarized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/solarized.css"></noscript>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0"/>
+  <link rel="preload" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></noscript>
+  <link rel="canonical" href="/2019/12/25/writing-an-xposed-module-to-quit-social-media/">
+
+  <!-- Meta information -->
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="description" content="Adnan Shaikh's personal website and blog."/>
+  <meta name="keywords" content="blog programming student resume technology talks">
+
+  <!-- Open Graph tags (Facebook meta-info) -->
+  <meta property="og:title" content="Writing an Xposed Module to Quit Social Media - Adnan Shaikh"/>
+  <meta property="og:url" content="adnanshaikh.com/2019/12/25/writing-an-xposed-module-to-quit-social-media/"/>
+  <meta property="og:image" content="adnanshaikh.com/images/me.jpg"/>
+  <meta property="og:description" content="The downside of sharing"/>
+  <meta property="og:site_name" content="Adnan Shaikh's Blog"/>
+  <meta property="og:see_also" content="adnanshaikh.com"/>
+
+  <!-- Various Javascript -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88085331-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88085331-1');
+</script>
+</head>
+
+  <body>
+  <div id="navigation" class="clearfix">
+    <a href="/">home/</a>
+    <a href="/blog">blog/</a>
+    <a href="/resume">resume/</a>
+    <a href="/now">now/</a>
+    <a href="/impossible">impossible/</a>
+    <a href="/kb">kb/</a>
+  </div>
+
+  <div class="site-content">
+    <h1>Writing an Xposed Module to Quit Social Media</h1>
+<em>Adnan Shaikh &bull; 25 December 2019</em>
+
+<p>Over the last year, I’ve been mindfully evaluating my usage of different
+services and actively pruning out those that offered more noise over signal. I
+started the year off by muting everybody on Facebook and Instagram. This got rid
+of the endless feed for me and dramatically reduced the time I spent on the app
+and improved my overall mood. What was left of my feed was just a string of
+greyed out stories and photos from my own feed populating the main page.</p>
+
+<p align="center"><img class="shadow-img" width="40%" src="/images/before_xposed.jpg" alt="before_xposed" /></p>
+
+<p>For the longest time I debated whether removing stories was worth the effort
+that it would require. Since Instagram itself wouldn’t allow it, I’d have to
+write an Xposed module myself to get it done. So I let it remain and I argued
+that I might get lose touch if I cut myself off completely–exactly the same way
+I felt before muting my feed by the way.</p>
+
+<p>Fast forward a few months and the content on my stories had gotten extremely
+political, ripe with both posts containing violence and misinformation. It
+reached a point where it genuinely started affecting my mood. It’s what finally
+drove to me to write the Xposed module once and for all.</p>
+
+<p>I forked <a href="https://github.com/TremendoX/UnclutterIG">TremendoX’s UnclutterIG</a> and
+extended it to add more hooks to intercept the <code class="language-plaintext highlighter-rouge">setAdapter()</code> function while
+trying to populate the lists in the MainActivity class. It’s a measly bit of code, but
+the trouble usually lies in hunting for the right class and method through the
+decompiled Java classes.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doStoryHooks</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Method</span> <span class="n">setAdapterMethod</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="n">setAdapterMethod</span> <span class="o">=</span> <span class="n">findMethodExact</span><span class="o">(</span><span class="nc">ListView</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="s">"setAdapter"</span><span class="o">,</span> <span class="nc">ListAdapter</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">setAdapterMethod</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">XposedBridge</span><span class="o">.</span><span class="na">hookMethod</span><span class="o">(</span><span class="n">setAdapterMethod</span><span class="o">,</span> <span class="k">new</span> <span class="n">XC_MethodHook</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforeHookedMethod</span><span class="o">(</span><span class="kd">final</span> <span class="nc">MethodHookParam</span> <span class="n">param</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Throwable</span> <span class="o">{</span>
+                <span class="nc">Object</span> <span class="n">adapter</span> <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="na">args</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+
+                <span class="k">if</span> <span class="o">(</span><span class="n">adapter</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="k">return</span><span class="o">;</span>
+                <span class="o">}</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">isOnMainPage</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">thisObject</span><span class="o">,</span> <span class="n">adapter</span><span class="o">.</span><span class="na">getClass</span><span class="o">()))</span> <span class="o">{</span>
+                    <span class="k">if</span> <span class="o">(</span><span class="n">shouldHideStories</span><span class="o">())</span> <span class="o">{</span>
+                        <span class="n">param</span><span class="o">.</span><span class="na">setResult</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>With the module complete, my feed now looks like this.</p>
+
+<p align="center"><img class="shadow-img" width="40%" src="/images/after_xposed.jpg" alt="after_xposed" /></p>
+
+<p>A few people have asked me that wouldn’t it just be easier to delete the app
+since I’ve taken out the two biggest features? That’s not true, I can still
+visit my friends’ profiles to see what they’re up to every once in a while and
+use direct messages to stay in touch. It’s a very intentional way of using
+social media that removes all the hooks that get you to keep coming back. As
+with anyone who’s quit social media before can tell you, once you do it, there’s
+just an abundance of time with which you’re not really sure what to do. Writing
+this post was my way of reclaiming that time back.</p>
+
+<p><a href="https://github.com/adyshake/UnclutterIG">You can find my forked version of UnclutterIG here</a>.</p>
+
+
+
+<div class="social">
+  <ul>
+  </ul>
+</div>
+<hr>
+
+
+
+</div>
+
+
+  <div style="clear:both;"></div>
+  <div class="poweredby">
+      <!-- <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Made with <3</span></a> -->
+  </div>
+  </body>
+</html>

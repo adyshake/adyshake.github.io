@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="adnanshaikh.com/feed.xml" rel="self" type="application/atom+xml" /><link href="adnanshaikh.com/" rel="alternate" type="text/html" /><updated>2020-12-17T21:03:08+00:00</updated><id>adnanshaikh.com/feed.xml</id><title type="html">Adnan Shaikh’s Blog</title><subtitle>Adnan Shaikh's personal website and blog.</subtitle><author><name>Adnan Shaikh</name></author><entry><title type="html">Improving Network Latency</title><link href="adnanshaikh.com/2020/09/30/improving-network-latency/" rel="alternate" type="text/html" title="Improving Network Latency" /><published>2020-09-30T00:00:00+00:00</published><updated>2020-09-30T00:00:00+00:00</updated><id>adnanshaikh.com/2020/09/30/improving-network-latency</id><content type="html" xml:base="adnanshaikh.com/2020/09/30/improving-network-latency/">&lt;p&gt;My friends and I recently got into a new tactical shooter called
+&lt;a href=&quot;https://playvalorant.com/en-us/&quot;&gt;Valorant&lt;/a&gt;. It’s a great game but the only
+thing holding us back from having an enjoyable experience was our latencies
+since we live on opposite sides of the planet. To mediate our latencies, we
+usually settle for a middle ground and that always happens to be European
+servers and although my average ping hovered around 140 ms, it wasn’t very
+consistent. Random ping spikes would ruin clutch moments. It bothered me enough
+to finally route a LAN cable around my house and see what sort of a difference
+it would make and wow did it make a difference. You can find some of the
+differences in latencies and speeds for 2.4 GHz, 5 GHz, and LAN below. Your
+mileage may definitely vary with regards to switching to a wired solution since
+factors like crowded frequency spectrums, range, and periodic network scanning
+determine how bad your WiFi experience can be.&lt;/p&gt;
+
+&lt;table align=&quot;center&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Download&lt;/th&gt;
+      &lt;th&gt;Upload&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2.4 Ghz&lt;/td&gt;
+      &lt;td&gt;14.3 Mbps&lt;/td&gt;
+      &lt;td&gt;6.57 Mbps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5 Ghz&lt;/td&gt;
+      &lt;td&gt;18.8 Mbps&lt;/td&gt;
+      &lt;td&gt;10.5 Mbps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LAN&lt;/td&gt;
+      &lt;td&gt;37.6 Mbps&lt;/td&gt;
+      &lt;td&gt;11.8 Mbps&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p align=&quot;middle&quot; style=&quot;font-size:12px&quot;&gt;&lt;em&gt;Download and Upload speeds using Google’s speed test&lt;/em&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;80%&quot; src=&quot;/images/latency/2.4ghz.jpg&quot; alt=&quot;2.4ghz&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot; style=&quot;font-size:12px&quot;&gt;&lt;em&gt;2.4 GHz average latency to 8.8.8.8&lt;/em&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;80%&quot; src=&quot;/images/latency/5ghz.jpg&quot; alt=&quot;5ghz&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot; style=&quot;font-size:12px&quot;&gt;&lt;em&gt;5 GHz average latency to 8.8.8.8&lt;/em&gt;&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;80%&quot; src=&quot;/images/latency/lan.jpg&quot; alt=&quot;lan&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot; style=&quot;font-size:12px&quot;&gt;&lt;em&gt;LAN average latency to 8.8.8.8&lt;/em&gt;&lt;/p&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">My friends and I recently got into a new tactical shooter called Valorant. It’s a great game but the only thing holding us back from having an enjoyable experience was our latencies since we live on opposite sides of the planet. To mediate our latencies, we usually settle for a middle ground and that always happens to be European servers and although my average ping hovered around 140 ms, it wasn’t very consistent. Random ping spikes would ruin clutch moments. It bothered me enough to finally route a LAN cable around my house and see what sort of a difference it would make and wow did it make a difference. You can find some of the differences in latencies and speeds for 2.4 GHz, 5 GHz, and LAN below. Your mileage may definitely vary with regards to switching to a wired solution since factors like crowded frequency spectrums, range, and periodic network scanning determine how bad your WiFi experience can be.</summary></entry><entry><title type="html">Offline-first workflows</title><link href="adnanshaikh.com/2020/03/12/offline-first-workflows/" rel="alternate" type="text/html" title="Offline-first workflows" /><published>2020-03-12T00:00:00+00:00</published><updated>2020-03-12T00:00:00+00:00</updated><id>adnanshaikh.com/2020/03/12/offline-first-workflows</id><content type="html" xml:base="adnanshaikh.com/2020/03/12/offline-first-workflows/">&lt;p&gt;A common problem I face while working on my computer or any device for that
+matter is frequent context switching. Part of the problem can be blamed on the
+allure of the novelty of what the internet has to offer. Googling for something
+as simple as centering a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has me opening at least 5+ tabs, but
+this behavior isn’t just limited to programming solutions. If I’m casually
+scrolling on Reddit, I’m bound to open a tab for every link I find interesting
+and get sucked into a rabbit hole. Even as I write this post, my mind keeps
+wanting to procrastinate and work on low-effort tasks like fixing the file
+watcher for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; that’s broken on WSL2 on Windows. What’s to blame
+for the advent of this distracted behavior? The tools or the user? I think it’s
+a combination of both. While I’m known to exercise self-control in other aspects
+of my life, it’s mentally draining to have to prune out choices and stick to a
+task at hand. Are there better ways of using tools to meet our needs?&lt;/p&gt;
+
+&lt;p&gt;Let’s start by listing some of the things internet-connected devices excel at.
+In my opinion that’s searching, persistence of storage, and repetition in the
+context of computation. For all other things that we use computers as
+replacements for such as reading or writing, I find that my work generally
+suffers. It’s led to me the idea of trying to reframe my workflow being solely
+offline-first.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-potential-remedy&quot;&gt;A Potential Remedy&lt;/h2&gt;
+&lt;p&gt;I was aimlessly browsing around Walmart when I came across an excessively cheap
+printer for $35, cheaper than buying both ink cartridges for the same system.
+After setting it up, I’ve been printing long articles that I find interesting on
+&lt;a href=&quot;news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt; and setting it aside for the next morning.
+My so-called assigned reading you could say. Then as I awaken the next morning,
+I don’t turn on my computer first thing but take what I printed the day prior
+and read in a different location – my new favorite one happens to be the
+balcony right now, the weather is quite favorable in Dallas. Now you might be
+saying, isn’t this analogous to reading a newspaper? Yes, it is. In our
+efforts to use technology to replace every aspect of our lives, it’s important
+to take an introspective look into what benefits (or hindrances) it actually
+provides you. Having access to novel information every day is great but if you’re
+not focused enough, you’ll tend to notice you’re usually skimming most articles
+without any real depth to your reading. I’m trying to practice a similar
+approach with programming and writing in general i.e. by performing these tasks
+on a siloed machine cut off from the internet. It’ll be a while before I have
+any conclusions on the siloed approach, on whether it actually forces me to
+think deeper before giving up and searching for solutions.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-points&quot;&gt;Final points&lt;/h2&gt;
+&lt;p&gt;The problem our prior generation faced was a lack of access to information,
+today’s problem is a lack of attention due to an abundance of it. Sometimes it
+really pays off to take a step back and reflect on the way you’re using your
+tools to identify whether they’re just paying lip service to the dreams of the
+past that it had promised or whether they truly are transformative tools of
+thought.&lt;/p&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">A common problem I face while working on my computer or any device for that matter is frequent context switching. Part of the problem can be blamed on the allure of the novelty of what the internet has to offer. Googling for something as simple as centering a &amp;lt;div&amp;gt; element has me opening at least 5+ tabs, but this behavior isn’t just limited to programming solutions. If I’m casually scrolling on Reddit, I’m bound to open a tab for every link I find interesting and get sucked into a rabbit hole. Even as I write this post, my mind keeps wanting to procrastinate and work on low-effort tasks like fixing the file watcher for the jekyll serve that’s broken on WSL2 on Windows. What’s to blame for the advent of this distracted behavior? The tools or the user? I think it’s a combination of both. While I’m known to exercise self-control in other aspects of my life, it’s mentally draining to have to prune out choices and stick to a task at hand. Are there better ways of using tools to meet our needs?</summary></entry><entry><title type="html">Falling In Love With The Process</title><link href="adnanshaikh.com/2020/01/18/falling-in-love-with-the-process/" rel="alternate" type="text/html" title="Falling In Love With The Process" /><published>2020-01-18T00:00:00+00:00</published><updated>2020-01-18T00:00:00+00:00</updated><id>adnanshaikh.com/2020/01/18/falling-in-love-with-the-process</id><content type="html" xml:base="adnanshaikh.com/2020/01/18/falling-in-love-with-the-process/">&lt;p&gt;Delaying gratification is hard and it’s as if the goals that I embark upon as I
+get older seem to push this feeling further and further away. Over the past few
+years, I’ve experimented with different techniques to get myself to work,
+whether that be structuring my environment to prime habits more easily, setting
+up negative reinforcement methods like Beeminder or just through practicing
+mindful awareness by journaling. What I’ve found is that while I haven’t had
+any long-lasting success with any of these methods, I’ve already mastered one
+form of getting uncomfortable work done, going to the gym.&lt;/p&gt;
+
+&lt;p&gt;Back in 2016, when I had just begun working out, picturing myself down to 10%
+body fat seemed like an absolutely unattainable prospect. I’d somewhat accepted
+that it probably wasn’t going to happen anytime soon. But I still stuck by,
+going to the gym every day, just putting in an hour’s worth of my time. Over
+time I could see the difference, the pounds wearing off and slowly packing on
+muscle. It taught me valuable lessons about compounding work, embracing
+discomfort, delaying gratification and the whole just-get-started mentality.&lt;/p&gt;
+
+&lt;p&gt;What I’ve found is that it’s better to stop romanticizing what it would feel
+like to have achieved the goal, but instead to fall in love with the process of
+doing the actual task itself. Each goal is different and spending a while trying
+to figure out what works best for you is a worthwhile investment. If you can
+make that happen you really don’t need to track anything anymore, and your habit
+naturally sticks as you no longer feel the resistance of getting started.&lt;/p&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">Delaying gratification is hard and it’s as if the goals that I embark upon as I get older seem to push this feeling further and further away. Over the past few years, I’ve experimented with different techniques to get myself to work, whether that be structuring my environment to prime habits more easily, setting up negative reinforcement methods like Beeminder or just through practicing mindful awareness by journaling. What I’ve found is that while I haven’t had any long-lasting success with any of these methods, I’ve already mastered one form of getting uncomfortable work done, going to the gym.</summary></entry><entry><title type="html">Writing an Xposed Module to Quit Social Media</title><link href="adnanshaikh.com/2019/12/25/writing-an-xposed-module-to-quit-social-media/" rel="alternate" type="text/html" title="Writing an Xposed Module to Quit Social Media" /><published>2019-12-25T00:00:00+00:00</published><updated>2019-12-25T00:00:00+00:00</updated><id>adnanshaikh.com/2019/12/25/writing-an-xposed-module-to-quit-social-media</id><content type="html" xml:base="adnanshaikh.com/2019/12/25/writing-an-xposed-module-to-quit-social-media/">&lt;p&gt;Over the last year, I’ve been mindfully evaluating my usage of different
+services and actively pruning out those that offered more noise over signal. I
+started the year off by muting everybody on Facebook and Instagram. This got rid
+of the endless feed for me and dramatically reduced the time I spent on the app
+and improved my overall mood. What was left of my feed was just a string of
+greyed out stories and photos from my own feed populating the main page.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;40%&quot; src=&quot;/images/before_xposed.jpg&quot; alt=&quot;before_xposed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the longest time I debated whether removing stories was worth the effort
+that it would require. Since Instagram itself wouldn’t allow it, I’d have to
+write an Xposed module myself to get it done. So I let it remain and I argued
+that I might get lose touch if I cut myself off completely–exactly the same way
+I felt before muting my feed by the way.&lt;/p&gt;
+
+&lt;p&gt;Fast forward a few months and the content on my stories had gotten extremely
+political, ripe with both posts containing violence and misinformation. It
+reached a point where it genuinely started affecting my mood. It’s what finally
+drove to me to write the Xposed module once and for all.&lt;/p&gt;
+
+&lt;p&gt;I forked &lt;a href=&quot;https://github.com/TremendoX/UnclutterIG&quot;&gt;TremendoX’s UnclutterIG&lt;/a&gt; and
+extended it to add more hooks to intercept the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setAdapter()&lt;/code&gt; function while
+trying to populate the lists in the MainActivity class. It’s a measly bit of code, but
+the trouble usually lies in hunting for the right class and method through the
+decompiled Java classes.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;doStoryHooks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Method&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setAdapterMethod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;setAdapterMethod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findMethodExact&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ListView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;setAdapter&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ListAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setAdapterMethod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;XposedBridge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hookMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setAdapterMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;XC_MethodHook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+            &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;beforeHookedMethod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MethodHookParam&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Throwable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;adapter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adapter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isOnMainPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thisObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;adapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shouldHideStories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+                    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With the module complete, my feed now looks like this.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;40%&quot; src=&quot;/images/after_xposed.jpg&quot; alt=&quot;after_xposed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A few people have asked me that wouldn’t it just be easier to delete the app
+since I’ve taken out the two biggest features? That’s not true, I can still
+visit my friends’ profiles to see what they’re up to every once in a while and
+use direct messages to stay in touch. It’s a very intentional way of using
+social media that removes all the hooks that get you to keep coming back. As
+with anyone who’s quit social media before can tell you, once you do it, there’s
+just an abundance of time with which you’re not really sure what to do. Writing
+this post was my way of reclaiming that time back.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adyshake/UnclutterIG&quot;&gt;You can find my forked version of UnclutterIG here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">Over the last year, I’ve been mindfully evaluating my usage of different services and actively pruning out those that offered more noise over signal. I started the year off by muting everybody on Facebook and Instagram. This got rid of the endless feed for me and dramatically reduced the time I spent on the app and improved my overall mood. What was left of my feed was just a string of greyed out stories and photos from my own feed populating the main page.</summary></entry><entry><title type="html">A Hacky GPU Switcher</title><link href="adnanshaikh.com/2019/11/30/a-hacky-gpu-switcher/" rel="alternate" type="text/html" title="A Hacky GPU Switcher" /><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><id>adnanshaikh.com/2019/11/30/a-hacky-gpu-switcher</id><content type="html" xml:base="adnanshaikh.com/2019/11/30/a-hacky-gpu-switcher/">&lt;p&gt;With the arrival of my Razer Core X eGPU enclosure, I was pretty excited to get
+back into some video editing and gaming, but there was a massive issue. My video
+and audio streams were both stuttering as soon as I’d plug it in. A bit of
+googling led to me to the solution to disable my integrated GPU from the Device
+Manager. That was odd though, I didn’t see any complaints from users with
+dedicated NVIDIA GPUs in their machines. I figure NVIDIA Optimus must have
+something to do with this. Anyway, with a working solution I could finally begin
+automating this procedure.&lt;/p&gt;
+
+&lt;p&gt;Windows provides a pretty powerful interface to instrument your plugged in
+hardware through WMI – Windows Management Interface. Here’s the powershell
+script I wrote that’s spawned everytime Windows boots up. It’s pretty neat since
+it works on events and not constant polling, so it’s pretty efficient too.&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Check to see if we are currently running &quot;as Administrator&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Verify-Elevated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Start-Process&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;powershell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Verb&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;runAs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ArgumentList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-NoExit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-Command &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cd &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-Location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.TrimEnd('\'))&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$myInvocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;MyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Definition&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Unregister-Event&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-SourceIdentifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;graphicsCardChanged&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ErrorAction&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SilentlyContinue&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Register-WmiEvent&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Class&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Win32_DeviceChangeEvent&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-SourceIdentifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;graphicsCardChanged&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Get inital eGPU state&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$null&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$null&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-ne&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-PnpDevice&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;friendlyname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Radeon RX 590*&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ok&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Write-Host(&quot;eGPU is initially connected&quot;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-PnpDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;friendlyname&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Intel(R) Iris(R) Plus Graphics*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Enable-PnpDevice&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$newEvent&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Wait-Event&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-SourceIdentifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;graphicsCardChanged&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$eventType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$newEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;SourceEventArgs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;NewEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;EventType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Write-Host($eventType)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    
+    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isEGPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$null&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-ne&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-PnpDevice&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;friendlyname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Radeon RX 590*&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ok&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$eventType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isEGPUConnected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Event - Device Arrival&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Write-Host(&quot;Device Arrived&quot;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-PnpDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;friendlyname&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Intel(R) Iris(R) Plus Graphics*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Disable-PnpDevice&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$eventType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-or&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$eventType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Event - Device config changed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# For some reason when I plug out the Razer Core X, it doesn't send an&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# event type 3 signal, so I'm working with config changed instead.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Write-Host(&quot;Device config changed&quot;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isEGPUUnknown&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$null&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-ne&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-PnpDevice&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;friendlyname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Radeon RX 590*&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Unknown&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isEGPUUnknown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Write-Host(&quot;eGPU is Unknown&quot;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-PnpDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;friendlyname&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-like&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Intel(R) Iris(R) Plus Graphics*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Enable-PnpDevice&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GPUConnected&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;	
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Remove-Event&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-SourceIdentifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;graphicsCardChanged&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-eq1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Loop until next event&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Unregister-Event&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-SourceIdentifier&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;graphicsCardChanged&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With the main script out of the way, here’s the script to register it to spawn
+upon boot with Task Scheduler.&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$installGPU&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Read-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Register Raden RX 590 GPU switcher task? (y/n)&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$installGPU&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'y'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$taskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GPU switcher&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$userName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;UserName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Read-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Password&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Unregister-ScheduledTask&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-TaskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$taskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Confirm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Erroraction&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SilentlyContinue&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$profileDirPath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Split-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-parent&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$profile&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gpuScript&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Join-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$profileDirPath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;gpu_switcher.ps1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$action&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;New-ScheduledTaskAction&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Execute&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;powershell.exe&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Argument&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$gpuScript&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$settings&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;New-ScheduledTaskSettingsSet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AllowStartIfOnBatteries&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-DontStopIfGoingOnBatteries&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Register-ScheduledTask&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Action&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$action&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-TaskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$taskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Settings&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$settings&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Description&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Switches to the Radeon RX 590 eGPU when plugged in&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-User&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$userName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Now add a special trigger to it with COM API.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Get the service and task&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ts&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;New-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ComObject&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Schedule.Service&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$task&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetFolder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$taskName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Definition&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Create the trigger&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TRIGGER_TYPE_STARTUP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$startTrigger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$task&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Triggers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TRIGGER_TYPE_STARTUP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$startTrigger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Enabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$startTrigger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;StartupTrigger&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Re-save the task in place.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TASK_CREATE_OR_UPDATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TASK_LOGIN_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GetFolder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RegisterTaskDefinition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$taskName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TASK_CREATE_OR_UPDATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$userName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TASK_LOGIN_PASSWORD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+    &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Start-ScheduledTask&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-TaskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$taskName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">With the arrival of my Razer Core X eGPU enclosure, I was pretty excited to get back into some video editing and gaming, but there was a massive issue. My video and audio streams were both stuttering as soon as I’d plug it in. A bit of googling led to me to the solution to disable my integrated GPU from the Device Manager. That was odd though, I didn’t see any complaints from users with dedicated NVIDIA GPUs in their machines. I figure NVIDIA Optimus must have something to do with this. Anyway, with a working solution I could finally begin automating this procedure.</summary></entry><entry><title type="html">What I’m doing now - November 2019</title><link href="adnanshaikh.com/2019/11/11/now-november/" rel="alternate" type="text/html" title="What I’m doing now - November 2019" /><published>2019-11-11T00:00:00+00:00</published><updated>2019-11-11T00:00:00+00:00</updated><id>adnanshaikh.com/2019/11/11/now-november</id><content type="html" xml:base="adnanshaikh.com/2019/11/11/now-november/">&lt;h1 id=&quot;what-im-doing-now---november-2019&quot;&gt;What I’m doing now - November 2019&lt;/h1&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;70%&quot; src=&quot;/images/adnan_laptop.jpg&quot; alt=&quot;now_page&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot; style=&quot;font-size:12px&quot;&gt;&lt;em&gt;MFW my entire career depends on whether I can reverse a linked list in 20 minutes&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m currently in my first year at grad school in the states. My thoughts on grad
+school are pretty mixed. I honestly didn’t know what to expect coming into it,
+but now it just feels like a full-time job juggling seemingly disjoint tasks
+simultaneously. The worst of which has to be internship hunting. Anybody who’s
+been through this period knows how much of an absolute drain it is both on your
+time that’s spent practicing questions that serve as a proxy metric for job
+success and your self-esteem when you begin doubting yourself when companies
+don’t respond to you.&lt;/p&gt;
+
+&lt;p&gt;I can get over the ghosting bit, I’m pretty pessimistic that way and usually
+consider the worst outcome. Whiteboarding, on the other hand, involves what
+essentially amounts to grinding through some 200+ questions on leetcode until
+you’ve run out of questions which test for that &lt;em&gt;aha&lt;/em&gt; moment. Standardized
+testing of any kind always runs the risk of people giving the exam to overfit
+themselves to the testing pattern. Leetcode/ whiteboarding is no different. The
+questions themselves aren’t that difficult if encountered in a normal job
+scenario, it’s the added stress of having a tight time constraint and having
+your future ride on whether you can validate a binary search tree that usually
+gets me (and others I’ve heard.)&lt;/p&gt;
+
+&lt;p&gt;There isn’t much substance to this rant because, at the end of the day, I can’t
+suggest other testing alternatives. Take-home projects are time-consuming for
+both the interviewer and the interviewee, and it’s also really hard to combat
+cheating on take-home coding quizzes.&lt;/p&gt;
+
+&lt;p&gt;If you can’t beat the system, then just keep grinding till you’re better at it I
+guess? It’s a shitty system that just tests your willpower to get back in the
+game again and again. But the nice thing about practicing leetcode questions is
+that it’s &lt;em&gt;quantifiable&lt;/em&gt;. About a year ago I’d heard of this service called
+Beeminder that tracks quantifiable goals of any kind, and it sets daily goals
+based on some overarching high-level one. Here’s the real kicker, if you miss a
+particular goal/ deadline, it charges your credit card based on some preset
+amount.&lt;/p&gt;
+
+&lt;p&gt;Here’s my beeminder leetcode graph&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;70%&quot; src=&quot;/images/beeminder.png&quot; alt=&quot;beeminder&quot; /&gt;&lt;/p&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">What I’m doing now - November 2019</summary></entry><entry><title type="html">Free as in free time</title><link href="adnanshaikh.com/2019/04/18/free-as-in-free-time/" rel="alternate" type="text/html" title="Free as in free time" /><published>2019-04-18T00:00:00+00:00</published><updated>2019-04-18T00:00:00+00:00</updated><id>adnanshaikh.com/2019/04/18/free-as-in-free-time</id><content type="html" xml:base="adnanshaikh.com/2019/04/18/free-as-in-free-time/">&lt;p&gt;4 months ago, I decided to abstain from using social media and overall it’s been going really well. I have to admit though I haven’t been completely off for good. I keep slipping back in everytime I’m bored but I’m glad I decided to mute everyone when I did quit. The only thing I do now is go through everyone’s greyed out stories which aren’t really interesting. Once I got comfortable living without social media, it got me thinking about other omnipresent services I use in my life. Namely, Google.&lt;/p&gt;
+
+&lt;p&gt;Google’s free offerings are everywhere. From Gmail to Maps to Android to Chrome to Youtube, you get the point. Each of these services are offered for free with the only catch being that you’re giving away your behavioural data. Depending on how comfortable you are with a corporation knowing so much about you, there’s two ways out of this.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One, you could just block all ads using a chrome extension or a network wide pi-hole.&lt;/li&gt;
+  &lt;li&gt;Two, you could take back control by diversifying these services either from other providers, self-hosting or other primitive alternatives.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;taking-back-control&quot;&gt;Taking back control&lt;/h2&gt;
+
+&lt;p&gt;I tried the latter approach recently. My plan of action was to remove OxygenOS off of my OnePlus 6 and install LineageOS. Here’s where my experience significantly started deteriorating. LineageOS, while I respect the endeavor and effort is incredibly buggy compared to commercial offerings. This was something that came as a surprise to me. Open source software on the desktop has always been great, but in hindsight that’s probably because the desktop has had a head start compared to what’s available on Android. Simple things that I’d taken for granted at this point like push notifications, lag-free touch input, a somewhat functioning free and open source app store, all buggy.&lt;/p&gt;
+
+&lt;p&gt;But even after all that, I decided to hold on for one more day. I assumed I’d be able to get over the initial discomfort like I managed to with social media. The very same day I flashed this brand spanking new Google-free ROM, I had go out to meet a friend. With some great luck I happened to get stuck in the worst traffic jam I’ve faced this entire year. Google Maps could have warned me, I even tried downloading it half way though the jam to find an alternate route, but nothing was working. It was if I set myself back 10 years. My time spent in the traffic jam with essentially a dumbphone at this point highlighted a few things to me. I realized how I’d been taking these services for granted and the true utility that these tools provide. On the other hand, a question that kept going through my mind was, whether replacing these tools with open source implementations were truly free?&lt;/p&gt;
+
+&lt;h2 id=&quot;free-is-ambiguous&quot;&gt;Free is ambiguous&lt;/h2&gt;
+&lt;p&gt;The English language doesn’t distinguish between free as in ‘free of charge’ or free as in ‘liberty’. So you have two terms coined by the community to differentiate them, ‘free as in beer’ and ‘free as in speech’. Louis Rossman in one of his videos mentions one key freedom not talked about – ‘Free as in free time’. Sure I could self host and set up contact syncing, a local photos repository, my own mail server, etc. Setting all this up would be ‘free’ as in ‘free beer’ since it’s freeware (ignoring the cost of hosting) and free as in ‘free speech’ since the software is open source. But it doesn’t account for the free time I’ve lost setting up and maintaining these services.&lt;/p&gt;
+
+&lt;p&gt;The next question that comes up is, is the benefit worth it? Is the upfront cost of time spent setting up these services – that could be spent doing other things – worth it? Or do I just bend over and pay the price of giving away my data to a corporation? A common argument mentioned is that you shouldn’t have a problem with sharing your data if you have nothing to hide. This argument is flawed and it’s analogous to saying you don’t care about free speech since you have nothing to say.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-am-i-going-to-do&quot;&gt;What am I going to do?&lt;/h2&gt;
+&lt;p&gt;I’m not entirely sure yet. I truly feel it’s a waste of time reinventing the wheel for solutions that have already been solved. Google’s services are nothing short of magical with some incredible utility to them. Perhaps once open source software catches up in the mobile space, I might consider taking another look. Till then I guess I have no choice to but to stick around.&lt;/p&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">4 months ago, I decided to abstain from using social media and overall it’s been going really well. I have to admit though I haven’t been completely off for good. I keep slipping back in everytime I’m bored but I’m glad I decided to mute everyone when I did quit. The only thing I do now is go through everyone’s greyed out stories which aren’t really interesting. Once I got comfortable living without social media, it got me thinking about other omnipresent services I use in my life. Namely, Google.</summary></entry><entry><title type="html">Wallpaper Algorithm</title><link href="adnanshaikh.com/2019/01/27/algorithmic-wallpaper/" rel="alternate" type="text/html" title="Wallpaper Algorithm" /><published>2019-01-27T00:00:00+00:00</published><updated>2019-01-27T00:00:00+00:00</updated><id>adnanshaikh.com/2019/01/27/algorithmic-wallpaper</id><content type="html" xml:base="adnanshaikh.com/2019/01/27/algorithmic-wallpaper/">&lt;p&gt;I’m currently reading The New Turing Omnibus and one of the first exercises mentioned in Chapter 1 was implementing the Wallpaper algorithm with 3 colors. Although the premise of the chapter was to simply get acquainted with the conventions of how algorithms would be written in the book, they picked a pretty mesmerizing one. Here’s the algorithm, straight from the book.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;input side
+for i ← 1 to 100
+    for j ← 1 to 100
+        x ← i * side/100
+        y ← j * side/100
+        c ← int(x*x + y*y)
+        if c == 0
+            then plot(x, y, red)
+        else if c == 1
+            then plot(x, y, green)
+        else
+            then plot(x, y, blue)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;At the core of function is the statement &lt;b&gt;&lt;em&gt;x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt;&lt;/em&gt;&lt;/b&gt;, the circular function. At low side values you can see concentric circles forming.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;70%&quot; src=&quot;/images/conc-circles.png&quot; alt=&quot;conc-circles&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the side value increases, the concentric circles get denser and moiré patterns begin forming like so. Colors begin to overlap leading to some very cool patterns as the algorithm iterates over the side value.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img class=&quot;shadow-img&quot; width=&quot;70%&quot; src=&quot;/images/conc-moire-patterns.png&quot; alt=&quot;conc-moire-patterns&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s a dynamic version implemented in JavaScript. I spent more time trying to get dynamic resizing to work than implementing the actual algorithm itself. &lt;em&gt;Yay software engineering&lt;/em&gt;.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;canvas class=&quot;shadow-img&quot; id=&quot;wallpaperCanvas&quot; width=&quot;100&quot; height=&quot;500&quot;&gt;&lt;/canvas&gt;
+&lt;/center&gt;
+
+&lt;script&gt;
+    const canvas = document.getElementById(&quot;wallpaperCanvas&quot;)
+    var ctx = canvas.getContext(&quot;2d&quot;)
+
+    function sleep(ms) {
+        return new Promise(resolve =&gt; setTimeout(resolve, ms))
+    }
+
+    function resizeCanvas() {
+        const maxWidth = 500
+        const minMarginPercent = 0.10
+
+        var W = window.innerWidth
+        var w = maxWidth
+        var x = (W - w) / 2
+        
+        if (x/W &lt; minMarginPercent) {
+            canvas.width = (1 - 2*minMarginPercent) * window.innerWidth;
+        }
+        else {
+            canvas.width = maxWidth;
+        }
+        ctx = canvas.getContext(&quot;2d&quot;)
+        ctx.scale(2, 2);
+        draw();
+    }
+
+    async function main() {
+        if(!ctx) {
+            alert(&quot;Couldn't grab canvas context&quot;)
+            return
+        }
+        
+        window.addEventListener('resize', resizeCanvas, false);
+        resizeCanvas();
+        while(true) {
+            draw();
+            await sleep(500)
+        }
+    }
+
+    function draw() {
+        if ( typeof draw.side == 'undefined' ) {
+            draw.side = 1
+        }
+        
+        var r, g, b
+        var x, y, c
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        draw.side += 1
+        for (var i = 0; i &lt; canvas.width/2; i++) {
+            for (var j = 0; j &lt; canvas.height/2; j++) {
+                x = i * draw.side/100
+                y = j * draw.side/100
+                c = Math.floor(x*x + y*y)
+                if (c % 3 == 0) {
+                    r = 255
+                    g = 0
+                    b = 0
+                }
+                else if (c % 3 == 1) {
+                    r = 0
+                    g = 255
+                    b = 0
+                }
+                else {
+                    r = 0
+                    g = 0
+                    b = 255
+                }
+                ctx.fillStyle = &quot;rgba(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;,&quot;+1+&quot;)&quot;
+                ctx.fillRect(i, j, 1, 1)
+            }
+        }
+    }
+
+    main();
+&lt;/script&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">I’m currently reading The New Turing Omnibus and one of the first exercises mentioned in Chapter 1 was implementing the Wallpaper algorithm with 3 colors. Although the premise of the chapter was to simply get acquainted with the conventions of how algorithms would be written in the book, they picked a pretty mesmerizing one. Here’s the algorithm, straight from the book.</summary></entry><entry><title type="html">What I’m doing now - January 2019</title><link href="adnanshaikh.com/2019/01/09/now-january/" rel="alternate" type="text/html" title="What I’m doing now - January 2019" /><published>2019-01-09T00:00:00+00:00</published><updated>2019-01-09T00:00:00+00:00</updated><id>adnanshaikh.com/2019/01/09/now-january</id><content type="html" xml:base="adnanshaikh.com/2019/01/09/now-january/">&lt;h1 id=&quot;what-im-doing-now---january-2019&quot;&gt;What I’m doing now - January 2019&lt;/h1&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;70%&quot; src=&quot;/images/srilanka_me_and_tea.jpg&quot; alt=&quot;srilanka&quot; /&gt;&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot; style=&quot;font-size:12px&quot;&gt;&lt;em&gt;A wild Adnan in Sri Lanka drinking tea and reading a Hindi dictionary?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m currently living in Pune, India, trying to lead an &lt;em&gt;exciting&lt;/em&gt; yet structured
+and habit-based life.&lt;/p&gt;
+
+&lt;p&gt;I just got accepted into the computer science program at the University of Texas
+at Dallas for my master’s. My semester begins in the fall of 2019, so I’ve got
+quite some time on my hands to prepare for what’s to come.&lt;/p&gt;
+
+&lt;p&gt;I also just returned from my first &lt;em&gt;(self-funded)&lt;/em&gt; international trip to Sri
+Lanka. Being away from home for those two weeks reminded me how being location
+independent has always been an overarching goal of mine. With over two years of
+work experience, I think it’s finally time to brave the freelance market.&lt;/p&gt;
+
+&lt;p&gt;Over the last year and a half, I’ve been trying to back off from my phone and
+the internet as much as I can. I question the utility of social networks every
+day, the signal to noise ratio is just too low. The hardest part of getting out
+of the Facebook ecosystem for me would be Instagram (and also WhatsApp, but
+it’s still far more useful than what IG offers). I’m planning–yet another–a
+digital detox for 30 days. As I mentioned, this isn’t my first rodeo, I’ve
+tried multiple variations of the detox and failed. Almost always because I
+promise myself that I will use social networks as tools and not a way to be
+content with boredom. You’d be surprised as to how a decent UX job and red
+notifications can hook you back in so quickly. Damn you variable rewards.&lt;/p&gt;
+
+&lt;p&gt;My main focus for this year are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Break into the freelance industry&lt;/li&gt;
+  &lt;li&gt;Read 2 books a month&lt;/li&gt;
+  &lt;li&gt;Quit social media for good this time&lt;/li&gt;
+  &lt;li&gt;Drop to 10% body fat&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">What I’m doing now - January 2019</summary></entry><entry><title type="html">Nutrition Basics - Macromolecules</title><link href="adnanshaikh.com/2018/08/01/nutrition-macros/" rel="alternate" type="text/html" title="Nutrition Basics - Macromolecules" /><published>2018-08-01T00:00:00+00:00</published><updated>2018-08-01T00:00:00+00:00</updated><id>adnanshaikh.com/2018/08/01/nutrition-macros</id><content type="html" xml:base="adnanshaikh.com/2018/08/01/nutrition-macros/">&lt;p&gt;Organic cells are composed of molecules that based on 4 fundamental elements:
+&lt;strong&gt;Carbon&lt;/strong&gt;, &lt;strong&gt;Hydrogen&lt;/strong&gt;, &lt;strong&gt;Nitrogen&lt;/strong&gt; &amp;amp; &lt;strong&gt;Oxygen&lt;/strong&gt; (and more!) Combining these
+elements, you can create 4 major macromolecules &lt;strong&gt;Carbohydrates&lt;/strong&gt;, &lt;strong&gt;Lipids&lt;/strong&gt; &amp;amp;
+&lt;strong&gt;Proteins&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;carbohydrates-sugars-starches-cellulose&quot;&gt;Carbohydrates (sugars, starches, cellulose)&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;30%&quot; src=&quot;/images/carb.png&quot; alt=&quot;carb&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Made from joining H&lt;sub&gt;2&lt;/sub&gt;O and CO&lt;sub&gt;2&lt;/sub&gt; by plants during photosynthesis.&lt;br /&gt;
+&lt;strong&gt;Monomer&lt;/strong&gt;: Simple sugars: CH&lt;sub&gt;2&lt;/sub&gt;O
+Bread, cereal, potatoes, fruits, vegetables, and pasta are made mostly of carbohydrates (sugars and starches).&lt;br /&gt;
+&lt;strong&gt;Three main functions&lt;/strong&gt;: Energy for cells, structural support, cell-cell communication.&lt;/p&gt;
+
+&lt;h3 id=&quot;monosaccharides-simple-sugars-monomers&quot;&gt;&lt;strong&gt;Monosaccharides (simple sugars; monomers)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Function&lt;/strong&gt;: Energy for cells&lt;br /&gt;
+&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Glucose: grape sugar, corn sugar, dextrose&lt;/li&gt;
+  &lt;li&gt;Fructose: honey&lt;/li&gt;
+  &lt;li&gt;Galactose: part of milk sugar (lactose)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disaccharides-double-sugars-or-oligosaccharides-short-sugars&quot;&gt;&lt;strong&gt;Disaccharides (double sugars) or oligosaccharides (short-sugars)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Function&lt;/strong&gt;: Energy for cells&lt;br /&gt;
+&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Maltose = glucose - glucose (brewing beer)&lt;/li&gt;
+  &lt;li&gt;Lactose = glucose - galactose (milk sugar)&lt;/li&gt;
+  &lt;li&gt;Sucrose = glucose - fructose (table sugar)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;polysaccharides-long-chains-of-sugar-polymers&quot;&gt;&lt;strong&gt;Polysaccharides (long chains of sugar polymers)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;These sugar polymers are not &lt;em&gt;sweet&lt;/em&gt; although they are made up of repeating
+glucose monomers.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Starch (plants), glycogen (animals)&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Function&lt;/strong&gt;: Energy storage&lt;br /&gt;
+&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Potatoes - pure starch!&lt;/li&gt;
+      &lt;li&gt;Pasta, bread, crackers - ground up wheat starch&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;strong&gt;Structure&lt;/strong&gt;: 1-4 linkage of a-glucose&lt;br /&gt;
+&lt;strong&gt;Note&lt;/strong&gt;: Animal cells can’t make sugars “from scratch”, but can polymerize plant sugars into glycogen , a related storage polymer.&lt;br /&gt;
+Once we have eaten, monosaccharides, disaccharides and starches are converted to the monomer glucose, our bodys preferred fuel, and circulate through the blood (reserves are stored in our bodies as glycogen).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Cellulose (plants), chitin (insects, fungi)&lt;/strong&gt;
+&lt;strong&gt;Function&lt;/strong&gt;: Structural support&lt;br /&gt;
+&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Cellulose: Paper, wood, cotton, the chewy stuff in celery&lt;/li&gt;
+      &lt;li&gt;Chitin: The crunchy exoskeleton of insects and shrimp, the soft spongy
+material that makes up a mushroom.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;strong&gt;Structure&lt;/strong&gt;: 1-4 linkage of b-glucose&lt;br /&gt;
+&lt;strong&gt;Note&lt;/strong&gt;: These structural polymers are almost indigestable, which is a good
+thing since they function as structural support! Some animals (like cows) and
+insects (like termites) have special bacteria in their intestines that can
+break the 1-4 linkage of b-glucose, but we cannot break this bond!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;proteins&quot;&gt;Proteins&lt;/h2&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;30%&quot; src=&quot;/images/protein.png&quot; alt=&quot;protein&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Proteins form about 50% of the dry weight of most cells. They are also the most
+complex type of macromolecule because there are 20 different monomers called
+amino acids. The way these monomers are put together gives each protein its own
+unique structure and function.&lt;/p&gt;
+
+&lt;p&gt;All proteins are polymers constructed from a set of 20 amino acid monomers
+linked end-to-end, up to thousands of amino acids long, each in a unique 3-D
+shape.&lt;/p&gt;
+
+&lt;p&gt;Our bodies can make 11 of the ~20 amino acids–the other 9 amino acids must be
+obtained from our diet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Essential amino acids (must be obtained by the food we eat)&lt;/strong&gt;: &lt;em&gt;Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;Non-essential amino acids (our bodies can make these amino acids)&lt;/strong&gt;: &lt;em&gt;Arginine ,Tyrosine, Glycine, Serine, Glutamic Acid, Aspartic Acid, Asparagine Cystine, Histidine, Proline, Alanine. (there are 2 rare amino acids as well - Taurine and Hydroxyproline)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;lipids&quot;&gt;Lipids&lt;/h2&gt;
+
+&lt;h3 id=&quot;triacylglycerols-fats-and-oils&quot;&gt;&lt;strong&gt;Triacylglycerols (fats and oils)&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;70%&quot; src=&quot;/images/triacylglycerol.png&quot; alt=&quot;triacylglycerol&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Structure&lt;/strong&gt; : Made from 1 glycerol + 3 fatty acid tails = tri-acylglycerol&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Example&lt;/strong&gt; : Fats: Butter, lard Oils: Corn oil, olive oil, margerine&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt; : Vary in length and location of double bonds in tail&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Two major functions of fats and oils:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Energy storage&lt;/strong&gt; – Fats are a more compact fuel than starch
+    &lt;ul&gt;
+      &lt;li&gt;Fat contains &lt;strong&gt;twice&lt;/strong&gt; the energy-rich (C-H) bonds as glucose&lt;/li&gt;
+      &lt;li&gt;Fat stores &lt;strong&gt;twice&lt;/strong&gt; as much energy as glucose&lt;/li&gt;
+      &lt;li&gt;Fat produces &lt;strong&gt;twice&lt;/strong&gt; as many calories (9 kcal/gm vs 4 kcal/gm) when burned&lt;/li&gt;
+      &lt;li&gt;Unfortunately, you need to put &lt;strong&gt;twice&lt;/strong&gt; as much energy to burn off a pound of excess fat than you do of glycogen…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cushions and insulates the body and nerves&lt;/strong&gt; – Each and every one of your nerves is wrapped in a lipid-rich layer called the myelin sheath.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;diacylglycerides-phospholipids&quot;&gt;&lt;strong&gt;Diacylglycerides (phospholipids)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Lipid bilayers (the plasma membrane of every cell and the membranes within eukaryotic cells)&lt;/p&gt;
+
+&lt;p align=&quot;middle&quot;&gt;&lt;img width=&quot;60%&quot; src=&quot;/images/diglyceride.png&quot; alt=&quot;diglyceride&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Structure&lt;/strong&gt;: Similar to a triacylglycerol, but has only 2 fatty acid tails, and in addition has a phosphate group = (1 glycerol, 2 fatty acids, and a -PO4).
+The -PO4 makes the glycerol “head” water soluble, or hydrophilic.
+The long hydrocarbon tail is hydrophobic.&lt;br /&gt;
+&lt;strong&gt;Function&lt;/strong&gt;: Due to this “amphipathic” nature (both water-loving and water-hating regions in a single molecule), phospholipids self assemble into bilayers that shield the tail from water = forming membranes (phospholipid bilayers!)&lt;/p&gt;
+
+&lt;h3 id=&quot;steroids-cholesterol-steroid-hormones&quot;&gt;&lt;strong&gt;Steroids (cholesterol, steroid hormones)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Structure&lt;/strong&gt;: Considered to be a “cousin” of fats - and are made from lipids. Have no fatty acids in their structure, but are very hydrophobic
+&lt;strong&gt;Functions of Chloesterol&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Help to maintain membrane fluidity, pliability and resilience in membranes of animals, which have high amounts or rigid, saturated fatty acids.&lt;/li&gt;
+  &lt;li&gt;Sex hormones (testosterone, estrogen and progesterone) are all made from cholesterol&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cholesterol gets a ‘bad rap” in our diet, but has CRUCIAL roles in the
+functioning of our cells - we wouldn’t be able to live without it!&lt;/p&gt;
+
+&lt;p&gt;However, too much cholestereol in the diet is known to be a factor in
+atherosclerosis and heart disease.&lt;/p&gt;
+
+&lt;p&gt;Cholesterol circulates in the bloodstream bound to carrier ‘lipo-proteins’. High
+Density Lipoprotein (HDL - the “Good” kind) carries blood cholesterol to the
+liver where is can be eliminated from the body. Low Density Lipoprotein (LDL -
+the “Bad” kind) deposits blood cholesterol in the artery walls, where it can
+lead to constriction of blood vessels, heart disease, heart attacks, etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;fats-compared&quot;&gt;Fats compared:&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Saturated (fats)&lt;/strong&gt; - No double bonds; Saturated with hydrogens.&lt;/td&gt;
+      &lt;td&gt;Solid at room temperature: animal fats (bacon, lard, butter, palm oil, coconut oil). These fats raise total blood cholesterol level, HDL and LDL, and have been shown to increase  the risk of coronary heart disease.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;MonoUnsaturated (oils)&lt;/strong&gt; - A double bond (“kink”) forms (loss of 2 hydrogens).&lt;/td&gt;
+      &lt;td&gt;Liquids at room temperature: olive oil, canola oil, peanut oil. These are the GOOD fats–they lower total blood cholesterol by raising HDL (good) cholesterol and lowering LDL (bad) cholesterol levels.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PolyUnsaturated (oils)&lt;/strong&gt; - More than one double bond (“kink”) forms (loss of more than 2 hydrogens).&lt;/td&gt;
+      &lt;td&gt;Liquids at room temperature: corn oil, soybean oil, Omega-3 and -6 fish oils. These are also the GOOD fats–they lower total blood cholesterol by lowering both HDL (good) and LDL (bad) cholesterol.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Hydrogenated oils (margarine, crisco)&lt;/strong&gt; - Hydrogens are added synthetically to plant oils to create trans-fatty saturated acids.&lt;/td&gt;
+      &lt;td&gt;Solids at room temperature–these oils are factory-made by adding hydrogens to liquid vegetable oil, creating a solid shortening or margarine. Trans-fats have adverse effects on health, they raise both LDL (bad) cholesterol and lower HDL (good) cholesterol levels and can be even worse that saturated animal fat in the development of coronary heart disease.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+
+      &lt;p&gt;Taken from IUPUI Department of Biology’s &lt;a href=&quot;https://www.biology.iupui.edu/biocourses/N100/notes.html&quot;&gt;N100 course&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Adnan Shaikh</name></author><summary type="html">Organic cells are composed of molecules that based on 4 fundamental elements: Carbon, Hydrogen, Nitrogen &amp;amp; Oxygen (and more!) Combining these elements, you can create 4 major macromolecules Carbohydrates, Lipids &amp;amp; Proteins</summary></entry></feed>

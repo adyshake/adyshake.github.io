@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Main/Important Meta -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Key Encryption &#8226; Adnan Shaikh</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="/images/me.jpg"/>
+  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" />
+
+  <!-- Styles -->
+  
+  <style type="text/css">#navigation{text-align:center}#navigation a{margin:1em;display:inline-block}div.site-content{margin-left:auto;margin-right:auto;margin-top:40px;padding-left:10px;padding-right:10px}@font-face{font-family:Vollkorn;font-style:normal;src:url(/assets/fonts/Vollkorn-Regular.otf);font-display:fallback}body{font-family:'Vollkorn', serif;font-feature-settings:'lnum';color:#112;background-color:#fffff8;font-size:17.8px}p,li{font-size:1.3em;font-size:17.8px}ul,ol{margin-block-start:0em;margin-block-end:0em}p{margin-block-start:0.25em;margin-block-end:0.25em}header,main{padding:0 20px}.wrapper{margin-top:10%}a:link,a:visited,a:hover,a:active{color:#b58900;text-decoration:none}a:hover{text-decoration:underline}.shadow-img{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}h2,h3{margin-block-start:0.50em;margin-block-end:0.25em}h4{margin-block-start:1.5em;margin-block-end:-0.8em}.main-list-item{font-weight:bold;font-size:1.2em;margin:0.8em 0}.fa-ul.main-list{margin-left:0}.main-list-item-icon{width:36px;color:#112}.logo-container{text-align:center}.logo{width:96px;height:96px;display:inline-block;background-size:cover;border-radius:50%;-moz-border-radius:50%;border:2px solid #fffff8;box-shadow:0 0 0 3px #112}.author-container h1{font-size:2.8em;margin-top:0;margin-bottom:0;text-align:center}.tagline-container p{font-size:1.3em;text-align:center;margin-bottom:2em}hr{border:0;height:1px;background-image:-webkit-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-moz-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-ms-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-o-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0))}footer{position:fixed;bottom:0;right:0;height:20px}.poweredby{font-family:"Arial Narrow", Arial;font-size:0.6em;line-height:0.6em;padding:0 5px;margin-top:30px;text-align:center}@media (min-width: 480px){.wrapper{width:480px;margin:2.5% auto 0 auto}div.site-content{width:480px}}@media (min-width: 768px){.wrapper{width:680px}div.site-content{width:680px}header{float:left;width:30%;text-align:right}.author-container h1,.logo-container,.tagline-container p{text-align:right}main{width:62%;margin-left:43%;padding:0}}@media (max-width: 768px){header ul span.fa{float:left;padding-top:3px}}.social{text-align:center}.social li{display:inline-block;font-size:1px;padding-left:20px}#reddit-share{padding-left:0px}blockquote{background:#f9f9f9;border-left:10px solid #ccc;margin:1.5em 10px;padding:0.5em 10px;quotes:"“" "”" "‘" "’"}blockquote p{display:inline}table{border:collapse}th,td{padding:5px}table,th,td{border:1px solid #112}
+</style>
+  <link rel="preload" href="/assets/solarized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/solarized.css"></noscript>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0"/>
+  <link rel="preload" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></noscript>
+  <link rel="canonical" href="/kb/pub_key/">
+
+  <!-- Meta information -->
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="description" content="Adnan Shaikh's personal website and blog."/>
+  <meta name="keywords" content="blog programming student resume technology talks">
+
+  <!-- Open Graph tags (Facebook meta-info) -->
+  <meta property="og:title" content="Public Key Encryption - Adnan Shaikh"/>
+  <meta property="og:url" content="adnanshaikh.com/kb/pub_key/"/>
+  <meta property="og:image" content="adnanshaikh.com/images/me.jpg"/>
+  <meta property="og:description" content="Adnan Shaikh's personal website and blog."/>
+  <meta property="og:site_name" content="Adnan Shaikh's Blog"/>
+  <meta property="og:see_also" content="adnanshaikh.com"/>
+
+  <!-- Various Javascript -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88085331-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88085331-1');
+</script>
+</head>
+
+  <body>
+  <div id="navigation" class="clearfix">
+    <a href="/">home/</a>
+    <a href="/blog">blog/</a>
+    <a href="/resume">resume/</a>
+    <a href="/now">now/</a>
+    <a href="/impossible">impossible/</a>
+    <a href="/kb">kb/</a>
+  </div>
+
+  <div class="site-content">
+    <h1 id="public-key-encryption">Public Key Encryption</h1>
+
+<p>This form of asymmetric encryption works on two keys, a public key and a private
+key. Encoding a message with a public key allows the message to be decrypted
+with the private key.</p>
+
+<h2 id="vulnerabilities">Vulnerabilities</h2>
+<ul>
+  <li>Intermediaries are able to see the metadata of the sent message (sender’s
+address, recipient’s address, subject line, timestamp).</li>
+  <li>An impostor could send their public key, this a Man-in-the-middle attack. MITM
+attacks are tackled by sending the public key through a variety of routes to
+ensure that the recipient gets the intended public key and not an impostor’s.</li>
+</ul>
+
+<h2 id="message-signing">Message Signing</h2>
+<p>A message encrypted using a private key can be decrypted using a public key.
+This validates the sender’s identity and prevents impersonation as well. It also
+prevents message tampering in its encrypted form.</p>
+
+<h2 id="pgp">PGP</h2>
+<p>PGP (Pretty Good Privacy) is an example of a protocol that uses both symmetric
+and asymmetric cryptography. In PGP, a certificate is essentially a public key.
+PGP stores its public keys in the <code class="language-plaintext highlighter-rouge">.asc</code> extension.</p>
+
+<h2 id="public-key-encryption-usage-on-linux">Public Key Encryption Usage on Linux</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen <span class="nt">-t</span> rsa
+</code></pre></div></div>
+
+<p>This command creates a public/private keypair. It provides the option of
+encrypting the private key, but that means you must supply the passphrase each
+time you use it. This prevents attackers from using your stolen key.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id_rsa
+id_rsa.pub
+</code></pre></div></div>
+
+<p>The command generates two files, <code class="language-plaintext highlighter-rouge">id_rsa</code> is your private key and <code class="language-plaintext highlighter-rouge">id_rsa.pub</code>
+is your public key. To log on to remote systems without supplying a password, 
+copy the public key to the <code class="language-plaintext highlighter-rouge">authorized_keys</code> file on the remote system.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> ~/.ssh/id_rsa.pub | ssh user@hostname <span class="s2">"mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; cat &gt;&gt;  ~/.ssh/authorized_keys"</span>
+</code></pre></div></div>
+<p>The following method is also a convenient alternative</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-copy-id user@hostname
+</code></pre></div></div>
+
+<p>To set aliases for hosts and default usernames for them as well, a <code class="language-plaintext highlighter-rouge">config</code> file
+can be created as well.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host amazon1
+    HostName ec2.amazon.com
+    User ec2-user
+    IdentityFile /path/to/special/privatekey/amazonKey
+    ServerAliveInterval 60
+    ServerAliveCountMax 30
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">ServerAliveInterval</code> option will refresh your session every 60 seconds in order
+to keep it open, <code class="language-plaintext highlighter-rouge">ServerAliveCountMax</code> option specifies that this should only be
+performed 30 times, thus ensuring your session won’t time-out for at least 30
+minutes of inactivity. Don’t forget to also run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>600 ~/.ssh/config
+</code></pre></div></div>
+
+<p>Now you can go ahead and log into your user profile and you will not be prompted
+for a password. However, if you set a passphrase when creating your SSH key, you
+will be asked to enter the passphrase at each time unless you add it to the
+keyring.</p>
+
+<p>To improve security you can disable standard password authentication and enforce
+key-based authentication only.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># vi /etc/ssh/sshd_config</span>
+PasswordAuthentication no
+</code></pre></div></div>
+<p>This prevents users whose keys aren’t in the <code class="language-plaintext highlighter-rouge">authorized_keys</code> file of the
+server to connect to it.</p>
+
+<h3 id="miscellaneous-commands">Miscellaneous commands</h3>
+<ul>
+  <li>Generate the corresponding public key using a private key
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen <span class="nt">-y</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+
+</div>
+
+
+  <div style="clear:both;"></div>
+  <div class="poweredby">
+      <!-- <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Made with <3</span></a> -->
+  </div>
+  </body>
+</html>

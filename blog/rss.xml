@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adnan Shaikh</title>
+    <description>Adnan Shaikh's personal website and blog.</description>          
+    <link>adnanshaikh.com</link>
+    <atom:link href="adnanshaikh.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Improving Network Latency</title>
+        <description>&lt;p&gt;My friends and I recently got into a new tactical shooter called
+&lt;a href=&quot;https://playvalorant.com/en-us/&quot;&gt;Valorant&lt;/a&gt;. It’s a great game but the only
+thing holding us back from having an enjoyable experience was our latencies
+since we live on opposite sides of the planet. To mediate our latencies, we
+usually settle for a middle ground and that always happens to be European
+servers and although my average ping hovered around 140 ms, it wasn’t very
+consistent. Random ping spikes would ruin clutch moments. It bothered me enough
+to finally route a LAN cable around my house and see what sort of a difference
+it would make and wow did it make a difference. You can find some of the
+differences in latencies and speeds for 2.4 GHz, 5 GHz, and LAN below. Your
+mileage may definitely vary with regards to switching to a wired solution since
+factors like crowded frequency spectrums, range, and periodic network scanning
+determine how bad your WiFi experience can be.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2020/09/30/improving-network-latency/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2020/09/30/improving-network-latency/</guid>
+      </item>
+    
+      <item>
+        <title>Offline-first workflows</title>
+        <description>&lt;p&gt;A common problem I face while working on my computer or any device for that
+matter is frequent context switching. Part of the problem can be blamed on the
+allure of the novelty of what the internet has to offer. Googling for something
+as simple as centering a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; element has me opening at least 5+ tabs, but
+this behavior isn’t just limited to programming solutions. If I’m casually
+scrolling on Reddit, I’m bound to open a tab for every link I find interesting
+and get sucked into a rabbit hole. Even as I write this post, my mind keeps
+wanting to procrastinate and work on low-effort tasks like fixing the file
+watcher for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; that’s broken on WSL2 on Windows. What’s to blame
+for the advent of this distracted behavior? The tools or the user? I think it’s
+a combination of both. While I’m known to exercise self-control in other aspects
+of my life, it’s mentally draining to have to prune out choices and stick to a
+task at hand. Are there better ways of using tools to meet our needs?&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2020/03/12/offline-first-workflows/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2020/03/12/offline-first-workflows/</guid>
+      </item>
+    
+      <item>
+        <title>Falling In Love With The Process</title>
+        <description>&lt;p&gt;Delaying gratification is hard and it’s as if the goals that I embark upon as I
+get older seem to push this feeling further and further away. Over the past few
+years, I’ve experimented with different techniques to get myself to work,
+whether that be structuring my environment to prime habits more easily, setting
+up negative reinforcement methods like Beeminder or just through practicing
+mindful awareness by journaling. What I’ve found is that while I haven’t had
+any long-lasting success with any of these methods, I’ve already mastered one
+form of getting uncomfortable work done, going to the gym.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2020/01/18/falling-in-love-with-the-process/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2020/01/18/falling-in-love-with-the-process/</guid>
+      </item>
+    
+      <item>
+        <title>Writing an Xposed Module to Quit Social Media</title>
+        <description>&lt;p&gt;Over the last year, I’ve been mindfully evaluating my usage of different
+services and actively pruning out those that offered more noise over signal. I
+started the year off by muting everybody on Facebook and Instagram. This got rid
+of the endless feed for me and dramatically reduced the time I spent on the app
+and improved my overall mood. What was left of my feed was just a string of
+greyed out stories and photos from my own feed populating the main page.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2019/12/25/writing-an-xposed-module-to-quit-social-media/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2019/12/25/writing-an-xposed-module-to-quit-social-media/</guid>
+      </item>
+    
+      <item>
+        <title>A Hacky GPU Switcher</title>
+        <description>&lt;p&gt;With the arrival of my Razer Core X eGPU enclosure, I was pretty excited to get
+back into some video editing and gaming, but there was a massive issue. My video
+and audio streams were both stuttering as soon as I’d plug it in. A bit of
+googling led to me to the solution to disable my integrated GPU from the Device
+Manager. That was odd though, I didn’t see any complaints from users with
+dedicated NVIDIA GPUs in their machines. I figure NVIDIA Optimus must have
+something to do with this. Anyway, with a working solution I could finally begin
+automating this procedure.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2019/11/30/a-hacky-gpu-switcher/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2019/11/30/a-hacky-gpu-switcher/</guid>
+      </item>
+    
+      <item>
+        <title>What I'm doing now - November 2019</title>
+        <description>&lt;h1 id=&quot;what-im-doing-now---november-2019&quot;&gt;What I’m doing now - November 2019&lt;/h1&gt;
+</description>
+        <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2019/11/11/now-november/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2019/11/11/now-november/</guid>
+      </item>
+    
+      <item>
+        <title>Free as in free time</title>
+        <description>&lt;p&gt;4 months ago, I decided to abstain from using social media and overall it’s been going really well. I have to admit though I haven’t been completely off for good. I keep slipping back in everytime I’m bored but I’m glad I decided to mute everyone when I did quit. The only thing I do now is go through everyone’s greyed out stories which aren’t really interesting. Once I got comfortable living without social media, it got me thinking about other omnipresent services I use in my life. Namely, Google.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2019/04/18/free-as-in-free-time/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2019/04/18/free-as-in-free-time/</guid>
+      </item>
+    
+      <item>
+        <title>Wallpaper Algorithm</title>
+        <description>&lt;p&gt;I’m currently reading The New Turing Omnibus and one of the first exercises mentioned in Chapter 1 was implementing the Wallpaper algorithm with 3 colors. Although the premise of the chapter was to simply get acquainted with the conventions of how algorithms would be written in the book, they picked a pretty mesmerizing one. Here’s the algorithm, straight from the book.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2019/01/27/algorithmic-wallpaper/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2019/01/27/algorithmic-wallpaper/</guid>
+      </item>
+    
+      <item>
+        <title>What I'm doing now - January 2019</title>
+        <description>&lt;h1 id=&quot;what-im-doing-now---january-2019&quot;&gt;What I’m doing now - January 2019&lt;/h1&gt;
+</description>
+        <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2019/01/09/now-january/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2019/01/09/now-january/</guid>
+      </item>
+    
+      <item>
+        <title>Nutrition Basics - Macromolecules</title>
+        <description>&lt;p&gt;Organic cells are composed of molecules that based on 4 fundamental elements:
+&lt;strong&gt;Carbon&lt;/strong&gt;, &lt;strong&gt;Hydrogen&lt;/strong&gt;, &lt;strong&gt;Nitrogen&lt;/strong&gt; &amp;amp; &lt;strong&gt;Oxygen&lt;/strong&gt; (and more!) Combining these
+elements, you can create 4 major macromolecules &lt;strong&gt;Carbohydrates&lt;/strong&gt;, &lt;strong&gt;Lipids&lt;/strong&gt; &amp;amp;
+&lt;strong&gt;Proteins&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+        <link>adnanshaikh.com/2018/08/01/nutrition-macros/</link>
+        <guid isPermaLink="true">adnanshaikh.com/2018/08/01/nutrition-macros/</guid>
+      </item>
+    
+  </channel>
+</rss>

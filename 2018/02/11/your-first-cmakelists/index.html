@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Main/Important Meta -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your first CMakeLists.txt &#8226; Adnan Shaikh</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="/images/me.jpg"/>
+  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" />
+
+  <!-- Styles -->
+  
+  <style type="text/css">#navigation{text-align:center}#navigation a{margin:1em;display:inline-block}div.site-content{margin-left:auto;margin-right:auto;margin-top:40px;padding-left:10px;padding-right:10px}@font-face{font-family:Vollkorn;font-style:normal;src:url(/assets/fonts/Vollkorn-Regular.otf);font-display:fallback}body{font-family:'Vollkorn', serif;font-feature-settings:'lnum';color:#112;background-color:#fffff8;font-size:17.8px}p,li{font-size:1.3em;font-size:17.8px}ul,ol{margin-block-start:0em;margin-block-end:0em}p{margin-block-start:0.25em;margin-block-end:0.25em}header,main{padding:0 20px}.wrapper{margin-top:10%}a:link,a:visited,a:hover,a:active{color:#b58900;text-decoration:none}a:hover{text-decoration:underline}.shadow-img{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}h2,h3{margin-block-start:0.50em;margin-block-end:0.25em}h4{margin-block-start:1.5em;margin-block-end:-0.8em}.main-list-item{font-weight:bold;font-size:1.2em;margin:0.8em 0}.fa-ul.main-list{margin-left:0}.main-list-item-icon{width:36px;color:#112}.logo-container{text-align:center}.logo{width:96px;height:96px;display:inline-block;background-size:cover;border-radius:50%;-moz-border-radius:50%;border:2px solid #fffff8;box-shadow:0 0 0 3px #112}.author-container h1{font-size:2.8em;margin-top:0;margin-bottom:0;text-align:center}.tagline-container p{font-size:1.3em;text-align:center;margin-bottom:2em}hr{border:0;height:1px;background-image:-webkit-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-moz-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-ms-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-o-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0))}footer{position:fixed;bottom:0;right:0;height:20px}.poweredby{font-family:"Arial Narrow", Arial;font-size:0.6em;line-height:0.6em;padding:0 5px;margin-top:30px;text-align:center}@media (min-width: 480px){.wrapper{width:480px;margin:2.5% auto 0 auto}div.site-content{width:480px}}@media (min-width: 768px){.wrapper{width:680px}div.site-content{width:680px}header{float:left;width:30%;text-align:right}.author-container h1,.logo-container,.tagline-container p{text-align:right}main{width:62%;margin-left:43%;padding:0}}@media (max-width: 768px){header ul span.fa{float:left;padding-top:3px}}.social{text-align:center}.social li{display:inline-block;font-size:1px;padding-left:20px}#reddit-share{padding-left:0px}blockquote{background:#f9f9f9;border-left:10px solid #ccc;margin:1.5em 10px;padding:0.5em 10px;quotes:"“" "”" "‘" "’"}blockquote p{display:inline}table{border:collapse}th,td{padding:5px}table,th,td{border:1px solid #112}
+</style>
+  <link rel="preload" href="/assets/solarized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/solarized.css"></noscript>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0"/>
+  <link rel="preload" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></noscript>
+  <link rel="canonical" href="/2018/02/11/your-first-cmakelists/">
+
+  <!-- Meta information -->
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="description" content="Adnan Shaikh's personal website and blog."/>
+  <meta name="keywords" content="blog programming student resume technology talks">
+
+  <!-- Open Graph tags (Facebook meta-info) -->
+  <meta property="og:title" content="Your first CMakeLists.txt - Adnan Shaikh"/>
+  <meta property="og:url" content="adnanshaikh.com/2018/02/11/your-first-cmakelists/"/>
+  <meta property="og:image" content="adnanshaikh.com/images/me.jpg"/>
+  <meta property="og:description" content="cmake my day"/>
+  <meta property="og:site_name" content="Adnan Shaikh's Blog"/>
+  <meta property="og:see_also" content="adnanshaikh.com"/>
+
+  <!-- Various Javascript -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88085331-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88085331-1');
+</script>
+</head>
+
+  <body>
+  <div id="navigation" class="clearfix">
+    <a href="/">home/</a>
+    <a href="/blog">blog/</a>
+    <a href="/resume">resume/</a>
+    <a href="/now">now/</a>
+    <a href="/impossible">impossible/</a>
+    <a href="/kb">kb/</a>
+  </div>
+
+  <div class="site-content">
+    <h1>Your first CMakeLists.txt</h1>
+<em>Adnan Shaikh &bull; 11 February 2018</em>
+
+<p>Writing a makefile to make another makefile is an unproductive, meta and
+probably the worst first step you can take if you’re trying to get started on a
+weekend project. Start hacking first, worry about the build system later. But
+given how I’m usually terrible at following my own rules, writing makefiles is
+my way of procrastinating. Each time I do decide to write one I’m usually at a
+loss for code. There’s a bunch of ways to do the same thing and what adds even
+more to this whole <em>experience</em> is the syntax. It’s incredibly ambiguous at times
+and makes for a really infuriating experience. Take this for example.</p>
+
+<p>The following are all equivalent statements:</p>
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">SET</span><span class="p">(</span> x a b c <span class="p">)</span>
+<span class="nf">SET</span><span class="p">(</span> x a;b;c <span class="p">)</span>
+<span class="nf">SET</span><span class="p">(</span> x <span class="s2">"a;b;c"</span> <span class="p">)</span>
+<span class="nf">SET</span><span class="p">(</span> x;a;b;c <span class="p">)</span>
+</code></pre></div></div>
+
+<p><em>Delightful.</em></p>
+
+<p>Alas, after spending a stupid amount of time on grokking the flow, here’s how
+to write a basic no nonsense <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> for your C/C++ project.</p>
+
+<h2 id="the-bare-minimum">The Bare Minimum</h2>
+<p>You’ll need the minimum following statements if you want it to generate a proper
+solution for Visual Studio.</p>
+
+<ul>
+  <li>
+    <p><strong>cmake_minimum_required</strong><br />
+Set the minimum required version of CMake.</p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span> <span class="p">(</span>VERSION 3.9<span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>project</strong><br />
+Sets the name of the Visual C++ solution file.</p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">project</span> <span class="p">(</span>solution<span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>add_executable</strong><br />
+Set the name of the Visual C ++ project file and the path of the included
+source code. To specify multiple header files and source code, enumerate them
+with a space. Also, files in different directories can be specified relative
+to <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code>.</p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">add_executable</span> <span class="p">(</span>project header.h source.cpp<span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>set_property</strong><br />
+Set the startup project when you hit F5, otherwise it defaults to <code class="language-plaintext highlighter-rouge">ALL_BUILD</code></p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">set_property</span> <span class="p">(</span>DIRECTORY PROPERTY VS_STARTUP_PROJECT <span class="s2">"project"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>So far, you can write a minimal <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> to generate a basic
+project. For programs that use only standard libraries, this is all right.</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cmake_minimum_required</span> <span class="p">(</span>VERSION 3.9<span class="p">)</span>
+
+ <span class="nb">project</span> <span class="p">(</span>solution<span class="p">)</span>
+ <span class="nb">add_executable</span> <span class="p">(</span>project header.h source.cpp<span class="p">)</span>
+
+ <span class="nb">set_property</span> <span class="p">(</span>DIRECTORY PROPERTY VS_STARTUP_PROJECT <span class="s2">"project"</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<h2 id="additional-libraries">Additional Libraries</h2>
+<p>You can also use CMake to detect other libraries on your system–the only
+feature I truly care about.</p>
+
+<ul>
+  <li>
+    <p><strong>CMAKE_MODULE_PATH</strong><br />
+Set the path where CMake can search for <code class="language-plaintext highlighter-rouge">Find&lt;module-name&gt;.cmake</code> module files. CMake’s default modules are
+included in <code class="language-plaintext highlighter-rouge">C:\Program Files (x86)\CMake\share\cmake-3.9\Modules</code>. In this example, the same path
+(<code class="language-plaintext highlighter-rouge">CMAKE_CURRENT_SOURCE_DIR</code>) as <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> is added as the search destination.</p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">set</span> <span class="p">(</span>CMAKE_MODULE_PATH <span class="s2">"</span><span class="si">${</span><span class="nv">CMAKE_CURRENT_SOURCE_DIR</span><span class="si">}</span><span class="s2">"</span> <span class="si">${</span><span class="nv">CMAKE_MODULE_PATH</span><span class="si">}</span><span class="p">)</span> 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>find_package</strong><br />
+CMake retrieves the module <code class="language-plaintext highlighter-rouge">Find&lt;module-name&gt;.cmake</code> and sets a few macros. (It is necessary to write
+<code class="language-plaintext highlighter-rouge">Find&lt;module-name&gt;.cmake</code> otherwise CMake will not find it.) If the module supports it, you can specify the
+version number of the library to search in <code class="language-plaintext highlighter-rouge">&lt;VERSION&gt;</code>.</p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">find_package</span> <span class="p">(</span>&lt;LIBRARY&gt; &lt;VERSION&gt; REQUIRED<span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>Depending on the module, the following macros are usually available.</p>
+    <ul>
+      <li><strong>&lt;LIBRARY&gt;_FOUND</strong><br />
+Returns whether the library was found.<br />
+(e.g. <code class="language-plaintext highlighter-rouge">TRUE</code> or <code class="language-plaintext highlighter-rouge">FALSE</code>)</li>
+      <li><strong>&lt;LIBRARY&gt;_INCLUDE_DIRS</strong><br />
+Path of the directory containing include files.<br />
+(e.g. <code class="language-plaintext highlighter-rouge">C:\Program Files\LIBRARY\include</code>)</li>
+      <li><strong>&lt;LIBRARY&gt;_LIBRARY_DIRS</strong><br />
+The path of the directory containing the library files.<br />
+(e.g. <code class="language-plaintext highlighter-rouge">C:\Program Files\LIBRARY\lib</code>)</li>
+      <li><strong>&lt;LIBRARY&gt;_LIBRARIES</strong> <br />
+Path of the library file.<br />
+(e.g. <code class="language-plaintext highlighter-rouge">C:\Program Files\LIBRARY\lib\LIBRARY.lib</code>)</li>
+      <li><strong>&lt;LIBRARY&gt;_DEFINITIONS</strong><br />
+Preprocessor definitions of the library.<br />
+(e.g. <code class="language-plaintext highlighter-rouge">LIBRARY_DEFINE</code>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>include_directories</strong><br />
+Set the additional include directory in the Visual C ++ project. In your
+project property pages that would be,<br />
+<code class="language-plaintext highlighter-rouge">[C/C++]&gt; [General]&gt; [Additional Include Directories]</code></p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">include_directories</span> <span class="p">(</span><span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_INCLUDE_DIRS</span><span class="si">}</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>add_definitions</strong><br />
+Set preprocessor definitions in the Visual C ++ project.<br />
+ <code class="language-plaintext highlighter-rouge">[C/C++]&gt; [Preprocessor]&gt; [Preprocessor Definitions]</code></p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">add_definitions</span> <span class="p">(</span><span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_DEFINITIONS</span><span class="si">}</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>link_directories</strong><br />
+Set the additional library directory in the Visual C ++ project.
+<code class="language-plaintext highlighter-rouge">[Linker]&gt; [General]&gt; [Additional Library Directories]</code></p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">link_directories</span> <span class="p">(</span><span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_LIBRARY_DIRS</span><span class="si">}</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>target_link_libraries</strong><br />
+Set the additional dependency file in the Visual C ++ project.<br />
+<code class="language-plaintext highlighter-rouge">[Linker]&gt; [Input]&gt; [Additional Dependencies]</code></p>
+
+    <div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">target_link_libraries</span> <span class="p">(</span>project <span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_LIBRARIES</span><span class="si">}</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>So now the entire script looks like this. Depending on the library, there are
+may be a few things you won’t need, so refer to the module and apply the 
+appropriate settings for your project.<br />
+I also added a little section to support both 32 and 64 bit builds.</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cmake_minimum_required</span> <span class="p">(</span>VERSION 3.9<span class="p">)</span>
+ <span class="nb">set</span> <span class="p">(</span>CMAKE_MODULE_PATH <span class="s2">" </span><span class="si">${</span><span class="nv">CMAKE_CURRENT_SOURCE_DIR</span><span class="si">}</span><span class="s2"> "</span> <span class="si">${</span><span class="nv">CMAKE_MODULE_PATH</span><span class="si">}</span><span class="p">)</span>
+
+ <span class="nb">project</span> <span class="p">(</span>solution<span class="p">)</span>
+
+<span class="c1"># Support both 32 and 64 bit builds</span>
+<span class="nb">if</span> <span class="p">(</span><span class="si">${</span><span class="nv">CMAKE_SIZEOF_VOID_P</span><span class="si">}</span> MATCHES 8<span class="p">)</span>
+  <span class="nf">MESSAGE</span><span class="p">(</span><span class="s2">"Using 64-bit libraries"</span><span class="p">)</span>
+  <span class="c1"># Add your code here</span>
+<span class="nb">else</span> <span class="p">()</span>
+  <span class="nf">MESSAGE</span><span class="p">(</span><span class="s2">"Using 32-bit libraries"</span><span class="p">)</span>
+  <span class="c1"># Add your code here</span>
+<span class="nb">endif</span> <span class="p">()</span>
+
+ <span class="nb">add_executable</span> <span class="p">(</span>project header.h source.cpp<span class="p">)</span>
+
+ <span class="nb">set_property</span> <span class="p">(</span>DIRECTORY PROPERTY VS_STARTUP_PROJECT <span class="s2">"project"</span><span class="p">)</span>
+
+ <span class="c1"># Aditional Library Settings</span>
+ <span class="nb">find_package</span> <span class="p">(</span>&lt;LIBRARY&gt; &lt;VERSION&gt; REQUIRED<span class="p">)</span>
+ <span class="nb">if</span> <span class="p">(</span>&lt;LIBRARY&gt;_FOUND<span class="p">)</span>
+   <span class="nb">include_directories</span> <span class="p">(</span><span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_INCLUDE_DIRS</span><span class="si">}</span><span class="p">)</span>
+   <span class="nb">add_definitions</span> <span class="p">(</span><span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_DEFINITIONS</span><span class="si">}</span><span class="p">)</span>
+   <span class="nb">link_directories</span> <span class="p">(</span><span class="si">${</span><span class="nv">&lt;LIBRARY&gt;_LIBRARY_DIRS</span><span class="si">}</span><span class="p">)</span>
+   <span class="nb">target_link_libraries</span> <span class="p">(</span>project $ {&lt;LIBRARY&gt;_LIBRARIES}<span class="p">)</span>
+ <span class="nb">endif</span> <span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="generating-the-project">Generating the Project</h2>
+
+<p>For all the command line purists here’s how its done. Make a <code class="language-plaintext highlighter-rouge">build</code> folder
+inside of your directory otherwise cmake will polute your project with its 
+build output.<br />
+<code class="language-plaintext highlighter-rouge">-DCMAKE_GENERATOR_PLATFORM=x64</code> specifies an <code class="language-plaintext highlighter-rouge">x64</code> build otherwise it
+defaults to <code class="language-plaintext highlighter-rouge">x86</code>.<br />
+<code class="language-plaintext highlighter-rouge">-DCMAKE_C_FLAGS="/W4"</code> raises the warning level from the default <code class="language-plaintext highlighter-rouge">/W3</code> to <code class="language-plaintext highlighter-rouge">/W4</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>build
+<span class="nb">cd </span>build
+cmake <span class="nt">-DCMAKE_GENERATOR_PLATFORM</span><span class="o">=</span><span class="s2">"x64"</span> <span class="nt">-DCMAKE_C_FLAGS</span><span class="o">=</span><span class="s2">"/W4"</span> ..
+</code></pre></div></div>
+
+<p>If for some reason that didn’t work for you because Windows is being
+troublesome, you can try out cmake-gui as well.<br />
+(You can delete the cache by pressing the <code class="language-plaintext highlighter-rouge">[File]&gt; [Delete Cache]</code> button
+from the menu.)</p>
+
+<ol>
+  <li>
+    <p><strong>Launch cmake-gui</strong><br />
+ Start cmake-gui, <em>duh</em></p>
+  </li>
+  <li>
+    <p><strong>Specify Source Code Directory and Output Directory</strong></p>
+
+    <ul>
+      <li>
+        <p><strong>Where is the source code:</strong><br />
+ <code class="language-plaintext highlighter-rouge">Where is the source code:</code> is the source code directory. 
+ Specify the directory where <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> is located. (eg <code class="language-plaintext highlighter-rouge">C:/project</code> )</p>
+      </li>
+      <li>
+        <p><strong>Where to build the binaries:</strong><br />
+ <code class="language-plaintext highlighter-rouge">Where to build the binaries:</code> is the directory to output Visual C ++ projects ( <code class="language-plaintext highlighter-rouge">*.sln</code> , <code class="language-plaintext highlighter-rouge">*.vcxproj</code> etc). 
+ Although you can specify any directory, it’s recommended that you follow the out-of-source build policy. It is customary to use <code class="language-plaintext highlighter-rouge">&lt;source-directory&gt;/build</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Specify Compiler</strong><br />
+ Click on the <code class="language-plaintext highlighter-rouge">Configure</code> button, the window for selecting the compiler is displayed. Select Visual Studio to use from the drop down menu.<br />
+ To build for x86, select “<code class="language-plaintext highlighter-rouge">Visual Studio ** ****</code>”.<br />
+ To build for x64, select “<code class="language-plaintext highlighter-rouge">Visual Studio ** **** Win64</code>”.<br />
+ Click on <code class="language-plaintext highlighter-rouge">Finish</code> and the settings are made according to the development
+ environment.</p>
+  </li>
+  <li>
+    <p><strong>Configuration Settings</strong><br />
+ Many items such as library path are automatically set according to the
+ development environment. When you change options etc., press the
+ <code class="language-plaintext highlighter-rouge">Configure</code> button again to reflect the changes.</p>
+  </li>
+  <li>
+    <p><strong>Generate Project</strong><br />
+ When you are done, press the <code class="language-plaintext highlighter-rouge">Generate</code> button. 
+ A Visual C ++ project is created in the specified directory.</p>
+  </li>
+</ol>
+
+<p>And that’s it! you’re done! Now you can actually move on to getting work done.<br />
+( ◔ ʖ̯ ◔ )</p>
+
+
+
+<div class="social">
+  <ul>
+  </ul>
+</div>
+<hr>
+
+
+
+</div>
+
+
+  <div style="clear:both;"></div>
+  <div class="poweredby">
+      <!-- <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Made with <3</span></a> -->
+  </div>
+  </body>
+</html>

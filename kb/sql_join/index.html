@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Main/Important Meta -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Join &#8226; Adnan Shaikh</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="/images/me.jpg"/>
+  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" />
+
+  <!-- Styles -->
+  
+  <style type="text/css">#navigation{text-align:center}#navigation a{margin:1em;display:inline-block}div.site-content{margin-left:auto;margin-right:auto;margin-top:40px;padding-left:10px;padding-right:10px}@font-face{font-family:Vollkorn;font-style:normal;src:url(/assets/fonts/Vollkorn-Regular.otf);font-display:fallback}body{font-family:'Vollkorn', serif;font-feature-settings:'lnum';color:#112;background-color:#fffff8;font-size:17.8px}p,li{font-size:1.3em;font-size:17.8px}ul,ol{margin-block-start:0em;margin-block-end:0em}p{margin-block-start:0.25em;margin-block-end:0.25em}header,main{padding:0 20px}.wrapper{margin-top:10%}a:link,a:visited,a:hover,a:active{color:#b58900;text-decoration:none}a:hover{text-decoration:underline}.shadow-img{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}h2,h3{margin-block-start:0.50em;margin-block-end:0.25em}h4{margin-block-start:1.5em;margin-block-end:-0.8em}.main-list-item{font-weight:bold;font-size:1.2em;margin:0.8em 0}.fa-ul.main-list{margin-left:0}.main-list-item-icon{width:36px;color:#112}.logo-container{text-align:center}.logo{width:96px;height:96px;display:inline-block;background-size:cover;border-radius:50%;-moz-border-radius:50%;border:2px solid #fffff8;box-shadow:0 0 0 3px #112}.author-container h1{font-size:2.8em;margin-top:0;margin-bottom:0;text-align:center}.tagline-container p{font-size:1.3em;text-align:center;margin-bottom:2em}hr{border:0;height:1px;background-image:-webkit-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-moz-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-ms-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0));background-image:-o-linear-gradient(left, rgba(0,0,0,0), #112, rgba(0,0,0,0))}footer{position:fixed;bottom:0;right:0;height:20px}.poweredby{font-family:"Arial Narrow", Arial;font-size:0.6em;line-height:0.6em;padding:0 5px;margin-top:30px;text-align:center}@media (min-width: 480px){.wrapper{width:480px;margin:2.5% auto 0 auto}div.site-content{width:480px}}@media (min-width: 768px){.wrapper{width:680px}div.site-content{width:680px}header{float:left;width:30%;text-align:right}.author-container h1,.logo-container,.tagline-container p{text-align:right}main{width:62%;margin-left:43%;padding:0}}@media (max-width: 768px){header ul span.fa{float:left;padding-top:3px}}.social{text-align:center}.social li{display:inline-block;font-size:1px;padding-left:20px}#reddit-share{padding-left:0px}blockquote{background:#f9f9f9;border-left:10px solid #ccc;margin:1.5em 10px;padding:0.5em 10px;quotes:"“" "”" "‘" "’"}blockquote p{display:inline}table{border:collapse}th,td{padding:5px}table,th,td{border:1px solid #112}
+</style>
+  <link rel="preload" href="/assets/solarized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/solarized.css"></noscript>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0"/>
+  <link rel="preload" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></noscript>
+  <link rel="canonical" href="/kb/sql_join/">
+
+  <!-- Meta information -->
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="description" content="Adnan Shaikh's personal website and blog."/>
+  <meta name="keywords" content="blog programming student resume technology talks">
+
+  <!-- Open Graph tags (Facebook meta-info) -->
+  <meta property="og:title" content="SQL Join - Adnan Shaikh"/>
+  <meta property="og:url" content="adnanshaikh.com/kb/sql_join/"/>
+  <meta property="og:image" content="adnanshaikh.com/images/me.jpg"/>
+  <meta property="og:description" content="Adnan Shaikh's personal website and blog."/>
+  <meta property="og:site_name" content="Adnan Shaikh's Blog"/>
+  <meta property="og:see_also" content="adnanshaikh.com"/>
+
+  <!-- Various Javascript -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88085331-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88085331-1');
+</script>
+</head>
+
+  <body>
+  <div id="navigation" class="clearfix">
+    <a href="/">home/</a>
+    <a href="/blog">blog/</a>
+    <a href="/resume">resume/</a>
+    <a href="/now">now/</a>
+    <a href="/impossible">impossible/</a>
+    <a href="/kb">kb/</a>
+  </div>
+
+  <div class="site-content">
+    <h1 id="sql-join">SQL Join</h1>
+
+<p>We’ll use following tables this example,</p>
+
+<p><code class="language-plaintext highlighter-rouge">friends</code> table</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>friend_id</th>
+      <th>friend_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">pets</code> tables</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>pet_id</th>
+      <th>owner_id</th>
+      <th>pet_type</th>
+      <th>pet_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Samwise</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>NULL</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here’s the SQL to set it up</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">friends</span>
+<span class="p">(</span>
+  <span class="n">friend_id</span> <span class="nb">INT</span><span class="p">,</span>
+  <span class="n">friend_name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">pets</span>
+<span class="p">(</span>
+ <span class="n">pet_id</span> <span class="nb">INT</span><span class="p">,</span>
+ <span class="n">owner_id</span> <span class="nb">INT</span><span class="p">,</span>
+ <span class="n">pet_type</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+ <span class="n">pet_name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">friends</span> <span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'John'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">friends</span> <span class="k">values</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'Sarah'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">friends</span> <span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'Rachel'</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">friends</span> <span class="k">values</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'Sam'</span><span class="p">);</span>
+
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>    <span class="s1">'goldfish'</span><span class="p">,</span>   <span class="s1">'Fishy'</span>    <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>    <span class="s1">'goldfish'</span><span class="p">,</span>   <span class="s1">'Nemo'</span>     <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>    <span class="s1">'dog'</span><span class="p">,</span>        <span class="s1">'Fido'</span>     <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>    <span class="s1">'cat'</span><span class="p">,</span>        <span class="s1">'Kitty'</span>    <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>    <span class="s1">'bird'</span><span class="p">,</span>       <span class="s1">'Feathers'</span> <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>    <span class="s1">'chinchilla'</span><span class="p">,</span> <span class="s1">'Fuzzy'</span>    <span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">pets</span> <span class="k">values</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="k">NULL</span><span class="p">,</span> <span class="s1">'iguana'</span><span class="p">,</span>     <span class="s1">'Scales'</span>   <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="inner-join">Inner join</h2>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">pets</span>
+<span class="k">ON</span> <span class="n">friends</span><span class="p">.</span><span class="n">friend_id</span> <span class="o">=</span> <span class="n">pets</span><span class="p">.</span><span class="n">owner_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>The inner join will combine the rows from <code class="language-plaintext highlighter-rouge">friends</code> that match up with at least
+one row from <code class="language-plaintext highlighter-rouge">pets</code></p>
+
+<p>Here’s the output of this join query:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>friend_id</th>
+      <th>friend_name</th>
+      <th>pet_id</th>
+      <th>owner_id</th>
+      <th>pet_type</th>
+      <th>pet_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Samwise</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Few things to note about the results:</p>
+<ul>
+  <li>Scales the iguana is not included in the results. He does not have an owner
+(<code class="language-plaintext highlighter-rouge">owner_id</code> is <code class="language-plaintext highlighter-rouge">NULL</code> in the <code class="language-plaintext highlighter-rouge">pets</code> table), so he was never matched with a
+row in <code class="language-plaintext highlighter-rouge">friends</code>.</li>
+  <li>Sam(<code class="language-plaintext highlighter-rouge">friend_id</code> = <code class="language-plaintext highlighter-rouge">4</code>) is not included in the results because he does not
+have any matches in the <code class="language-plaintext highlighter-rouge">pets</code> table.</li>
+</ul>
+
+<h2 id="implicit-join">Implicit Join</h2>
+<p>Inner joins can be perform with the implicit join syntax. This query will give
+you the same results as above:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM friends, pets
+WHERE friends.friend_id = pets.owner_id;
+</code></pre></div></div>
+
+<h2 id="outer-joins">Outer Joins</h2>
+
+<p>Outer joins can be classified into three types:</p>
+<ul>
+  <li>Left outer join: all rows from <code class="language-plaintext highlighter-rouge">friends</code>, all matching rows from <code class="language-plaintext highlighter-rouge">pets</code></li>
+  <li>Right outer join: all matching rows from <code class="language-plaintext highlighter-rouge">friends</code>, all rows from <code class="language-plaintext highlighter-rouge">pets</code></li>
+  <li>Full outer join: all rows from <code class="language-plaintext highlighter-rouge">friends</code>, all rows from <code class="language-plaintext highlighter-rouge">pets</code> regardless of
+whether they match</li>
+</ul>
+
+<h3 id="left-outer-join">Left outer join</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span>
+<span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">pets</span>
+<span class="k">ON</span> <span class="n">friends</span><span class="p">.</span><span class="n">friend_id</span> <span class="o">=</span> <span class="n">pets</span><span class="p">.</span><span class="n">owner_id</span>
+</code></pre></div></div>
+
+<p>This left outer join will give you all the rows from <code class="language-plaintext highlighter-rouge">friends</code>, and will try to
+match them with rows from <code class="language-plaintext highlighter-rouge">pets</code>.</p>
+
+<p>If there is no match with <code class="language-plaintext highlighter-rouge">pets</code>, the <code class="language-plaintext highlighter-rouge">pet_id</code>, <code class="language-plaintext highlighter-rouge">owner_id</code>, <code class="language-plaintext highlighter-rouge">pet_type</code>, and
+<code class="language-plaintext highlighter-rouge">pet_name</code> columns in the results will be <code class="language-plaintext highlighter-rouge">NULL</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">pets</code> with no owner will not be included. (Sorry, Scales the iguana).</p>
+
+<p>Here’s the output from this join query:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>friend_id</th>
+      <th>friend_name</th>
+      <th>pet_id</th>
+      <th>owner_id</th>
+      <th>pet_type</th>
+      <th>pet_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Samwise</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Few things to note about the results:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Sam</code> has <code class="language-plaintext highlighter-rouge">NULL</code> for his <code class="language-plaintext highlighter-rouge">pet_id</code>, <code class="language-plaintext highlighter-rouge">owner_id</code>, <code class="language-plaintext highlighter-rouge">pet_type</code>, and <code class="language-plaintext highlighter-rouge">pet_name</code> columns because he does not have a pet.</li>
+  <li>Scales the iguana is not included in the table because he has a <code class="language-plaintext highlighter-rouge">NULL</code> owner.</li>
+</ul>
+
+<h3 id="right-outer-join">Right outer join</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">from</span> <span class="n">friends</span>
+<span class="k">RIGHT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">pets</span>
+<span class="k">ON</span> <span class="n">friends</span><span class="p">.</span><span class="n">friend_id</span> <span class="o">=</span> <span class="n">pets</span><span class="p">.</span><span class="n">owner_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This query will give you almost the same results as the left outer join. The
+only difference is that <code class="language-plaintext highlighter-rouge">pets</code> with no owners are in the results, and <code class="language-plaintext highlighter-rouge">friends</code>
+with no pets are left out.</p>
+
+<p>Here are the results:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>friend_id</th>
+      <th>friend_name</th>
+      <th>pet_id</th>
+      <th>owner_id</th>
+      <th>pet_type</th>
+      <th>pet_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Samwise</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>7</td>
+      <td>NULL</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Notice how Scales the iguana is in, but Sam is left out.</p>
+
+<h3 id="full-outer-join">Full outer join</h3>
+<p>These don’t exist in MySQL but do in PostgreSQL and other databases.
+If your database does support full outer joins, the syntax should look like this:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span>
+<span class="k">FULL</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">pets</span>
+<span class="k">ON</span> <span class="n">friends</span><span class="p">.</span><span class="n">friend_id</span> <span class="o">=</span> <span class="n">pets</span><span class="p">.</span><span class="n">owner_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>You can emulate a full outer join in MySQL like this:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">pets</span> <span class="k">ON</span> <span class="n">friends</span><span class="p">.</span><span class="n">friend_id</span> <span class="o">=</span> <span class="n">pets</span><span class="p">.</span><span class="n">owner_id</span>
+<span class="k">UNION</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span>
+<span class="k">RIGHT</span> <span class="k">JOIN</span> <span class="n">pets</span> <span class="k">ON</span> <span class="n">friends</span><span class="p">.</span><span class="n">friend_id</span> <span class="o">=</span> <span class="n">pets</span><span class="p">.</span><span class="n">owner_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Here’s what the results what would look like:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>friend_id</th>
+      <th>friend_name</th>
+      <th>pet_id</th>
+      <th>owner_id</th>
+      <th>pet_type</th>
+      <th>pet_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Samwise</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+    <tr>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>7</td>
+      <td>NULL</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Both Sam and Scales the iguana are in the results. In essence, it’s a union
+between the right and left outer joins.</p>
+
+<h2 id="cross-join">Cross join</h2>
+<p>A cross join is a different from the other types of joins discussed in that
+there’s no matching between tables. It’s forms a cartesian product.</p>
+
+<p>The cross join below will take every row from <code class="language-plaintext highlighter-rouge">friends</code> and mash it together
+with every other row in <code class="language-plaintext highlighter-rouge">pets</code>.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span>
+<span class="k">CROSS</span> <span class="k">JOIN</span> <span class="n">pets</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Implicit cross join syntax:</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">friends</span><span class="p">,</span> <span class="n">pets</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Here’s what that would look like:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>friend_id</th>
+      <th>friend_name</th>
+      <th>pet_id</th>
+      <th>owner_id</th>
+      <th>pet_type</th>
+      <th>pet_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>1</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Fishy</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>2</td>
+      <td>1</td>
+      <td>goldfish</td>
+      <td>Nemo</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>3</td>
+      <td>1</td>
+      <td>dog</td>
+      <td>Fido</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Kitty</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Kitty</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Kitty</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>4</td>
+      <td>2</td>
+      <td>cat</td>
+      <td>Kitty</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>5</td>
+      <td>2</td>
+      <td>bird</td>
+      <td>Feathers</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>6</td>
+      <td>3</td>
+      <td>chinchilla</td>
+      <td>Fuzzy</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>7</td>
+      <td>(null)</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sarah</td>
+      <td>7</td>
+      <td>(null)</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Rachel</td>
+      <td>7</td>
+      <td>(null)</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sam</td>
+      <td>7</td>
+      <td>(null)</td>
+      <td>iguana</td>
+      <td>Scales</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+  <div style="clear:both;"></div>
+  <div class="poweredby">
+      <!-- <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Made with <3</span></a> -->
+  </div>
+  </body>
+</html>
