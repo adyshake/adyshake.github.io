@@ -26,15 +26,15 @@ work experience, I think it's finally time to brave the freelance market.
 Over the last year and a half, I've been trying to back off from my phone and
 the internet as much as I can. I question the utility of social networks every
 day, the signal to noise ratio is just too low. The hardest part of getting out
-of the Facebook ecosystem for me would be Instagram (and also WhatsApp, but
-it's still far more useful than what IG offers). I'm planning--yet another--a
-digital detox for 30 days. As I mentioned, this isn't my first rodeo, I've
-tried multiple variations of the detox and failed. Almost always because I
-promise myself that I will use social networks as tools and not a way to be
-content with boredom. You'd be surprised as to how a decent UX job and red
-notifications can hook you back in so quickly. Damn you variable rewards.
+of the Facebook ecosystem for me would be Instagram (and WhatsApp, but it's
+still far more useful than what IG offers). I'm planning--yet another--a digital
+detox for 30 days. As I mentioned, this isn't my first rodeo, I've tried
+multiple variations of the detox and failed. Almost always because I promise
+myself that I will use social networks as tools and not a way to be content with
+boredom. You'd be surprised as to how a decent UX job and red notifications can
+hook you back in so quickly. Damn you variable rewards.
 
-My main focus for this year are:
+The things I want to focus on for this year are:
 * Break into the freelance industry
 * Read 2 books a month
 * Quit social media for good this time

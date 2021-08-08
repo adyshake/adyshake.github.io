@@ -97,7 +97,7 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 ## Life Goals
 
 * ~~Graduate from college~~ [(January 2018)][graduate-college]
-* Graduate from grad school
+* ~~Graduate from grad school~~ [(May 2021)][graduate-grad-school]
 * ~~Be self-sufficient and location-independent~~ (August 2020)
 * “Retire” [Mr. Money Mustache-style][money-mustache] * by age 40 * (save $900k in 2014 dollars, live off of less than 4% $36,000/yr – from interest)
 * Maintain a loving, inspiring, happy relationship with my girlfriend
@@ -110,5 +110,6 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 [visit-usa]:/images/impossible/visit-usa.jpg
 [cliff-dive]:https://youtu.be/XPeZyCxxVKA
 [graduate-college]:/images/impossible/graduate-college.jpg
+[graduate-grad-school]:/images/impossible/graduate-grad-school.jpg
 [impossible-banner]:/images/impossible/impossible-banner.jpg
 {:class="shadow-img" width="70%"}

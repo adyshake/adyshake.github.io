@@ -15,7 +15,16 @@ Experience
   width="4.5%"
   style="float:left;">
    <b>Amazon</b><br>
-   <i>Software Engineer Intern, May 2020 - August 2020</i>
+   <i>Software Development Engineer I, June 2021 - Present</i>
+</p>
+
+* Working on the Business Payments Products team.
+
+<p vertical-align="center"> <img src="/images/resume/amazon.png"
+  width="4.5%"
+  style="float:left;">
+   <b>Amazon</b><br>
+   <i>Software Development Engineer Intern, May 2020 - August 2020</i>
 </p>
 
 * Migrated serving the frontend of an existing tightly coupled monolithic
@@ -80,14 +89,15 @@ Education
   width="4%"
   style="float:left;">
    <b>The University of Texas at Dallas</b><br>
-   <i>MS in Computer Science, Expected May 2021</i>
+   <i>MS in Computer Science, May 2021</i>
 </p>
+* Cum. GPA: <font color = "#4a4a4a"><i>3.889/ 4</i></font>
 
 <p vertical-align="center"> <img src="/images/resume/vit_logo.png"
   width="4%"
   style="float:left;">
    <b>Vishwakarma Institute of Technology</b><br>
-   <i>BTech in Computer Engineering, May 2017</i>
+   <i>B.Tech in Computer Engineering, May 2017</i>
 </p>
 
 * Graduated 1st Class with Distinction
