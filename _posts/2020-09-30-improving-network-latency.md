@@ -4,8 +4,7 @@ title: Improving Network Latency
 description: No ms for this mf
 featured: false
 ---
-
-My friends and I recently got into a new tactical shooter called
+My friends and I recently got into this new game
 [Valorant](https://playvalorant.com/en-us/). It's a great game but the only
 thing holding us back from having an enjoyable experience was our latencies
 since we live on opposite sides of the planet. To mediate our latencies, we

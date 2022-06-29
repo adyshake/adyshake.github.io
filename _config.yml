@@ -20,7 +20,7 @@ sass:
     sass_dir: assets
     style: compressed
 
-paginate: 10	
+paginate: 6	
 paginate_path: "blog/page:num"
 
 markdown: kramdown

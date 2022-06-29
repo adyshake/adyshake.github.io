@@ -5,7 +5,11 @@ description: Wallpapers for ages
 featured: false
 ---
 
-I'm currently reading The New Turing Omnibus and one of the first exercises mentioned in Chapter 1 was implementing the Wallpaper algorithm with 3 colors. Although the premise of the chapter was to simply get acquainted with the conventions of how algorithms would be written in the book, they picked a pretty mesmerizing one. Here’s the algorithm, straight from the book.
+I'm currently reading The New Turing Omnibus and one of the first exercises
+mentioned in Chapter 1 was implementing the Wallpaper algorithm with 3 colors.
+Although the premise of the chapter was to simply get acquainted with the
+conventions of how algorithms would be written in the book, they picked a pretty
+mesmerizing one. Here’s the algorithm, straight from the book.
 
 ```
 input side
@@ -22,17 +26,23 @@ for i ← 1 to 100
             then plot(x, y, blue)
 ```
 
-At the core of function is the statement <b>_x<sup>2</sup> + y<sup>2</sup>_</b>, the circular function. At low side values you can see concentric circles forming.
+At the core of function is the statement <b>_x<sup>2</sup> + y<sup>2</sup>_</b>,
+the circular function. At low side values you can see concentric circles
+forming.
 
 {: align="center"}
 ![conc-circles]
 
-As the side value increases, the concentric circles get denser and moiré patterns begin forming like so. Colors begin to overlap leading to some very cool patterns as the algorithm iterates over the side value.
+As the side value increases, the concentric circles get denser and moiré
+patterns begin forming like so. Colors begin to overlap leading to some very
+cool patterns as the algorithm iterates over the side value.
 
 {: align="center"}
 ![conc-moire-patterns]
 
-Here's a dynamic version implemented in JavaScript. I spent more time trying to get dynamic resizing to work than implementing the actual algorithm itself. _Yay software engineering_.
+Here's a dynamic version implemented in JavaScript. I spent more time trying to
+get dynamic resizing to work than implementing the actual algorithm itself. _Yay
+software engineering_.
 
 <center>
 <canvas class="shadow-img" id="wallpaperCanvas" width="100" height="500"></canvas>
