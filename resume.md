@@ -6,6 +6,13 @@ pdf: <span class="fa fa-file-pdf-o fa-lg"></span>
 Resume
 ======
 
+<style>
+ul,
+ol {
+    margin-block-start: -0.6em;
+}
+</style>
+
 [{{page.pdf}} Download my resume](/papers/resume.pdf)
 
 Experience

@@ -20,6 +20,8 @@ because I know how difficult it is to make friends in a new city as a busy
 adult. I'm just grateful for a lot of things in life right now and I'd like to
 keep this update short. Till next time.
 
+<hr>
+
 This page is a public declaration of my priorities and a reminder to myself for
 times when I’m feeling unfocused. It was inspired by Thomas Frank’s impossible
 list and Derek Sivers’ now page.

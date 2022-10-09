@@ -14,7 +14,7 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 
 ### Cardio
 * ~~Run a 3K~~ (April 2018)
-* Run a 5K
+* ~~Run a 5K~~ (March 2022)
 * Run a 10K
 * Run a 22K
 * Run a 42K
@@ -53,28 +53,17 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 
 * ~~Make $5,000 (gross) in a month~~ (May 2020)
 
-## Creative Goals
-
-* Learn how to make electronic music
-* Learn how to play the piano
-
 ## Fun Goals
 
 * ~~Cliff dive~~ [(July 2017)][cliff-dive]
 * Sky dive
-* Scuba dive
+* ~~Scuba dive~~ (July 2022)
 * Bungee jump
 * Wingsuit fly
 * Zero-G flight
 * Go cavern diving
 * ~~Go surfing~~ (December 2018)
 * Go sailing
-
-## Events to attend
-
-* ComicCon
-* VidCon
-* Coachella
 
 ## Travel Goals
 
@@ -83,6 +72,7 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Visit UAE~~ [(1997)][visit-uae]
 * ~~Vist Oman~~ [(July 2017)][visit-oman]
 * ~~Vist USA~~ [(August 2019)][visit-usa]
+* ~~Visit Mexico~~ (July 2022)
 * Visit Thailand
 * Visit China
 * Visit Japan
@@ -99,7 +89,7 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Graduate from college~~ [(January 2018)][graduate-college]
 * ~~Graduate from grad school~~ [(May 2021)][graduate-grad-school]
 * ~~Be self-sufficient and location-independent~~ (August 2020)
-* “Retire” [Mr. Money Mustache-style][money-mustache] * by age 40 * (save $900k in 2014 dollars, live off of less than 4% $36,000/yr – from interest)
+* “Retire” [Mr. Money Mustache-style][money-mustache] * by age 40 * (save $1mil in 2021 dollars, live off of less than 4% $40,000/yr – from interest)
 * Maintain a loving, inspiring, happy relationship with my girlfriend
 * Get Married
 

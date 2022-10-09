@@ -72,7 +72,7 @@ this post was my way of reclaiming that time back.
 
 [You can find my forked version of UnclutterIG here](https://github.com/adyshake/UnclutterIG).
 
-[before_xposed]:/images/before_xposed.jpg
+[before_xposed]:/images/writing-an-xposed-module-to-quit-social-media.jpg
 {:class="shadow-img" width="40%"}
 [after_xposed]:/images/after_xposed.jpg
 {:class="shadow-img" width="40%"}

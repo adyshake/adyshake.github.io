@@ -47,11 +47,11 @@ _5 GHz average latency to 8.8.8.8_
 {: align="middle" style="font-size:12px"}
 _LAN average latency to 8.8.8.8_
 
-[2.4ghz]:/images/latency/2.4ghz.jpg
+[2.4ghz]:/images/2.4ghz.jpg
 {:class="shadow-img" width="80%"}
 
-[5ghz]:/images/latency/5ghz.jpg
+[5ghz]:/images/5ghz.jpg
 {:class="shadow-img" width="80%"}
 
-[lan]:/images/latency/lan.jpg
+[lan]:/images/lan.jpg
 {:class="shadow-img" width="80%"}

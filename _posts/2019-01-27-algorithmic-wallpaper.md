@@ -129,5 +129,5 @@ software engineering_.
 
 [conc-circles]: /images/conc-circles.png
 {:class="shadow-img"  width="70%"}
-[conc-moire-patterns]: /images/conc-moire-patterns.png
+[conc-moire-patterns]: /images/algorithmic-wallpaper.jpg
 {:class="shadow-img"  width="70%"}

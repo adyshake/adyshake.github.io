@@ -5,6 +5,15 @@ layout: contentbase
 Knowledge Base
 ======
 
+<style>
+ul,
+ol {
+    margin-block-start: -0.7em;
+    margin-block-end: -0.7em;
+}
+</style>
+
+
 ## SQL
 * [SQL Joins](/kb/sql_join)
 
