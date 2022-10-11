@@ -42,6 +42,18 @@ body {
     background-color: $background-color;
 }
 
+.content p {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.content li {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
 /*** anchor tags ***/
 
 a:link,
