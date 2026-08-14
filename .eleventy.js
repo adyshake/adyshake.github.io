@@ -13,12 +13,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
 
-  eleventyConfig.addFilter("dateToLongString", function (date) {
-    const d = new Date(date);
-    const day = d.getUTCDate();
-    const month = d.toLocaleString("en-US", { month: "long", timeZone: "UTC" });
-    const year = d.getUTCFullYear();
-    return `${day} ${month} ${year}`;
+  eleventyConfig.on("eleventy.after", async ({ directories }) => {
+    const out = (directories && directories.output) || path.join(__dirname, "_site");
+    fs.writeFileSync(path.join(out, ".nojekyll"), "");
   });
 
   eleventyConfig.addFilter("dateISO", function (date) {
@@ -27,10 +24,6 @@ module.exports = function (eleventyConfig) {
     const month = String(d.getUTCMonth() + 1).padStart(2, "0");
     const day = String(d.getUTCDate()).padStart(2, "0");
     return `${year}-${month}-${day}`;
-  });
-
-  eleventyConfig.addFilter("limit", function (arr, count) {
-    return arr.slice(0, count);
   });
 
   eleventyConfig.addFilter("crumbs", function (url) {
