@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Join / Adnan Shaikh</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="apple-touch-icon" href="/images/me.jpg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="description" content="Inner, outer, and cross joins with a small example">
+  <meta property="og:title" content="SQL Join">
+  <meta property="og:description" content="Inner, outer, and cross joins with a small example">
+  <meta property="og:image" content="https://adnanshaikh.com/images/me.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar">
+      <h2 class="navbar-label">Navigation</h2>
+      <h2>
+        <span class="crumb">~/<a href="/">home</a>/<a href="/sql-join/">sql-join</a></span>
+      </h2>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="prose">
+  <h2>SQL Join</h2>
+  <p class="meta">2019-12-15</p>
+  <p>We'll use following tables this example,</p>
+<p><code>friends</code> table</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>friend_id</th>
+<th>friend_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>pets</code> tables</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>pet_id</th>
+<th>owner_id</th>
+<th>pet_type</th>
+<th>pet_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Samwise</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>7</td>
+<td>NULL</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here's the SQL to set it up</p>
+<pre><code class="language-sql">CREATE TABLE friends
+(
+  friend_id INT,
+  friend_name VARCHAR(100)
+);
+
+CREATE TABLE pets
+(
+ pet_id INT,
+ owner_id INT,
+ pet_type VARCHAR(100),
+ pet_name VARCHAR(100)
+);
+
+INSERT INTO friends values(1, 'John');
+INSERT INTO friends values(2, 'Sarah');
+INSERT INTO friends values(3, 'Rachel');
+INSERT INTO friends values(4, 'Sam');
+
+
+INSERT INTO pets values(1, 1,    'goldfish',   'Fishy'    );
+INSERT INTO pets values(2, 1,    'goldfish',   'Nemo'     );
+INSERT INTO pets values(3, 1,    'dog',        'Fido'     );
+INSERT INTO pets values(4, 2,    'cat',        'Kitty'    );
+INSERT INTO pets values(5, 2,    'bird',       'Feathers' );
+INSERT INTO pets values(6, 3,    'chinchilla', 'Fuzzy'    );
+INSERT INTO pets values(7, NULL, 'iguana',     'Scales'   );
+</code></pre>
+<h2>Inner join</h2>
+<pre><code class="language-sql">SELECT * FROM friends
+INNER JOIN pets
+ON friends.friend_id = pets.owner_id;
+</code></pre>
+<p>The inner join will combine the rows from <code>friends</code> that match up with at least
+one row from <code>pets</code></p>
+<p>Here's the output of this join query:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>friend_id</th>
+<th>friend_name</th>
+<th>pet_id</th>
+<th>owner_id</th>
+<th>pet_type</th>
+<th>pet_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Samwise</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+</tbody>
+</table></div>
+<p>Few things to note about the results:</p>
+<ul>
+<li>Scales the iguana is not included in the results. He does not have an owner
+(<code>owner_id</code> is <code>NULL</code> in the <code>pets</code> table), so he was never matched with a
+row in <code>friends</code>.</li>
+<li>Sam(<code>friend_id</code> = <code>4</code>) is not included in the results because he does not
+have any matches in the <code>pets</code> table.</li>
+</ul>
+<h2>Implicit Join</h2>
+<p>Inner joins can be perform with the implicit join syntax. This query will give
+you the same results as above:</p>
+<pre><code>SELECT * FROM friends, pets
+WHERE friends.friend_id = pets.owner_id;
+</code></pre>
+<h2>Outer Joins</h2>
+<p>Outer joins can be classified into three types:</p>
+<ul>
+<li>Left outer join: all rows from <code>friends</code>, all matching rows from <code>pets</code></li>
+<li>Right outer join: all matching rows from <code>friends</code>, all rows from <code>pets</code></li>
+<li>Full outer join: all rows from <code>friends</code>, all rows from <code>pets</code> regardless of
+whether they match</li>
+</ul>
+<h3>Left outer join</h3>
+<pre><code class="language-sql">SELECT * FROM friends
+LEFT OUTER JOIN pets
+ON friends.friend_id = pets.owner_id
+</code></pre>
+<p>This left outer join will give you all the rows from <code>friends</code>, and will try to
+match them with rows from <code>pets</code>.</p>
+<p>If there is no match with <code>pets</code>, the <code>pet_id</code>, <code>owner_id</code>, <code>pet_type</code>, and
+<code>pet_name</code> columns in the results will be <code>NULL</code>.</p>
+<p><code>pets</code> with no owner will not be included. (Sorry, Scales the iguana).</p>
+<p>Here's the output from this join query:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>friend_id</th>
+<th>friend_name</th>
+<th>pet_id</th>
+<th>owner_id</th>
+<th>pet_type</th>
+<th>pet_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Samwise</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table></div>
+<p>Few things to note about the results:</p>
+<ul>
+<li><code>Sam</code> has <code>NULL</code> for his <code>pet_id</code>, <code>owner_id</code>, <code>pet_type</code>, and <code>pet_name</code> columns because he does not have a pet.</li>
+<li>Scales the iguana is not included in the table because he has a <code>NULL</code> owner.</li>
+</ul>
+<h3>Right outer join</h3>
+<pre><code class="language-sql">SELECT * from friends
+RIGHT OUTER JOIN pets
+ON friends.friend_id = pets.owner_id;
+</code></pre>
+<p>This query will give you almost the same results as the left outer join. The
+only difference is that <code>pets</code> with no owners are in the results, and <code>friends</code>
+with no pets are left out.</p>
+<p>Here are the results:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>friend_id</th>
+<th>friend_name</th>
+<th>pet_id</th>
+<th>owner_id</th>
+<th>pet_type</th>
+<th>pet_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Samwise</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>7</td>
+<td>NULL</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+</tbody>
+</table></div>
+<p>Notice how Scales the iguana is in, but Sam is left out.</p>
+<h3>Full outer join</h3>
+<p>These don’t exist in MySQL but do in PostgreSQL and other databases.
+If your database does support full outer joins, the syntax should look like this:</p>
+<pre><code class="language-sql">SELECT * FROM friends
+FULL OUTER JOIN pets
+ON friends.friend_id = pets.owner_id;
+</code></pre>
+<p>You can emulate a full outer join in MySQL like this:</p>
+<pre><code class="language-sql">SELECT * FROM friends
+LEFT JOIN pets ON friends.friend_id = pets.owner_id
+UNION
+SELECT * FROM friends
+RIGHT JOIN pets ON friends.friend_id = pets.owner_id;
+</code></pre>
+<p>Here's what the results what would look like:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>friend_id</th>
+<th>friend_name</th>
+<th>pet_id</th>
+<th>owner_id</th>
+<th>pet_type</th>
+<th>pet_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Samwise</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>7</td>
+<td>NULL</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+</tbody>
+</table></div>
+<p>Both Sam and Scales the iguana are in the results. In essence, it's a union
+between the right and left outer joins.</p>
+<h2>Cross join</h2>
+<p>A cross join is a different from the other types of joins discussed in that
+there's no matching between tables. It's forms a cartesian product.</p>
+<p>The cross join below will take every row from <code>friends</code> and mash it together
+with every other row in <code>pets</code>.</p>
+<pre><code class="language-sql">SELECT * FROM friends
+CROSS JOIN pets;
+</code></pre>
+<p>Implicit cross join syntax:</p>
+<pre><code class="language-sql">SELECT * FROM friends, pets;
+</code></pre>
+<p>Here's what that would look like:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>friend_id</th>
+<th>friend_name</th>
+<th>pet_id</th>
+<th>owner_id</th>
+<th>pet_type</th>
+<th>pet_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>1</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Fishy</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>2</td>
+<td>1</td>
+<td>goldfish</td>
+<td>Nemo</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>3</td>
+<td>1</td>
+<td>dog</td>
+<td>Fido</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Kitty</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Kitty</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Kitty</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>4</td>
+<td>2</td>
+<td>cat</td>
+<td>Kitty</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>5</td>
+<td>2</td>
+<td>bird</td>
+<td>Feathers</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>6</td>
+<td>3</td>
+<td>chinchilla</td>
+<td>Fuzzy</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John</td>
+<td>7</td>
+<td>(null)</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sarah</td>
+<td>7</td>
+<td>(null)</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rachel</td>
+<td>7</td>
+<td>(null)</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sam</td>
+<td>7</td>
+<td>(null)</td>
+<td>iguana</td>
+<td>Scales</td>
+</tr>
+</tbody>
+</table></div>
+
+</div>
+
+  </main>
+</body>
+</html>
