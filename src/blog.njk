@@ -1,0 +1,42 @@
+---
+title: Blog
+layout: base.njk
+pagination:
+  data: collections.post
+  size: 10
+  reverse: true
+permalink: "blog/{% if pagination.pageNumber > 0 %}page{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+---
+
+<div class="section-head">
+  <h2>Notes</h2>
+</div>
+<table class="notes">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th class="hide-phone">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for post in pagination.items %}
+    <tr>
+      <td><time datetime="{{ post.date | dateISO }}">{{ post.date | dateISO }}</time></td>
+      <td><a href="{{ post.url }}">{{ post.data.title }}</a></td>
+      <td class="hide-phone"><a class="btn" href="{{ post.url }}">Read →</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="pager">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">← Previous</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next →</a>
+  {% endif %}
+</div>

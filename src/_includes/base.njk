@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title and page.url != "/" %}{{ title }} / {% endif %}{{ site.name }}</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="apple-touch-icon" href="{{ site.logo }}">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="description" content="{{ description or site.description }}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.logo }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar">
+      <h2 class="navbar-label">Navigation</h2>
+      <h2>
+        <span class="crumb">~{% for crumb in page.url | crumbs %}/<a href="{{ crumb.href }}">{{ crumb.label }}</a>{% endfor %}</span>
+      </h2>
+    </div>
+  </header>
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+</body>
+</html>

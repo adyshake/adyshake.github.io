@@ -1,0 +1,13 @@
+{
+  "name": "adyshake-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "deploy": "npm run build && bash scripts/deploy.sh"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

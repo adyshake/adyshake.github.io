@@ -1,0 +1,78 @@
+---
+title: Home
+layout: base.njk
+---
+
+<div class="columns">
+  <div class="col-about">
+    <table class="intro">
+      <thead>
+        <tr>
+          <th>About</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            This is a personal website where I keep a diary of misadventures that
+            roughly fall into recreational programming. Views here are my own.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-pages">
+    <table class="about">
+      <thead>
+        <tr>
+          <th>Pages</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Now</td>
+          <td><a href="/now/">now/</a></td>
+        </tr>
+        <tr>
+          <td>Impossible</td>
+          <td><a href="/impossible/">impossible/</a></td>
+        </tr>
+        <tr>
+          <td>Beliefs</td>
+          <td><a href="/beliefs/">beliefs/</a></td>
+        </tr>
+        <tr>
+          <td>Favorites</td>
+          <td><a href="/favorites/">favorites/</a></td>
+        </tr>
+        <tr>
+          <td>Github</td>
+          <td><a href="https://github.com/adyshake">adyshake</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section-head">
+  <h2>Notes</h2> / <a href="/blog/">Archive →</a>
+</div>
+<table class="notes">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th class="hide-phone">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for post in collections.post | reverse %}
+    <tr>
+      <td><time datetime="{{ post.date | dateISO }}">{{ post.date | dateISO }}</time></td>
+      <td><a href="{{ post.url }}">{{ post.data.title }}</a></td>
+      <td class="hide-phone"><a class="btn" href="{{ post.url }}">Read →</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
