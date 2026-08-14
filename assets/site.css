@@ -5,7 +5,7 @@
   --border: #c8c8c8;
   --header-border: #000;
   --header-bg: #eee;
-  --read: #137752;
+  --read: #ffa459;
   --page: #fff;
 }
 
@@ -162,7 +162,7 @@ blockquote {
 .table-scroll {
   min-width: 0;
   max-width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   margin: 0 0 1em;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
@@ -182,6 +182,15 @@ blockquote {
 
 .table-scroll table {
   margin-bottom: 0;
+  width: 100%;
+}
+
+/* Wide markdown tables in posts: keep cells intact, scroll inside */
+.prose .table-scroll {
+  overflow-x: scroll;
+}
+
+.prose .table-scroll table {
   width: max-content;
   min-width: 100%;
 }
@@ -189,15 +198,19 @@ blockquote {
 .prose .table-scroll th,
 .prose .table-scroll td {
   white-space: nowrap;
+  word-break: normal;
 }
 
 table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
   border: 0.1rem solid #bfbfbf;
   margin: 0 0 1em;
+  table-layout: auto;
+  word-break: break-word;
 }
 
 thead {
@@ -249,8 +262,8 @@ td {
   line-height: 1.2rem;
   height: 1.4rem;
   padding: 0.15rem 0.3rem;
-  background: #137752;
-  color: #fff !important;
+  background: var(--read);
+  color: #000 !important;
   text-decoration: none !important;
   border: 0.1rem solid #000;
   border-radius: 0.1rem;
@@ -262,7 +275,7 @@ td {
 }
 
 .btn:visited {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .btn:hover {
@@ -297,6 +310,17 @@ td {
     font-size: 0.85rem;
   }
 
+  .columns {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .col-about,
+  .col-pages {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
   .about td:first-child {
     width: 1%;
     white-space: nowrap;
@@ -305,7 +329,7 @@ td {
   .notes td:nth-child(2) {
     width: auto;
     white-space: normal;
-    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .hide-phone {
