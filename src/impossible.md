@@ -19,7 +19,6 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * Cycle 5K
 * Cycle 10K
 * Cycle 15K
-* Do a triathalon
 
 ### Gains
 
@@ -55,9 +54,6 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Cliff dive~~ ([July 2017](https://youtu.be/XPeZyCxxVKA))
 * Sky dive
 * ~~Scuba dive~~ (July 2022)
-* Bungee jump
-* Wingsuit fly
-* Zero-G flight
 * Go cavern diving
 * ~~Go surfing~~ (December 2018)
 * Go sailing
@@ -70,14 +66,12 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Vist Oman~~ ([July 2017](/images/impossible/visit-oman.jpg))
 * ~~Vist USA~~ ([August 2019](/images/impossible/visit-usa.jpg))
 * ~~Visit Mexico~~ (July 2022)
-* Visit Thailand
+* ~~Visit Thailand~~ (January 2026)
 * Visit China
 * Visit Japan
 * Visit Turkey
 * Visit Italy
-* Visit Rome
-* Visit Ireland
-* Visit England
+* ~~Visit England~~ (May 2026)
 * Visit Singapore
 * Visit Spain
 
@@ -86,6 +80,6 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Graduate from college~~ ([January 2018](/images/impossible/graduate-college.jpg))
 * ~~Graduate from grad school~~ ([May 2021](/images/impossible/graduate-grad-school.jpg))
 * ~~Be self-sufficient and location-independent~~ (August 2020)
-* "Retire" [Mr. Money Mustache-style](http://www.mrmoneymustache.com/2011/09/15/a-brief-history-of-the-stash-how-we-saved-from-zero-to-retirement-in-ten-years/) * by age 40 * (save $1mil in 2021 dollars, live off of less than 4% $40,000/yr -- from interest)
-* Maintain a loving, inspiring, happy relationship with my girlfriend
-* Get Married
+* ~~Be "Retire"-able like [Mr. Money Mustache-style](http://www.mrmoneymustache.com/2011/09/15/a-brief-history-of-the-stash-how-we-saved-from-zero-to-retirement-in-ten-years/) by age 40~~ (2025)
+* ~~Maintain a loving, inspiring, happy relationship with my girlfriend (now wife)~~
+* ~~Get Married~~ (Februrary 2026)
