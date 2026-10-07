@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing an Xposed Module to Quit Social Media / Adnan Shaikh</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="apple-touch-icon" href="/images/me.jpg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="description" content="The downside of sharing">
+  <meta property="og:title" content="Writing an Xposed Module to Quit Social Media">
+  <meta property="og:description" content="The downside of sharing">
+  <meta property="og:image" content="https://adnanshaikh.com/images/me.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar">
+      <h2 class="navbar-label">Navigation</h2>
+      <h2>
+        <span class="crumb">~/<a href="/">home</a>/<a href="/writing-an-xposed-module-to-quit-social-media/">writing-an-xposed-module-to-quit-social-media</a></span>
+      </h2>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="prose">
+  <h2>Writing an Xposed Module to Quit Social Media</h2>
+  <p class="meta">2019-12-25</p>
+  <p>Over the last year, I've been mindfully evaluating my usage of different
+services and actively pruning out those that offered more noise over signal. I
+started the year off by muting everybody on Facebook and Instagram. This got rid
+of the endless feed for me and dramatically reduced the time I spent on the app
+and improved my overall mood. What was left of my feed was just a string of
+greyed out stories and photos from my own feed populating the main page.</p>
+<p><img loading="lazy" decoding="async" src="/images/writing-an-xposed-module-to-quit-social-media.jpg" alt="before_xposed"></p>
+<p>For the longest time I debated whether removing stories was worth the effort
+that it would require. Since Instagram itself wouldn't allow it, I'd have to
+write an Xposed module myself to get it done. So I let it remain and I argued
+that I might get lose touch if I cut myself off completely--exactly the same way
+I felt before muting my feed by the way.</p>
+<p>Fast forward a few months and the content on my stories had gotten extremely
+political, ripe with both posts containing violence and misinformation. It
+reached a point where it genuinely started affecting my mood. It's what finally
+drove to me to write the Xposed module once and for all.</p>
+<p>I forked <a href="https://github.com/TremendoX/UnclutterIG">TremendoX's UnclutterIG</a> and
+extended it to add more hooks to intercept the <code>setAdapter()</code> function while
+trying to populate the lists in the MainActivity class. It's a measly bit of code, but
+the trouble usually lies in hunting for the right class and method through the
+decompiled Java classes.</p>
+<pre><code class="language-java">protected void doStoryHooks() {
+    Method setAdapterMethod = null;
+    setAdapterMethod = findMethodExact(ListView.class, &quot;setAdapter&quot;, ListAdapter.class);
+    if (setAdapterMethod != null) {
+        XposedBridge.hookMethod(setAdapterMethod, new XC_MethodHook() {
+            @Override
+            public void beforeHookedMethod(final MethodHookParam param) throws Throwable {
+                Object adapter = param.args[0];
+
+                if (adapter == null) {
+                    return;
+                }
+                if (isOnMainPage(param.thisObject, adapter.getClass())) {
+                    if (shouldHideStories()) {
+                        param.setResult(null);
+                    }
+                }
+            }
+        });
+    }
+}
+</code></pre>
+<p>With the module complete, my feed now looks like this.</p>
+<p><img loading="lazy" decoding="async" src="/images/after_xposed.jpg" alt="after_xposed"></p>
+<p>A few people have asked me that wouldn't it just be easier to delete the app
+since I've taken out the two biggest features? That's not true, I can still
+visit my friends' profiles to see what they're up to every once in a while and
+use direct messages to stay in touch. It's a very intentional way of using
+social media that removes all the hooks that get you to keep coming back. As
+with anyone who's quit social media before can tell you, once you do it, there's
+just an abundance of time with which you're not really sure what to do. Writing
+this post was my way of reclaiming that time back.</p>
+<p><a href="https://github.com/adyshake/UnclutterIG">You can find my forked version of UnclutterIG here</a>.</p>
+
+</div>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Hacky GPU Switcher / Adnan Shaikh</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="apple-touch-icon" href="/images/me.jpg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="description" content="Should&#39;ve gone with NVIDIA">
+  <meta property="og:title" content="A Hacky GPU Switcher">
+  <meta property="og:description" content="Should&#39;ve gone with NVIDIA">
+  <meta property="og:image" content="https://adnanshaikh.com/images/me.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar">
+      <h2 class="navbar-label">Navigation</h2>
+      <h2>
+        <span class="crumb">~/<a href="/">home</a>/<a href="/a-hacky-gpu-switcher/">a-hacky-gpu-switcher</a></span>
+      </h2>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="prose">
+  <h2>A Hacky GPU Switcher</h2>
+  <p class="meta">2019-11-30</p>
+  <p>With the arrival of my Razer Core X eGPU enclosure, I was pretty excited to get
+back into some video editing and gaming, but there was a massive issue. My video
+and audio streams were both stuttering as soon as I'd plug it in. A bit of
+googling led to me to the solution to disable my integrated GPU from the Device
+Manager. That was odd though, I didn't see any complaints from users with
+dedicated NVIDIA GPUs in their machines. I figure NVIDIA Optimus must have
+something to do with this. Anyway, with a working solution I could finally begin
+automating this procedure.</p>
+<p>Windows provides a pretty powerful interface to instrument your plugged in
+hardware through WMI -- Windows Management Interface. Here's the powershell
+script I wrote that's spawned everytime Windows boots up. It's pretty neat since
+it works on events and not constant polling, so it's pretty efficient too.</p>
+<pre><code class="language-powershell"># Check to see if we are currently running &quot;as Administrator&quot;
+if (!(Verify-Elevated)) {
+    Start-Process powershell -Verb runAs -ArgumentList @(&quot;-NoExit&quot;, &quot;-Command `&quot;cd `'$(([string](Get-Location)).TrimEnd('\'))`'; $($myInvocation.MyCommand.Definition)`&quot;&quot;)
+    exit
+}
+
+Unregister-Event -SourceIdentifier graphicsCardChanged -ErrorAction SilentlyContinue
+Register-WmiEvent -Class Win32_DeviceChangeEvent -SourceIdentifier graphicsCardChanged
+
+# Get inital eGPU state
+$GPUConnected = $null
+if ($null -ne (Get-PnpDevice | Where-Object {($_.friendlyname) -like &quot;Radeon RX 590*&quot; -and ($_.status) -like &quot;Ok&quot;})) {
+    # Write-Host(&quot;eGPU is initially connected&quot;)
+    $GPUConnected = $true
+}
+else {
+    Get-PnpDevice| Where-Object {$_.friendlyname -like &quot;Intel(R) Iris(R) Plus Graphics*&quot;} | Enable-PnpDevice -Confirm:$false
+    $GPUConnected = $false
+}
+do{
+    $newEvent = Wait-Event -SourceIdentifier graphicsCardChanged
+    $eventType = $newEvent.SourceEventArgs.NewEvent.EventType
+    #Write-Host($eventType)
+    
+    if ($GPUConnected -eq $false) {
+        $isEGPUConnected = $null -ne (Get-PnpDevice | Where-Object {($_.friendlyname) -like &quot;Radeon RX 590*&quot; -and ($_.status) -like &quot;Ok&quot;})
+        if ($eventType -eq 2 -and $isEGPUConnected) {
+            #Event - Device Arrival
+            # Write-Host(&quot;Device Arrived&quot;)
+            Get-PnpDevice| Where-Object {$_.friendlyname -like &quot;Intel(R) Iris(R) Plus Graphics*&quot;} | Disable-PnpDevice -Confirm:$false
+            $GPUConnected = $true
+        }
+    }
+
+    if ($GPUConnected -eq $true -and $eventType -eq 1 -or $eventType -eq 3) {
+        #Event - Device config changed
+        # For some reason when I plug out the Razer Core X, it doesn't send an
+        # event type 3 signal, so I'm working with config changed instead.
+        # Write-Host(&quot;Device config changed&quot;)
+        $isEGPUUnknown = $null -ne (Get-PnpDevice | Where-Object {($_.friendlyname) -like &quot;Radeon RX 590*&quot; -and ($_.status) -like &quot;Unknown&quot;})
+        if ($isEGPUUnknown) {
+            # Write-Host(&quot;eGPU is Unknown&quot;)
+            Get-PnpDevice| Where-Object {$_.friendlyname -like &quot;Intel(R) Iris(R) Plus Graphics*&quot;} | Enable-PnpDevice -Confirm:$false
+            $GPUConnected = $false
+        }
+    }	
+    Remove-Event -SourceIdentifier graphicsCardChanged
+} while (1-eq1) #Loop until next event
+Unregister-Event -SourceIdentifier graphicsCardChanged
+</code></pre>
+<p>With the main script out of the way, here's the script to register it to spawn
+upon boot with Task Scheduler.</p>
+<pre><code class="language-powershell">$installGPU = Read-Host &quot;Register Raden RX 590 GPU switcher task? (y/n)&quot;
+
+if ($installGPU -eq 'y') {
+    $taskName = &quot;GPU switcher&quot;
+    $userName = $env:UserName
+
+    $password = Read-Host &quot;Password&quot;
+
+    Unregister-ScheduledTask -TaskName $taskName -Confirm:$false -Erroraction SilentlyContinue
+
+    $profileDirPath = Split-Path -parent $profile
+    $gpuScript = Join-Path $profileDirPath &quot;gpu_switcher.ps1&quot;
+    $action = New-ScheduledTaskAction -Execute powershell.exe -Argument &quot;`&quot;$gpuScript`&quot;&quot;
+    $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+
+    Register-ScheduledTask -Action $action -TaskName $taskName -Settings $settings  -Description &quot;Switches to the Radeon RX 590 eGPU when plugged in&quot; -User $userName -Password $password
+
+    # Now add a special trigger to it with COM API.
+    # Get the service and task
+    $ts = New-Object -ComObject Schedule.Service
+    $ts.Connect()
+    $task = $ts.GetFolder(&quot;\&quot;).GetTask($taskName).Definition
+
+    # Create the trigger
+    $TRIGGER_TYPE_STARTUP=8
+    $startTrigger=$task.Triggers.Create($TRIGGER_TYPE_STARTUP)
+    $startTrigger.Enabled=$true
+    $startTrigger.Id=&quot;StartupTrigger&quot;
+
+    # Re-save the task in place.
+    $TASK_CREATE_OR_UPDATE=6
+    $TASK_LOGIN_PASSWORD=1
+    $ts.GetFolder(&quot;\&quot;).RegisterTaskDefinition($taskName, $task, $TASK_CREATE_OR_UPDATE, $userName, $password, $TASK_LOGIN_PASSWORD)
+
+    Start-ScheduledTask -TaskName $taskName
+}
+</code></pre>
+
+</div>
+
+  </main>
+</body>
+</html>

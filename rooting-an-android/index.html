@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooting an Android Phone / Adnan Shaikh</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="apple-touch-icon" href="/images/me.jpg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="description" content="Magisk, TWRP, and EdXposed on a OnePlus 6">
+  <meta property="og:title" content="Rooting an Android Phone">
+  <meta property="og:description" content="Magisk, TWRP, and EdXposed on a OnePlus 6">
+  <meta property="og:image" content="https://adnanshaikh.com/images/me.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar">
+      <h2 class="navbar-label">Navigation</h2>
+      <h2>
+        <span class="crumb">~/<a href="/">home</a>/<a href="/rooting-an-android/">rooting-an-android</a></span>
+      </h2>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="prose">
+  <h2>Rooting an Android Phone</h2>
+  <p class="meta">2019-12-24</p>
+  <h2>Download prerequisites</h2>
+<ul>
+<li><a href="https://magiskmanager.com/downloading-magisk-manager">Magisk Manager</a></li>
+<li><a href="https://github.com/topjohnwu/Magisk/releases/">Magisk</a></li>
+<li><a href="https://dl.twrp.me/">TWRP Recovery</a></li>
+<li><a href="https://forum.xda-developers.com/oneplus-6/development/recovery-unofficial-twrp-touch-recovery-t3860815">TWRP Recovery OP6</a></li>
+<li><a href="https://github.com/ElderDrivers/EdXposedManager/releases">EdXposed Manager</a></li>
+</ul>
+<h2>Installation</h2>
+<p>First, copy over all the downloaded files on to the phone. Next, hold the Volume
+Down and Power button till phone vibrates. Then reboot into fastboot by
+navigating through the following menus, <code>English -&gt; Advanced -&gt; Reboot to Fasboot</code></p>
+<p>Once in fastboot, run the following command to boot into TWRP</p>
+<pre><code class="language-bash">fastboot boot ./twrp-3.3.1-2-enchilada.img
+</code></pre>
+<p>Now run the following steps,</p>
+<ul>
+<li>Install the TWRP Recovery zip</li>
+<li>Install Magisk</li>
+<li>Reboot, and install the Magisk Manager and the EdXposed Installer APK</li>
+<li>Open Magisk Manager, and download <code>Riru - Core</code> and <code>Riru - EdXposed (SandHook)</code></li>
+<li>Reboot</li>
+</ul>
+<h1>Some caveats</h1>
+<p>Deleting magisk modules doesn't work sometimes, so you can delete them manually
+by navigating to <code>/data/adb/modules</code></p>
+
+</div>
+
+  </main>
+</body>
+</html>
