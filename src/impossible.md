@@ -13,35 +13,25 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 * ~~Run a 3K~~ (April 2018)
 * ~~Run a 5K~~ (March 2022)
 * Run a 10K
-* Run a 22K
-* Run a 42K
 * Run a mile in less than 6 minutes
 * Cycle 5K
-* Cycle 10K
-* Cycle 15K
 
 ### Gains
 
 * ~~Do a 50 push-ups in one set~~ (March 2020)
-* Do a muscle up
+* ~~Do a muscle up~~ (Feb 2023)
 * ~~Do 15 pull-ups in a single-set~~ (May 2018)
-* Do 20 pull-ups in a single-set
 * Do a one hand pull-up
 * ~~Bench 50 kgs~~ (August 2017)
 * ~~Bench 75 kgs~~ (February 2018)
-* Bench 100 kgs
 * ~~Deadlift 50 kgs~~ (February 2017)
 * ~~Deadlift 75 kgs~~ (April 2018)
 * ~~Deadlift 100 kgs~~ (June 2018)
 * ~~Squat 50 kgs~~ (February 2017)
 * ~~Squat 75 kgs~~ (May 2018)
-* Squat 100 kgs
-* Overhead Press 60 kgs
 
 ### Gymnastics
 
-* Do an iron cross
-* Do a front lever
 * ~~Do a headstand~~ (September 2017)
 * ~~Do a handstand~~ (May 2019)
 
@@ -52,7 +42,6 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 ## Fun Goals
 
 * ~~Cliff dive~~ ([July 2017](https://youtu.be/XPeZyCxxVKA))
-* Sky dive
 * ~~Scuba dive~~ (July 2022)
 * Go cavern diving
 * ~~Go surfing~~ (December 2018)
@@ -60,7 +49,6 @@ I've always had a vague idea of the kind of experiences I wanted to pursue, but 
 
 ## Travel Goals
 
-* Visit every state in India (7/29 states) (2/7 UTs)
 * ~~Visit Sri Lanka~~ ([December 2018](/images/impossible/visit-srilanka.jpg))
 * ~~Visit UAE~~ ([1997](/images/impossible/visit-uae.jpg))
 * ~~Vist Oman~~ ([July 2017](/images/impossible/visit-oman.jpg))
