@@ -1,7 +1,6 @@
 ---
 date: 2019-12-15
-title: SQL Join
-description: Inner, outer, and cross joins with a small example
+title: SQL joins
 featured: false
 ---
 

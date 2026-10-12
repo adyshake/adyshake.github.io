@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 ---
-<div class="prose">
+<div class="prose{% if wideImages %} wide-images{% endif %}">
   <h2>{{ title }}</h2>
   <p class="meta">{{ date | dateISO }}</p>
   {{ content | safe }}

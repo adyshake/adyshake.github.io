@@ -1,6 +1,6 @@
 ---
 date: 2020-09-30
-title: Improving Network Latency
+title: Improving network latency
 description: No ms for this mf
 featured: false
 ---

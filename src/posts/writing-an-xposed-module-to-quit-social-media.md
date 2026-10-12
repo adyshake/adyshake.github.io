@@ -1,6 +1,6 @@
 ---
 date: 2019-12-25
-title: Writing an Xposed Module to Quit Social Media
+title: Writing an Xposed module to quit social media
 description: The downside of sharing
 featured: true
 ---

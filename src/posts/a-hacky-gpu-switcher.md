@@ -1,6 +1,6 @@
 ---
 date: 2019-11-30
-title: A Hacky GPU Switcher
+title: A hacky GPU switcher
 description: Should've gone with NVIDIA
 featured: true
 ---

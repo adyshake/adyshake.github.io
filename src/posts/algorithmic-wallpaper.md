@@ -1,7 +1,6 @@
 ---
 date: 2019-01-27
-title: Wallpaper Algorithm
-description: Wallpapers for ages
+title: Wallpaper algorithm
 featured: false
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2020-01-18
-title: Falling In Love With The Process
-description: How to prevent romanticizing goals
+title: Falling in love with the process
 featured: false
 ---
 

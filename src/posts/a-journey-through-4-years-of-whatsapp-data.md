@@ -1,6 +1,6 @@
 ---
 date: 2018-01-27
-title: A Journey Through 4 Years of WhatsApp Data
+title: A journey through 4 years of WhatsApp data
 description: I ought to plot a lot
 featured: true
 ---

@@ -1,7 +1,6 @@
 ---
 date: 2019-12-24
-title: Rooting an Android Phone
-description: Magisk, TWRP, and EdXposed on a OnePlus 6
+title: Rooting an Android phone
 featured: false
 ---
 
