@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Making my 2023 Mazda3 drive itself / Adnan Shaikh</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="apple-touch-icon" href="/images/me.jpg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="author" content="Adnan Shaikh">
+  <meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+  <meta name="description" content="Adnan Shaikh&#39;s personal website and blog.">
+  <meta property="og:title" content="Making my 2023 Mazda3 drive itself">
+  <meta property="og:description" content="Adnan Shaikh&#39;s personal website and blog.">
+  <meta property="og:image" content="https://adnanshaikh.com/images/me.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar">
+      <h2 class="navbar-label">Navigation</h2>
+      <h2>
+        <span class="crumb">~/<a href="/">home</a>/<a href="/self-driving-mazda/">self-driving-mazda</a></span>
+      </h2>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="prose wide-images">
+  <h2>Making my 2023 Mazda3 drive itself</h2>
+  <p class="meta">2026-10-07</p>
+  <p>Moving to the Bay Area hasn't been without its issues. My main complaint has been how bad the traffic is out here. So, in an attempt to fix that issue, I'm going to install the <a href="https://comma.ai/shop/comma-four">Comma 4</a> in my unsupported 2023 Mazda3. Hopefully this won't kill me.</p>
+<p>To set up this in the Mazda3, we'll need a <a href="https://torqueinterceptor.com/en-us/products/torque-interceptor-2">torque interceptor</a> and a <a href="https://konik.ai/shop/harness-box/">Konik Harness box</a>. The TI2 is required for reasons I don't fully understand yet -- I believe it's to override the torque safety limits on the EPS. The Konik harness box is required to connect the TI2's 26 pin male 'CN4' connector to the Konik harness box's female input. Comma used to provide an older harness box with the 26 pin female connector but now they provide a more simplified input with fewer pins, so a separate harness box is required.</p>
+<p>Hooking up the Torque Interceptor's wiring harness is pretty simple. The CN1 goes to the TI2 device.</p>
+<p><img loading="lazy" decoding="async" src="/images/ti2_wire_diagram.jpg" alt="Torque interceptor wiring diagram"></p>
+<p>The CN2 and CN3 pair go to the torque sensor cable under the steering wheel and connect to the power steering motor. There's a female and a male connector so you're just tapping the connection essentially.</p>
+<p><img loading="lazy" decoding="async" src="/images/eps.avif" alt="Torque sensor connector on the EPS motor"></p>
+<p>We'll need to do the same thing with the BCM pair, CN5 and CN6, that's located near the cabin fuse box for the car as well.</p>
+<p><img loading="lazy" decoding="async" src="/images/bcm.jpg" alt="BCM connectors CN5 and CN6 beside the cabin fuse box"></p>
+<p>Finally the CN4 goes to the Konik Harness box, and a USB-C cable goes from the harness box to the Comma 4 device.</p>
+<p>After wiring it all up and starting the car, I got every dashboard error light to pop up and the ignition wouldn't turn on. :sigh:</p>
+<p><img loading="lazy" decoding="async" src="/images/dash_lights.jpg" alt="Dashboard warning lights after the first start"></p>
+<p>Turns out the TI2's CN4 wire was pinned incorrectly. The green and blue wires were initially on pins 2 and 4. I had to repin it to pins 4 and 6.</p>
+<p><img loading="lazy" decoding="async" src="/images/wire_repinning.jpg" alt="Repinned torque interceptor connector"></p>
+<p>After repinning, the car started up without any warning lights!</p>
+<p>Once connected, I installed the <code>moretore/StarPilot-dev</code> branch on the Comma 4.</p>
+<p>StarPilot comes with a web interface to control additional settings on the port <code>8082</code> which can be accessed from your phone. On the settings page, I'd disabled automatic fingerprinting and selected my car make to <code>Mazda</code> and the model to <code>3 2019-2024</code>.</p>
+<p>After which, the device finally recognized all the CAN bus signals being sent to it.</p>
+<p>I took it for a test drive on StarPilot's default model <code>Regret Driven Framework v4</code> but it didn't work well. It ping ponged quite a bit within the lane and required a lot of corrections from me.</p>
+<p>I switched out the model to Pop v2 and the car drove as well as I would've driven it.</p>
+<p><img loading="lazy" decoding="async" src="/images/mazda_self_drive.gif" alt="Test drive with the Pop v2 model"></p>
+
+</div>
+
+  </main>
+</body>
+</html>
