@@ -6,7 +6,7 @@ wideImages: true
 
 Moving to the Bay Area hasn't been without its issues. My main complaint has been how bad the traffic is out here. So, in an attempt to fix that issue, I'm going to install the [Comma 4](https://comma.ai/shop/comma-four) in my unsupported 2023 Mazda3. Hopefully this won't kill me.
 
-To set up this in the Mazda3, we'll need a [torque interceptor](https://torqueinterceptor.com/en-us/products/torque-interceptor-2) and a [Konik Harness box](https://konik.ai/shop/harness-box/). The TI2 is required for reasons I don't fully understand yet -- I believe its to override the torque safety limits on the EPS. The Konik harness box is required to connect the TI2's 26 pin male 'CN4' connector to the Konix harness box's female input. Comma used to provide an older harness box with the 26 pin female connector but now they provide a more simplified input with fewer pins, so a separate harness box is required.
+To set up this in the Mazda3, we'll need a [torque interceptor](https://torqueinterceptor.com/en-us/products/torque-interceptor-2) and a [Konik Harness box](https://konik.ai/shop/harness-box/). The TI2 is required for reasons I don't fully understand yet -- I believe it's to override the torque safety limits on the EPS. The Konik harness box is required to connect the TI2's 26 pin male 'CN4' connector to the Konik harness box's female input. Comma used to provide an older harness box with the 26 pin female connector but now they provide a more simplified input with fewer pins, so a separate harness box is required.
 
 Hooking up the Torque Interceptor's wiring harness is pretty simple. The CN1 goes to the TI2 device. 
 
@@ -27,7 +27,7 @@ After wiring it all up and starting the car, I got every dashboard error light t
 
 ![Dashboard warning lights after the first start][dash-lights]
 
-Turns out the TI2's CN4 wire was pinned incorrcetly. The green and blue wires were initially on pins 2 and 4. I had to repin it to pins 4 and 6.
+Turns out the TI2's CN4 wire was pinned incorrectly. The green and blue wires were initially on pins 2 and 4. I had to repin it to pins 4 and 6.
 
 ![Repinned torque interceptor connector][wire-repinning]
 
