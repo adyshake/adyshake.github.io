@@ -7,6 +7,11 @@ module.exports = function (eleventyConfig) {
     fs.rmSync(path.resolve(out), { recursive: true, force: true });
   });
 
+  // publish: false skips the page and every collection (home, blog).
+  eleventyConfig.addPreprocessor("unpublished", "*", (data) => {
+    if (data.publish === false) return false;
+  });
+
   eleventyConfig.addPassthroughCopy({ "images": "images" });
   eleventyConfig.addPassthroughCopy({ "assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "favicon.ico": "favicon.ico" });
